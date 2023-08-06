@@ -3,7 +3,8 @@ WORKDIR /usr/src/app
 
 COPY package*.json ./
 
-RUN npm install --production --no-optional && tsc
+RUN npm install typescript -g
+RUN npm install --omit=dev && tsc
 
 COPY . .
 
