@@ -5,7 +5,7 @@ import rateLimiter from 'express-rate-limit';
 import cors from 'cors';
 import helmet from 'helmet';
 
-app.set('trust proxy', true);
+// app.set('trust proxy', true);
 
 app.use(
   rateLimiter({
@@ -24,7 +24,9 @@ app.use(
 );
 
 app.get('/api/v1', (req: Request, res: Response) => {
-  return res.status(200).send('Hello form node');
+  return res.status(200).send('Hello from node');
 });
 
-app.listen(5000, () => console.log('Server running on port 5000'));
+const PORT: number = parseInt(<string>process.env.PORT) || 5000;
+
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
