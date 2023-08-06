@@ -1,9 +1,8 @@
-FROM node:18.15.0
+FROM node:18.15.0-alpine
 WORKDIR /usr/src/app
 
 COPY package*.json ./
 
-RUN npm install typescript -g
 RUN npm install
 
 COPY . .
