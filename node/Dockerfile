@@ -11,4 +11,4 @@ COPY . .
 RUN tsc
 
 EXPOSE 5000
-CMD [ "node", "./build/server.js"]
+CMD [ "npm", "start"]
