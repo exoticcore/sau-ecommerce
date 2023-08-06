@@ -1,0 +1,29 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure("2") do |config|
+    config.vm.box = "bento/ubuntu-22.04"
+    config.env.enable # enable vagrant-env plugin
+    config.vm.network "private_network", ip: "192.168.56.14"
+    config.vm.network "public_network", ip: "192.168.1.102" # enable to access in Local network on External Machine
+
+    config.vm.provider "virtualbox" do |vb|
+        vb.memory = "2048" # Docker recomend 4GB of RAM
+        vb.cpus = "2"
+
+    end
+
+    config.vm.provision "shell", inline: <<-SHELL
+      sudo apt update
+      sudo apt install openjdk-17-jre -y
+      java -version
+      curl -fsSL https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key | sudo tee \
+      /usr/share/keyrings/jenkins-keyring.asc > /dev/null
+      echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
+      https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
+      /etc/apt/sources.list.d/jenkins.list > /dev/null
+      sudo apt-get update
+      sudo apt-get install jenkins -y
+    SHELL
+
+end
