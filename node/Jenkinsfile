@@ -2,6 +2,10 @@
 pipeline {
     agent any
 
+    environment {
+        LINE_NOTIFY_TOKEN = credentials('LINE_NOTIFY_TOKEN')
+    }
+
     tools {nodejs "Node18"}
 
     stages {
@@ -9,6 +13,7 @@ pipeline {
         stage('BUILD') {
             steps {
                 dir('node') {
+                    echo $LINE_NOTIFY_TOKEN
                     sh 'npm install'
                 }
             }   
@@ -57,6 +62,11 @@ pipeline {
 
                 timeout(time: 10, unit: 'MINUTES') {
                     waitForQualityGate abortPipeline: true
+                }
+                post {
+                    success {
+                        sh 'curl -X POST -H "Authorization: Bearer Sbm2Xv4AM0Rr4Q3B1bIqcEHNlz2xUOEVNGpp2z7fsXe" -F "message=jenkins test" https://notify-api.line.me/api/notify'
+                    }
                 }
             }
         }
