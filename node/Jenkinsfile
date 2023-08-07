@@ -47,7 +47,10 @@ pipeline {
             post {
                 success {
                     notifyLINE("succeed")
-                    echo "Unit testing Suscces..."
+                    // echo "Unit testing Suscces..."
+                }
+                failure {
+                    notifyLINE("failed")
                 }
             }
         }
@@ -56,6 +59,15 @@ pipeline {
         stage('INTEGRATION TEST') {
             steps {
                 echo 'wait for integration state build, skipping...'
+            }
+            post {
+                success {
+                    notifyLINE("succeed")
+                    // echo "Unit testing Suscces..."
+                }
+                failure {
+                    notifyLINE("failed")
+                }
             }
         }
 
@@ -78,6 +90,16 @@ pipeline {
                 timeout(time: 10, unit: 'MINUTES') {
                     waitForQualityGate abortPipeline: true
                 }
+
+                post {
+                success {
+                    notifyLINE("succeed")
+                    // echo "Unit testing Suscces..."
+                }
+                failure {
+                    notifyLINE("failed")
+                }
+            }
             }
         }
 
