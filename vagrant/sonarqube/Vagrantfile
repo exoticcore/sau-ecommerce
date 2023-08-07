@@ -1,0 +1,17 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure("2") do |config|
+  config.vm.box = "bento/ubuntu-22.04"
+  config.env.enable # enable vagrant-env plugin
+  config.vm.network "private_network", ip: "192.168.56.15"
+  config.vm.network "public_network", ip: "192.168.1.103" # enable to access in Local network on External Machine
+
+  config.vm.provider "virtualbox" do |vb|
+      vb.memory = "2048" # Docker recomend 4GB of RAM
+      vb.cpus = "2"
+
+  end
+
+  config.vm.provision "shell", path: "../../shell-scripts/sonar-setup.sh"
+end
