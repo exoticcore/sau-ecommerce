@@ -1,6 +1,5 @@
 // node pipeline
 def notifyLINE(status) {
-    // def token = credentials('LINE_NOTIFY_TOKEN')
     def jobName = env.JOB_NAME
     def stageName = env.STAGE_NAME
     def buildNo = env.BUILD_NUMBER
@@ -30,7 +29,6 @@ pipeline {
             post {
                 success {
                     notifyLINE("succeed")
-                    // echo 'Build Successful...'
                 }
                 failure {
                     notifyLINE("failed")
@@ -47,7 +45,6 @@ pipeline {
             post {
                 success {
                     notifyLINE("succeed")
-                    // echo "Unit testing Suscces..."
                 }
                 failure {
                     notifyLINE("failed")
@@ -63,7 +60,6 @@ pipeline {
             post {
                 success {
                     notifyLINE("succeed")
-                    // echo "Unit testing Suscces..."
                 }
                 failure {
                     notifyLINE("failed")
@@ -95,7 +91,6 @@ pipeline {
             post {
                 success {
                     notifyLINE("succeed")
-                    // echo "Unit testing Suscces..."
                 }
                 failure {
                     notifyLINE("failed")
