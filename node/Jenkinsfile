@@ -46,11 +46,11 @@ pipeline {
 
             steps {
                 withSonarQubeEnv('SonarQubeServer') {
-                    sh '''${scannerHome}/bin/sonar-scanner -Dsonar.projectKey=nodejs \
+                    sh '''${scannerHome}/bin/sonar-scanner \
+                   -Dsonar.projectKey=nodejs \
                    -Dsonar.projectName=Node application \
                    -Dsonar.projectVersion=1.0 \
                    -Dsonar.sources=node/src/ \
-                   -Dsonar.java.binaries=target/test-classes/com/visualpathit/account/controllerTest/ \
                    -Dsonar.language=ts \
                    -Dsonar.sourceEncoding=UTF-8'''          
                 }
