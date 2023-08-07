@@ -19,6 +19,7 @@ pipeline {
             post {
                 success {
                     echo "$LINE_NOTIFY_TOKEN"
+                    sh "curl -X POST -H 'Authorization: Bearer Sbm2Xv4AM0Rr4Q3B1bIqcEHNlz2xUOEVNGpp2z7fsXe' -F 'message=jenkins test' https://notify-api.line.me/api/notify"
                     echo 'Build Successful...'
                 }
             }
@@ -62,11 +63,6 @@ pipeline {
 
                 timeout(time: 10, unit: 'MINUTES') {
                     waitForQualityGate abortPipeline: true
-                }
-                post {
-                    success {
-                        sh 'curl -X POST -H "Authorization: Bearer Sbm2Xv4AM0Rr4Q3B1bIqcEHNlz2xUOEVNGpp2z7fsXe" -F "message=jenkins test" https://notify-api.line.me/api/notify'
-                    }
                 }
             }
         }
