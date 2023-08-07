@@ -146,6 +146,15 @@ pipeline {
             steps {
                 sh "docker rmi $registry:V$BUILD_NUMBER"
             }
+
+            post {
+                success {
+                    notifyLINE("succeed")
+                }
+                failure {
+                    notifyLINE("failed")
+                }
+            }
         }
 
     }
