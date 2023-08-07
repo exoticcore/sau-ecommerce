@@ -49,7 +49,7 @@ pipeline {
                    -Dsonar.sources=node/src/ \
                    -Dsonar.java.binaries=target/test-classes/com/visualpathit/account/controllerTest/ \
                    -Dsonar.language=ts \
-                   -Dsonar.sourceEncoding=UTF-8 \xml'''          
+                   -Dsonar.sourceEncoding=UTF-8'''          
                 }
             }
         }
