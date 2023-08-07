@@ -13,12 +13,12 @@ pipeline {
         stage('BUILD') {
             steps {
                 dir('node') {
-                    echo $LINE_NOTIFY_TOKEN
                     sh 'npm install'
                 }
             }   
             post {
                 success {
+                    echo $LINE_NOTIFY_TOKEN
                     echo 'Build Successful...'
                 }
             }
