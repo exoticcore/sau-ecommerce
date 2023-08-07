@@ -32,6 +32,9 @@ pipeline {
                     notifyLINE("succeed")
                     // echo 'Build Successful...'
                 }
+                failure {
+                    notifyLINE("failed")
+                }
             }
         }
 
