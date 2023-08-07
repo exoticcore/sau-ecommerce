@@ -142,5 +142,11 @@ pipeline {
             }
         }
 
+        stage('Remove Unsed docker image') {
+            steps {
+                sh "docker rmi $registry:V$BUILD_NUMBER"
+            }
+        }
+
     }
 }
