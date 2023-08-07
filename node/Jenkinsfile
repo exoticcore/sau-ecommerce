@@ -18,7 +18,7 @@ pipeline {
             }   
             post {
                 success {
-                    echo $LINE_NOTIFY_TOKEN
+                    echo "$LINE_NOTIFY_TOKEN"
                     echo 'Build Successful...'
                 }
             }
