@@ -48,7 +48,7 @@ pipeline {
                 withSonarQubeEnv('SonarQubeServer') {
                     sh '''${scannerHome}/bin/sonar-scanner \
                    -Dsonar.projectKey=nodejs \
-                   -Dsonar.projectName=Node-application \
+                   -Dsonar.projectName=node-app \
                    -Dsonar.projectVersion=1.0 \
                    -Dsonar.sources=./node/ \
                    -Dsonar.language=ts \
