@@ -41,7 +41,7 @@ pipeline {
 
         stage('CODE ANALYSIS with SONARQUBE') {
             environment {
-                scannerHome = tool 'mysornarscanner4'
+                scannerHome = tool 'mysonarscanner4'
             }
 
             steps {
@@ -53,6 +53,10 @@ pipeline {
                    -Dsonar.java.binaries=target/test-classes/com/visualpathit/account/controllerTest/ \
                    -Dsonar.language=ts \
                    -Dsonar.sourceEncoding=UTF-8'''          
+                }
+
+                timeout(time: 10, unit: 'MINUTES') {
+                    waitForQualityGate abortPipeline: true
                 }
             }
         }
