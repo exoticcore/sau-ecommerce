@@ -1,11 +1,11 @@
 // node pipeline
 def notifyLINE(status) {
     // def token = credentials('LINE_NOTIFY_TOKEN')
-    def jobName = env.JOB_NAME + ' ' + env.BRANCH_NAME
+    def jobName = env.JOB_NAME
     def buildNo = env.BUILD_NUMBER
 
     def url = 'https://notify-api.line.me/api/notify'
-    def message = "${jobName} Build #${buildNo} ${status} \r\n"
+    def message = "${jobName}\n Build #${buildNo} ${status} \r\n"
     sh "curl ${url} -H 'Authorization: Bearer ${LINE_NOTIFY_TOKEN}' -F 'message=${message}'"
 }
 
