@@ -1,20 +1,20 @@
 // node pipeline
 def notifyLINE(status) {
-    def token = credentials('LINE_NOTIFY_TOKEN')
+    // def token = credentials('LINE_NOTIFY_TOKEN')
     def jobName = env.JOB_NAME + ' ' + env.BRANCH_NAME
     def buildNo = env.BUILD_NUMBER
 
     def url = 'https://notify-api.line.me/api/notify'
     def message = "${jobName} Build #${buildNo} ${status} \r\n"
-    sh "curl ${url} -H 'Authorization: Bearer ${token}' -F 'message=${message}'"
+    sh "curl ${url} -H 'Authorization: Bearer ${LINE_NOTIFY_TOKEN}' -F 'message=${message}'"
 }
 
 pipeline {
     agent any
 
-    // environment {
-    //     LINE_NOTIFY_TOKEN = credentials('LINE_NOTIFY_TOKEN')
-    // }
+    environment {
+        LINE_NOTIFY_TOKEN = credentials('LINE_NOTIFY_TOKEN')
+    }
 
     tools {nodejs "Node18"}
 
