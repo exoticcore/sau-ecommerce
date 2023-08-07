@@ -51,7 +51,8 @@ pipeline {
                    -Dsonar.projectName=Node-application \
                    -Dsonar.projectVersion=1.0 \
                    -Dsonar.sources=./node/ \
-                   -Dsonar.language=js,ts \
+                   -Dsonar.language=ts \
+                   -Dsonar.javascript.Icov.reportPaths=coverage/lcov.info \
                    -Dsonar.sourceEncoding=UTF-8'''          
                 }
 
