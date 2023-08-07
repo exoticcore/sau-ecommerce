@@ -1,0 +1,42 @@
+// node pipeline
+pipeline {
+    agent any
+
+    tools {nodejs "Node18"}
+
+    stages {
+        stage('BUILD') {
+            steps {
+                sh 'npm install mocha -g'
+                sh 'npm install'
+            }
+            post {
+                success {
+                    echo 'Build Successful...'
+                }
+            }
+        }
+    }
+
+    stages('UNIT TEST') {
+        steps {
+            sh 'node test'
+        } post {
+            success {
+                echo "Unit testing Suscces..."
+            }
+        }
+    }
+
+    stages('INTEGRATION TEST') {
+        steps {
+            sh 'npm test'
+        } post {
+            success {
+                echo "Integration testing Success..."
+            }
+        }
+    }
+
+    stage('')
+}

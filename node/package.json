@@ -5,10 +5,11 @@
   "main": "dist/server.js",
   "scripts": {
     "dev": "ts-node-dev --respawn --transpile-only --files src/server.ts",
+    "test": "mocha",
     "build": "npm i --production && tsc",
     "start": "node ./build/server.js"
   },
-  "author": "",
+  "author": "echo \"Error: no test specified\" && exit 1",
   "license": "ISC",
   "devDependencies": {
     "@types/cors": "^2.8.13",
