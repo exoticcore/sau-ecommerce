@@ -6,7 +6,7 @@ pipeline {
 
     stages {
 
-        stage('BUILD'){
+        stage('BUILD') {
             steps {
                 sh 'npm install mocha -g'
                 sh 'npm install'
@@ -18,7 +18,7 @@ pipeline {
             }
         }
 
-        stage('UNIT TEST'){
+        stage('UNIT TEST') {
             steps {
                 sh 'node test'
             } 
@@ -29,13 +29,27 @@ pipeline {
             }
         }
 
-        stage('INTEGRATION TEST'){
+        
+        stage('INTEGRATION TEST') {
             steps {
-                sh 'npm test'
-            } 
-            post {
-                success {
-                    echo "Integration testing Success..."
+                echo 'wait for integration state build, skipping...'
+            }
+        }
+
+        stage('CODE ANALYSIS with SONARQUBE') {
+            environment {
+                scannerHome = tool 'mysornarscanner4'
+            }
+
+            steps {
+                withSonarQubeEnv('sonar-pro') {
+                    sh '''${scannerHome}/bin/sonar-scanner -Dsonar.projectKey=nodejs \
+                   -Dsonar.projectName=Node application \
+                   -Dsonar.projectVersion=1.0 \
+                   -Dsonar.sources=node/src/ \
+                   -Dsonar.java.binaries=target/test-classes/com/visualpathit/account/controllerTest/ \
+                   -Dsonar.language=ts \
+                   -Dsonar.sourceEncoding=UTF-8 \xml'''          
                 }
             }
         }
