@@ -8,10 +8,10 @@ pipeline {
 
         stage('BUILD') {
             steps {
-                dir('node')
-                sh 'npm install mocha -g'
-                sh 'npm install'
-            }
+                dir('node') {
+                    sh 'npm install'
+                }
+            }   
             post {
                 success {
                     echo 'Build Successful...'
@@ -21,7 +21,9 @@ pipeline {
 
         stage('UNIT TEST') {
             steps {
-                sh 'node test'
+                dir('node') {
+                    sh 'node test'
+                }
             } 
             post {
                 success {
