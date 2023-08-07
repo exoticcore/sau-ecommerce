@@ -14,6 +14,8 @@ pipeline {
 
     environment {
         LINE_NOTIFY_TOKEN = credentials('LINE_NOTIFY_TOKEN')
+        registry = "doublecore/node-hello"
+        registryCredential = "dockerhub"
     }
 
     tools {nodejs "Node18"}
@@ -79,7 +81,7 @@ pipeline {
                    -Dsonar.projectName=node-app \
                    -Dsonar.projectVersion=1.0 \
                    -Dsonar.sources=./node/ \
-                   -Dsonar.language=ts \
+                   -Dsonar.language=js,ts \
                    -Dsonar.sourceEncoding=UTF-8'''          
                 }
 
@@ -97,6 +99,47 @@ pipeline {
                 }
             }
             
+        }
+
+        stage('Build App Image') {
+            steps {
+                dir('node') {
+                    script {
+                        dockerImage = docker.build registry + ":V$BUILD_NUMBER"
+                    }
+                }
+            }
+
+            post {
+                success {
+                    notifyLINE("succeed")
+                }
+                failure {
+                    notifyLINE("failed")
+                }
+            }
+        }
+
+        stage('Upload Images') {
+            steps {
+                dir('node') {
+                    script {
+                        docker.withRegistry('', registryCredential) {
+                            dockerImage.push('V${BUILD_ID}')
+                            dockerImage.push('latest')
+                        }
+                    }
+                }
+            }
+
+            post {
+                success {
+                    notifyLINE("succeed")
+                }
+                failure {
+                    notifyLINE("failed")
+                }
+            }
         }
 
     }
