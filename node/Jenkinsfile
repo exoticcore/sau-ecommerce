@@ -6,7 +6,7 @@ pipeline {
 
     stages {
 
-        stage('BUILD') {
+        stage('BUILD'){
             steps {
                 sh 'npm install mocha -g'
                 sh 'npm install'
@@ -18,20 +18,22 @@ pipeline {
             }
         }
 
-        stage('UNIT TEST') {
+        stage('UNIT TEST'){
             steps {
                 sh 'node test'
-            } post {
+            } 
+            post {
                 success {
                     echo "Unit testing Suscces..."
                 }
             }
         }
 
-        stage('INTEGRATION TEST') {
+        stage('INTEGRATION TEST'){
             steps {
                 sh 'npm test'
-            } post {
+            } 
+            post {
                 success {
                     echo "Integration testing Success..."
                 }
