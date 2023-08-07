@@ -50,7 +50,7 @@ pipeline {
                    -Dsonar.projectKey=nodejs \
                    -Dsonar.projectName=Node-application \
                    -Dsonar.projectVersion=1.0 \
-                   -Dsonar.sources=./node/src/ \
+                   -Dsonar.sources=./node/ \
                    -Dsonar.language=js,ts \
                    -Dsonar.sourceEncoding=UTF-8'''          
                 }
