@@ -53,6 +53,7 @@ pipeline {
                    -Dsonar.sources=./node/ \
                    -Dsonar.language=ts \
                    -Dsonar.javascript.Icov.reportPaths=coverage/lcov.info \
+                   -Dsonar.testExecutionReportPaths=./coverage/test-reporter.xml \
                    -Dsonar.sourceEncoding=UTF-8'''          
                 }
 
