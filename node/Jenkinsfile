@@ -90,8 +90,9 @@ pipeline {
                 timeout(time: 10, unit: 'MINUTES') {
                     waitForQualityGate abortPipeline: true
                 }
+            }
 
-                post {
+            post {
                 success {
                     notifyLINE("succeed")
                     // echo "Unit testing Suscces..."
@@ -100,7 +101,7 @@ pipeline {
                     notifyLINE("failed")
                 }
             }
-            }
+            
         }
 
     }
