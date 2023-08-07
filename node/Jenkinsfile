@@ -18,7 +18,7 @@ pipeline {
             }
         }
 
-        stages('UNIT TEST') {
+        stage('UNIT TEST') {
             steps {
                 sh 'node test'
             } post {
@@ -28,7 +28,7 @@ pipeline {
             }
         }
 
-        stages('INTEGRATION TEST') {
+        stage('INTEGRATION TEST') {
             steps {
                 sh 'npm test'
             } post {
