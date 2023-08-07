@@ -8,7 +8,7 @@ pipeline {
 
         stage('BUILD') {
             steps {
-                sh 'cd node'
+                dir('node')
                 sh 'npm install mocha -g'
                 sh 'npm install'
             }
