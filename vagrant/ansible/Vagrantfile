@@ -3,7 +3,7 @@
 
 Vagrant.configure("2") do |config|
   config.vm.box = "bento/ubuntu-22.04"
-  config.vm.synced_folder "./src", "/home/vagrant"
+  config.vm.synced_folder "./src", "/home/vagrant/ansible"
   config.vm.network "private_network", ip: "192.168.56.13"
   config.vm.network "public_network", ip: "192.168.1.100" # enable to access in Local network on External Machine
 
