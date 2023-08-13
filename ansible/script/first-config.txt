@@ -1,0 +1,3 @@
+https://www.vnoob.com/2022/12/deploying-kubernetes-kubeadm-on-raspberry-pi-pt1-initial-image-and-setup/
+https://www.vnoob.com/2022/12/deploying-kubernetes-kubeadm-on-raspberry-pi-pt2-kubernetes-install/
+https://medium.com/@julian.tellez/raspberry-pi-kubernetes-cluster-install-k8s-issue-4-790928b9c66c
