@@ -1,0 +1,231 @@
+---
+- name: Playbook to install the necessary things to run k8s on Raspberry PIs
+  hosts: all
+  become: yes
+  gather_facts: no
+  tasks:
+    - name: Update repositories cache and upgrade system
+      ansible.builtin.apt:
+        update_cache: yes
+        upgrade: dist
+        cache_valid_time: 3600
+        autoclean: yes
+        autoremove: yes
+
+    - name: Check if a reboot is needed
+      register: reboot_required_file
+      stat:
+        path: /var/run/reboot-required
+        get_md5: no
+
+    - name: Reboot if needed
+      ansible.builtin.reboot:
+        msg: 'Reboot initiated by Ansible for kernel updates'
+        connect_timeout: 5
+        reboot_timeout: 300
+        pre_reboot_delay: 0
+        post_reboot_delay: 30
+        test_command: uptime
+      when: reboot_required_file.stat.exists
+
+    - name: Install vim and aptitude
+      ansible.builtin.apt:
+        pkg:
+          - vim
+          - aptitude
+
+    - name: Create Aptitude config directory
+      ansible.builtin.file:
+        path: /root/.aptitude/
+        state: directory
+        recurse: yes
+        owner: root
+        group: root
+        mode: '0700'
+
+    - name: Configure Aptitude
+      ansible.builtin.copy:
+        content: |
+          aptitude "";
+          aptitude::Keep-Unused-Pattern "";
+          aptitude::Delete-Unused-Pattern "";
+          aptitude::UI "";
+          aptitude::UI::Prompt-On-Exit "false";
+          aptitude::UI::Default-Grouping "task,status";
+          aptitude::AutoClean-After-Update "true";
+          aptitude::Clean-After-Install "true";
+          aptitude::Forget-New-On-Update "true";
+        dest: /root/.aptitude/config
+        backup: yes
+        owner: root
+        group: root
+        mode: '0644'
+
+    - name: Modify ls alias
+      ansible.builtin.lineinfile:
+        path: /home/pi/.bashrc
+        backup: yes
+        regexp: "^    alias ls='ls --color=auto'$"
+        line: "    alias ls='ls --color=auto -lahpG'"
+
+    # disable swap
+
+    - name: Check whether a package called dphys-swapfile is installed
+      ansible.builtin.package_facts:
+        manager: auto
+
+    - name: Turn off "dphys-swapfile"
+      ansible.builtin.command: dphys-swapfile swapoff
+      when: "'dphys-swapfile' in ansible_facts.packages"
+
+    - name: Uninstall "dphys-swapfile"
+      ansible.builtin.command: dphys-swapfile uninstall
+      when: "'dphys-swapfile' in ansible_facts.packages"
+
+    - name: Remove and purge "dphys-swapfile" package
+      ansible.builtin.apt:
+        pkg: dphys-swapfile
+        state: absent
+        purge: yes
+        autoclean: yes
+        autoremove: yes
+      when: "'dphys-swapfile' in ansible_facts.packages"
+
+    # Configure cgroup
+
+    - name: Enable cgroup in /boot/cmdline.txt
+      ansible.builtin.lineinfile:
+        path: /boot/cmdline.txt
+        backrefs: yes
+        regexp: '^console(.*) rootwait$'
+        line: '\g<0> cgroup_enable=cpuset cgroup_enable=memory cgroup_memory=1'
+
+    # Install and configure Container Runtime
+
+    - name: Install Container Runtime
+      ansible.builtin.apt:
+        pkg:
+          - containerd
+          - containernetworking-plugins
+
+    - name: Configure containerd
+      ansible.builtin.copy:
+        content: |
+          version = 2
+          [plugins]
+            [plugins."io.containerd.grpc.v1.cri"]
+              [plugins."io.containerd.grpc.v1.cri".containerd]
+                [plugins."io.containerd.grpc.v1.cri".containerd.runtimes]
+                  [plugins."io.containerd.grpc.v1.cri".containerd.runtimes.runc]
+                    runtime_type = "io.containerd.runc.v2"
+                    [plugins."io.containerd.grpc.v1.cri".containerd.runtimes.runc.options]
+                      SystemdCgroup = true
+        dest: /etc/containerd/config.toml
+        # backup: yes
+        owner: root
+        group: root
+        mode: '0644'
+
+    # Forwarding IPv4 and letting iptables see bridged traffic
+
+    - name: create /etc/modules-load.d/k8s.conf
+      ansible.builtin.copy:
+        content: |
+          overlay
+          br_netfilter
+        dest: /etc/modules-load.d/k8s.conf
+        # backup: yes
+        owner: root
+        group: root
+        mode: '0644'
+
+    - name: modprobe overlay
+      ansible.builtin.command: modprobe overlay
+
+    - name: modprobe br_netfilter
+      ansible.builtin.command: modprobe br_netfilter
+
+    - name: Create /etc/sysctl.d/k8s.conf
+      ansible.builtin.copy:
+        content: |
+          net.bridge.bridge-nf-call-iptables  = 1
+          net.bridge.bridge-nf-call-ip6tables = 1
+          net.ipv4.ip_forward                 = 1
+        dest: /etc/sysctl.d/k8s.conf
+        backup: yes
+        owner: root
+        group: root
+        mode: '0644'
+
+    - name: sysctl --system
+      ansible.builtin.command: sysctl --system
+
+    # Install kubeadm
+
+    - name: Install apt-transport-https ca-certificates
+      ansible.builtin.apt:
+        pkg:
+          - apt-transport-https
+          - ca-certificates
+          - curl
+
+    - name: Download the Google Cloud public signing key
+      ansible.builtin.get_url:
+        url: https://dl.k8s.io/apt/doc/apt-key.gpg
+        dest: /usr/share/keyrings/kubernetes-archive-keyring.gpg
+        owner: root
+        group: root
+        mode: '0644'
+
+    - name: Add the Kubernetes apt repository
+      ansible.builtin.apt_repository:
+        repo: 'deb [signed-by=/etc/apt/keyrings/kubernetes-archive-keyring.gpg] https://apt.kubernetes.io/ kubernetes-xenial main'
+        state: present
+        filename: kubernetes
+        update_cache: yes
+
+    - name: Install kubelet kubeadm kubectl
+      ansible.builtin.apt:
+        pkg:
+          - kubelet
+          - kubeadm
+          - kubectl
+
+    - name: Hold kubelet
+      dpkg_selections:
+        name: kubelet
+        selection: hold
+
+    - name: Hold kubeadm
+      dpkg_selections:
+        name: kubeadm
+        selection: hold
+
+    - name: Hold kubectl
+      dpkg_selections:
+        name: kubectl
+        selection: hold
+
+    # Download and install Flannel
+
+    - name: Download and install Flannel
+      ansible.builtin.get_url:
+        url: https://github.com/flannel-io/flannel/releases/download/v0.19.2/flanneld-arm64
+        dest: /usr/local/bin/flanneld
+        owner: root
+        group: root
+        mode: '0755'
+
+    - name: Create Flannel networks directory
+      ansible.builtin.file:
+        path: /var/lib/k8s/flannel/networks
+        state: directory
+        recurse: yes
+        owner: root
+        group: root
+        mode: '0755'
+
+    # reboot
+
+    - name: reboot
+      reboot:
