@@ -24,9 +24,10 @@ model User {
   saltAuth              String
   createAt              DateTime          @default(now())
   updateAt              DateTime          @updatedAt
-  
   token                 Token?
   product               Product[]
+  addrs                 Address[]
+  carts                 Cart[]
 }
 
 model Token {
@@ -41,28 +42,77 @@ model Token {
   user                  User              @relation(fields: [userId], references: [user_id])
 }
 
+model Address {
+  addr_id               Int               @id @default(autoincrement())
+  title                 String?
+  addr1                 String            @db.Text
+  addr2                 String?           @db.Text
+  city                  String
+  county                String
+  district              String
+  postcode              Int
+  region                String
+  createAt              DateTime          @default(now())
+  updateAt              DateTime          @updatedAt
+  userId                Int
+  user                  User              @relation(fields: [userId], references: [user_id])
+}
+
 model Category {
   cat_id                Int               @id @default(autoincrement())
   name                  String
   image                 String?
   description           String            @db.Text
   products              Product[]
+  createAt              DateTime          @default(now())
+  updateAt              DateTime          @updatedAt
 }
 
 model Product {
   product_id            Int               @id @default(autoincrement())
   name                  String
   description           String            @db.Text
+  price                 Int
   addBy                 Int               
   user                  User              @relation(fields: [addBy], references: [user_id])
   options               Option[]
   categoryId            Int
-  category              Category          @relation(fields: [categoryId], references: [cat_id])       
+  category              Category          @relation(fields: [categoryId], references: [cat_id])      
+  images                ProductImage[]
+  createAt              DateTime          @default(now())
+  updateAt              DateTime          @updatedAt
 }
 
 model Option {
-  color_id              Int               @id @default(autoincrement())
+  option_id             Int               @id @default(autoincrement())
   name                  String
+  addPrice              Int
   productId             Int
   product               Product           @relation(fields: [productId], references: [product_id])
+  image                 ProductImage?
+  cart                  Cart[]
+}
+
+model ProductImage {
+  pimg_id               Int               @id @default(autoincrement())
+  title                 String
+  image                 String
+  mainImg               Boolean           @default(false)
+  productId             Int
+  product               Product           @relation(fields: [productId], references: [product_id])
+  optionId              Int?              @unique
+  option                Option?           @relation(fields: [optionId], references: [option_id])
+  createAt              DateTime          @default(now())
+  updateAt              DateTime          @updatedAt
+}
+
+model Cart {
+  cart_id               Int               @id @default(autoincrement())
+  userId                Int?
+  user                  User?             @relation(fields: [userId], references: [user_id])
+  qty                   Int
+  optionId              Int
+  option                Option            @relation(fields: [optionId], references: [option_id])
+  createAt              DateTime          @default(now())
+  updateAt              DateTime          @updatedAt
 }
