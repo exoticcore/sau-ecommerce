@@ -1,9 +1,19 @@
+import 'dotenv/config';
 import express, { Application, Request, Response } from 'express';
 const app: Application = express();
 
 import rateLimiter from 'express-rate-limit';
 import cors from 'cors';
 import helmet from 'helmet';
+
+import { Client } from 'pg';
+const client = new Client({
+  host: process.env.PSQL_HOST,
+  port: 5432,
+  database: process.env.PSQL_DB,
+  user: process.env.PSQL_USER,
+  password: process.env.PSQL_PASS,
+});
 
 // app.set('trust proxy', true);
 
@@ -29,4 +39,14 @@ app.get('/api/v1', (req: Request, res: Response) => {
 
 const PORT: number = parseInt(<string>process.env.PORT) || 5000;
 
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+const connection = async () => {
+  try {
+    await client.connect();
+    console.log('connected to PostgreSQL');
+    app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+  } catch (err) {
+    console.log(err);
+  }
+};
+
+connection();
