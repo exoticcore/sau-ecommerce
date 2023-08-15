@@ -12,8 +12,7 @@ datasource db {
 
 model User {
   user_id               Int               @id @default(autoincrement())
-  fname                 String
-  lname                 String
+  fullName              String
   email                 String            @unique
   password              String
   image                 String?
@@ -21,9 +20,9 @@ model User {
   isVerified            Boolean           @default(false)
   passwordToken         String?
   passwordTokenExpDate  DateTime?
-  saltAuth              String
+  saltAuth              String?
   createAt              DateTime          @default(now())
-  updateAt              DateTime          @updatedAt
+  updateAt              DateTime?         @updatedAt
   token                 Token?
   product               Product[]
   addrs                 Address[]
@@ -116,3 +115,12 @@ model Cart {
   createAt              DateTime          @default(now())
   updateAt              DateTime          @updatedAt
 }
+
+model TestDB {
+  test_id               Int               @id @default(autoincrement())
+  name                  String
+  email                 String            @unique
+  createAt              DateTime          @default(now())
+  updateAt              DateTime          @updatedAt
+}
+

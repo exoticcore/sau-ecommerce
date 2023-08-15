@@ -14,7 +14,7 @@ pipeline {
 
     environment {
         LINE_NOTIFY_TOKEN = credentials('LINE_NOTIFY_TOKEN')
-        registry = "doublecore/node-hello"
+        registry = "doublecore/sau-auth-app"
         registryCredential = "dockerhub"
     }
 
