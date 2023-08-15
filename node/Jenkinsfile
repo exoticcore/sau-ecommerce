@@ -29,9 +29,6 @@ pipeline {
                 }
             }   
             post {
-                success {
-                    notifyLINE("succeed")
-                }
                 failure {
                     notifyLINE("failed")
                 }
@@ -45,9 +42,6 @@ pipeline {
                 }
             } 
             post {
-                success {
-                    notifyLINE("succeed")
-                }
                 failure {
                     notifyLINE("failed")
                 }
@@ -60,9 +54,6 @@ pipeline {
                 echo 'wait for integration state build, skipping...'
             }
             post {
-                success {
-                    notifyLINE("succeed")
-                }
                 failure {
                     notifyLINE("failed")
                 }
@@ -91,9 +82,6 @@ pipeline {
             }
 
             post {
-                success {
-                    notifyLINE("succeed")
-                }
                 failure {
                     notifyLINE("failed")
                 }
@@ -111,9 +99,6 @@ pipeline {
             }
 
             post {
-                success {
-                    notifyLINE("succeed")
-                }
                 failure {
                     notifyLINE("failed")
                 }
@@ -148,9 +133,6 @@ pipeline {
             }
 
             post {
-                success {
-                    notifyLINE("succeed")
-                }
                 failure {
                     notifyLINE("failed")
                 }

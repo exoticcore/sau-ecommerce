@@ -3,16 +3,31 @@ kind: Service
 metadata:
   name: auth-app-service
   labels:
-    app: auth-app
+    app: auth-app-service
 spec:
   ports:
-    - name: TCP
+    - name: tcp
       port: 5000
       protocol: TCP
       targetPort: 5000
   selector:
     app: auth-app
   type: ClusterIP
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: auth-app-lb
+spec:
+  ports:
+    - name: tcp
+      port: 5000
+      protocol: TCP
+      targetPort: 5000
+  selector:
+    app: auth-app
+  type: LoadBalancer
 
 ---
 apiVersion: apps/v1
@@ -30,7 +45,7 @@ spec:
         app: auth-app
     spec:
       containers:
-        - image: doublecore/sau-auth-app:latest
+        - image: doublecore/auth-app:v1
           name: auth-app
           ports:
             - containerPort: 5000
@@ -49,6 +64,6 @@ spec:
             - name: PSQL_SCHEMA
               value: 'public'
             - name: DATABASE_URL
-              value: 'postgresql://${PSQL_USER}:${PSQL_PASS}@${PSQL_HOST}:5432/${PSQL_DB}?schema=${PSQL_SCHEMA}'
+              value: 'postgresql://$(PSQL_USER):$(PSQL_PASS)@$(PSQL_HOST):5432/$(PSQL_DB)?schema=$(PSQL_SCHEMA)'
             - name: PORT
               value: '5000'

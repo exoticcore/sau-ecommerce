@@ -15,6 +15,21 @@ spec:
   type: ClusterIP
 
 ---
+apiVersion: v1
+kind: Service
+metadata:
+  name: postgres-db-lb
+spec:
+  ports:
+    - name: tcp
+      port: 5432
+      protocol: TCP
+      targetPort: 5432
+  selector:
+    app: auth-db
+  type: LoadBalancer
+
+---
 kind: PersistentVolume
 apiVersion: v1
 metadata:
