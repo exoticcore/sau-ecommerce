@@ -12,15 +12,17 @@ datasource db {
 
 model User {
   user_id               Int               @id @default(autoincrement())
-  fullName              String
   email                 String            @unique
   password              String
+  callingCode           Int?
+  phone                 Int?
+  role                  Role              @default(USER)
   image                 String?
   verificationToken     String?
   isVerified            Boolean           @default(false)
   passwordToken         String?
   passwordTokenExpDate  DateTime?
-  saltAuth              String?
+  saltAuth              String
   createAt              DateTime          @default(now())
   updateAt              DateTime?         @updatedAt
   token                 Token?
@@ -124,3 +126,8 @@ model TestDB {
   updateAt              DateTime          @updatedAt
 }
 
+enum Role {
+  OWNER
+  ADMIN
+  USER
+}
