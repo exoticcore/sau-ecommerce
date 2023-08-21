@@ -1,0 +1,143 @@
+// node pipeline
+def notifyLINE(status) {
+    def jobName = env.JOB_NAME
+    def stageName = env.STAGE_NAME
+    def buildNo = env.BUILD_NUMBER
+
+    def url = 'https://notify-api.line.me/api/notify'
+    def message = "${jobName}\n ${STAGE_NAME} #${buildNo} ${status} \r\n"
+    sh "curl ${url} -H 'Authorization: Bearer ${LINE_NOTIFY_TOKEN}' -F 'message=${message}'"
+}
+
+pipeline {
+    agent any
+
+    environment {
+        LINE_NOTIFY_TOKEN = credentials('LINE_NOTIFY_TOKEN')
+        registry = "doublecore/sau-auth-app"
+        registryCredential = "dockerhub"
+    }
+
+    tools {nodejs "Node18"}
+
+    stages {
+
+        stage('BUILD') {
+            steps {
+                dir('node') {
+                    sh 'npm install'
+                }
+            }   
+            post {
+                failure {
+                    notifyLINE("failed")
+                }
+            }
+        }
+
+        stage('UNIT TEST') {
+            steps {
+                dir('node') {
+                    echo 'skiping unit testing...'
+                }
+            } 
+            post {
+                failure {
+                    notifyLINE("failed")
+                }
+            }
+        }
+
+        
+        stage('INTEGRATION TEST') {
+            steps {
+                echo 'wait for integration state build, skipping...'
+            }
+            post {
+                failure {
+                    notifyLINE("failed")
+                }
+            }
+        }
+
+        stage('CODE ANALYSIS with SONARQUBE') {
+            environment {
+                scannerHome = tool 'mysonarscanner4'
+            }
+
+            steps {
+                withSonarQubeEnv('SonarQubeServer') {
+                    sh '''${scannerHome}/bin/sonar-scanner \
+                   -Dsonar.projectKey=nodejs \
+                   -Dsonar.projectName=node-app \
+                   -Dsonar.projectVersion=1.0 \
+                   -Dsonar.sources=./node/ \
+                   -Dsonar.language=js,ts \
+                   -Dsonar.sourceEncoding=UTF-8'''          
+                }
+
+                timeout(time: 10, unit: 'MINUTES') {
+                    waitForQualityGate abortPipeline: true
+                }
+            }
+
+            post {
+                failure {
+                    notifyLINE("failed")
+                }
+            }
+            
+        }
+
+        stage('Build App Image') {
+            steps {
+                dir('node') {
+                    script {
+                        dockerImage = docker.build registry + ":V$BUILD_NUMBER"
+                    }
+                }
+            }
+
+            post {
+                failure {
+                    notifyLINE("failed")
+                }
+            }
+        }
+
+        stage('Upload Images') {
+            steps {
+                dir('node') {
+                    script {
+                        docker.withRegistry('', registryCredential) {
+                            dockerImage.push("V$BUILD_NUMBER")
+                            dockerImage.push('latest')
+                        }
+                    }
+                }
+            }
+
+            post {
+                success {
+                    notifyLINE("succeed")
+                }
+                failure {
+                    notifyLINE("failed")
+                }
+            }
+        }
+
+        stage('Remove Unsed docker image') {
+            steps {
+                sh "docker rmi $registry:V$BUILD_NUMBER"
+            }
+
+            post {
+                failure {
+                    notifyLINE("failed")
+                }
+            }
+        }
+
+    }
+}
