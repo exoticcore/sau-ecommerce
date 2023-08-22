@@ -1,6 +1,7 @@
 import express from 'express';
-import { checkUser } from '../controllers/checkUserController';
+import * as RegisterController from '../controllers/registerController';
 
 export default (router: express.Router) => {
-  router.post('checkUser', checkUser);
+  router.post('/check', RegisterController.checkUser);
+  router.post('/register', RegisterController.register);
 };
