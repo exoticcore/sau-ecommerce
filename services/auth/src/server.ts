@@ -6,6 +6,8 @@ const app: Application = express();
 // sec dependencies
 import cors from 'cors';
 import helmet from 'helmet';
+// cookie-parser
+import cookieParser from 'cookie-parser';
 // routers
 import routes from './routes';
 // middleware
@@ -22,6 +24,7 @@ app.use(
 );
 
 app.use(express.json());
+app.use(cookieParser(process.env.COOKIE_SECRET));
 
 app.use('/api/v1/auth', routes());
 

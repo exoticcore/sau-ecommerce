@@ -27,11 +27,11 @@ export const register = async (req: Request, res: Response) => {
   const data = {
     enabled: true,
     attributes: {},
-    realmRoles: [],
     email: email,
     emailVerified: true,
     firstName: firstName,
     lastName: lastName,
+    realmRoles: ['user'],
     credentials: [
       {
         type: 'password',
@@ -51,16 +51,18 @@ export const register = async (req: Request, res: Response) => {
     { headers: { Authorization: `Bearer ${adminToken}` } }
   );
   if (isUser.data[0]?.email) {
-    throw new CustomError.BadRequest('Invalid Email');
+    throw new CustomError.UnauthenticatedError('Invalid Email');
   }
 
-  const resp = await axios.post(
-    `${process.env.KEY_HOST}/admin/realms/${process.env.REALMS}/users`,
-    data,
-    { headers: { Authorization: `Bearer ${adminToken}` } }
-  );
-
-  console.log(resp.data);
+  await axios
+    .post(
+      `${process.env.KEY_HOST}/admin/realms/${process.env.REALMS}/users`,
+      data,
+      { headers: { Authorization: `Bearer ${adminToken}` } }
+    )
+    .catch((err) => {
+      throw new CustomError.BadRequest(err);
+    });
 
   res.status(StatusCodes.CREATED).json({ msg: 'created new user' });
 };
