@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* Root constants */
+@import './constants.css';
+
+/* Component Design */
+@import './design/navbar.css';
+
+body {
+  background: var(--backgroundColor);
+  font-weight: 400;
+  line-height: 1;
+  color: var(--textColor);
+  margin: 0;
+  padding: 0;
+  font-family: Kanit, sans-serif;
+}
+
+button {
+  font-family: Kanit, sans-serif;
+}
+
+p {
+  margin: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  font-weight: 400;
+  line-height: 1;
+  text-transform: capitalize;
+  letter-spacing: var(--letterSpacing);
+}
+
+h1 {
+  font-size: 3.052rem;
+}
+
+h2 {
+  font-size: 2.441rem;
+}
+
+h3 {
+  font-size: 1.953rem;
+}
+
+h4 {
+  font-size: 1.563rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+::selection {
+  color: var(--primary-600);
+  background: rgba(38, 191, 163, 0.15);
+}
+
+/* ----- App Content ----- */
+.app {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  /* padding: 0 0.75rem; */
+  overflow-x: visible;
+  max-width: 32rem;
+}
+@media screen and (min-width: 1280px) {
+  .app {
+    max-width: 72rem;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .app {
+    max-width: 62rem;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .app {
+    max-width: 42rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .app {
+    max-width: 36rem;
+  }
+}

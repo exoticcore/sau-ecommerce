@@ -1,0 +1,57 @@
+.navbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.15rem 0;
+}
+
+.menu {
+  padding: 0.15rem;
+  cursor: pointer;
+}
+
+.menu.icon {
+  font-size: 1.75rem;
+}
+
+.cart {
+  position: relative;
+  /* padding: 0.15rem; */
+  cursor: pointer;
+}
+
+.cart.noti {
+  position: absolute;
+  right: 0;
+  font-size: 0.5rem;
+  border-radius: 50%;
+  background-color: var(--primary-800);
+  width: 0.75rem;
+  height: 0.75rem;
+  padding: 0.1rem;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+}
+
+.cart.icon {
+  margin: 0 0.25rem;
+  font-size: 1.75rem;
+  color: var(--black);
+  opacity: 100%;
+}
+
+@media screen and (min-width: 1280px) {
+}
+
+@media screen and (max-width: 1280px) {
+}
+
+@media screen and (max-width: 1080px) {
+}
+
+@media screen and (max-width: 768px) {
+}
