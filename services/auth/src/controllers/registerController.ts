@@ -8,7 +8,6 @@ export const checkUser = async (req: Request, res: Response) => {
   const { email } = req.body;
 
   const adminToken = await generateAccessToken();
-  console.log(adminToken);
   const user = await axios.get(
     `${process.env.KEY_HOST}/admin/realms/${process.env.REALMS}/users?email=${email}&exact=true`,
     { headers: { Authorization: `Bearer ${adminToken}` } }
