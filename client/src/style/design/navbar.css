@@ -1,9 +1,16 @@
 .navbar {
-  width: 100%;
+  position: fixed;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.15rem 0;
+  box-sizing: border-box;
+  top: 0;
+  padding: 0.15rem 0.2rem;
+  width: 100%;
+  background: var(--backgroundColor);
+  overflow-x: hidden;
+  transition: top 0.5s;
+  z-index: 1;
 }
 
 .menu {
@@ -17,20 +24,20 @@
 
 .cart {
   position: relative;
-  /* padding: 0.15rem; */
   cursor: pointer;
 }
 
 .cart.noti {
   position: absolute;
   right: 0;
+  top: 0;
   font-size: 0.5rem;
   border-radius: 50%;
   background-color: var(--primary-800);
   width: 0.75rem;
   height: 0.75rem;
   padding: 0.1rem;
-  z-index: 2;
+  z-index: 1;
   display: flex;
   align-items: center;
   justify-content: center;
