@@ -11,7 +11,7 @@ export const login = async (req: Request, res: Response) => {
   }
 
   let params = new URLSearchParams();
-  params.append('client_id', 'node-js');
+  params.append('client_id', <string>process.env.CLIENT);
   params.append('client_secret', <string>process.env.CLIENT_SECRET);
   params.append('grant_type', 'password');
   params.append('scope', 'openid roles');
