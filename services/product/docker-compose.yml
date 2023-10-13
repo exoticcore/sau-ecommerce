@@ -1,0 +1,15 @@
+services:
+  db-dev:
+    image: postgres:13
+    restart: always
+    ports:
+      - 5434:5432
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: secret
+      POSTGRES_DB: test
+
+  reddis-test:
+    image: reddis:7.2.1
+    ports:
+      - 6379:6379

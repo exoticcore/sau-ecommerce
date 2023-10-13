@@ -1,0 +1,73 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Category {
+  id                  Int         @id  @default(autoincrement())
+
+  title               String
+  description         String?      @db.Text()
+  image               String?
+
+  products            Product[]
+}
+
+model Product {
+  id                  Int               @id  @default(autoincrement())
+
+  name                String
+  description         String?           @db.Text()
+  price               Decimal           @db.Decimal(10, 2)
+
+  createdAt           DateTime          @default(now())
+  updatedAt           DateTime          @updatedAt
+
+  category_id         Int       
+  category            Category          @relation(fields: [category_id], references: [id])
+
+  created_by          String?
+  edited_by           String?
+
+  colors              Color[]
+  images              ImagesProduct[]
+}
+
+model ImagesProduct {
+  id                  Int               @id  @default(autoincrement())
+
+  title               String?
+  url                 String
+
+  createdAt           DateTime          @default(now())
+  updatedAt           DateTime          @updatedAt
+
+  product_id          Int
+  product             Product           @relation(fields: [product_id], references: [id])
+
+  colors              Color[]
+}
+
+model Color {
+  id                  Int               @id  @default(autoincrement())
+
+  title               String
+  description         String?           @db.Text()
+  add_price           Decimal?          @db.Decimal(10, 2)
+
+  created_by          String?
+  edited_by           String?
+
+  image_id            Int?
+  image               ImagesProduct?     @relation(fields: [image_id], references: [id])
+  
+  product_id          Int
+  product             Product           @relation(fields: [product_id], references: [id])
+}
