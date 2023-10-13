@@ -1,44 +1,48 @@
 import 'dotenv/config';
 import 'express-async-errors';
-// express
-import express, { Application, Request, Response } from 'express';
-const app: Application = express();
-// sec dependencies
-import cors from 'cors';
-import helmet from 'helmet';
-// cookie-parser
-import cookieParser from 'cookie-parser';
-// routers
-import routes from './routes';
-// middleware
-import notFound from './middleware/not-found';
-import errorHandlerMiddleware from './middleware/error-handler';
 
+import express from 'express';
+import cors from 'cors';
+import cookieParser from 'cookie-parser';
+
+import { redis } from './config/redis.js';
+
+import session from 'express-session';
+import { sessionCofig } from './config/session.js';
+
+import routes from './routes/index.js';
+import notFound from './middleware/not-found.js';
+import errorHandler from './middleware/error-handler.js';
+import helmet from 'helmet';
+
+const app: express.Application = express();
+
+app.set('trust proxy', true);
+app.use(cors());
 app.use(helmet());
-app.use(
-  cors({
-    origin: process.env.ORIGINAL || true,
-    credentials: true,
-    optionsSuccessStatus: 200,
-  })
-);
+app.use(cookieParser(<string>process.env.COOKIE_SECRET));
+app.use(session(sessionCofig));
 
 app.use(express.json());
-app.use(cookieParser(process.env.COOKIE_SECRET));
 
 app.use('/api/v1/auth', routes());
 
 app.use(notFound);
-app.use(errorHandlerMiddleware);
+app.use(errorHandler);
 
-const PORT: number = parseInt(<string>process.env.PORT) || 5000;
+const port: number = parseInt(<string>process.env.PORT) || 8888;
 
-const connection = async () => {
+const start = async () => {
   try {
-    app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+    redis.on('Error', (err: Error) => console.log('Redis Client Error', err));
+    await redis.connect();
+
+    app.listen(port, () =>
+      console.log(`Server running at http://localhost:${port}`)
+    );
   } catch (err) {
     console.log(err);
   }
 };
 
-connection();
+await start();

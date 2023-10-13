@@ -1,35 +1,24 @@
-# build image
-FROM node:18.15.0 as builder
-WORKDIR /usr/src/app
+# Build
+FROM node:18.7.1-alpine as builder
 
-COPY package*.json ./
-
-RUN npm ci
+WORKDIR /app
 
 COPY . .
 
-RUN npm run build
+RUN "yarn install"
+RUN "yarn build"
 
-# production
-FROM node:18.15.0
+# Production
+FROM node:18.7.1-alpine
 
-ENV NODE_ENV production
-USER node
+WORKDIR /app
 
-WORKDIR /usr/src/app
+COPY --from=builder ./app/dist ./dist
+COPY package.json .
+COPY yarn.lock .
 
-COPY package*.json ./
+RUN yarn install --production
 
-RUN npm ci --omit=dev
+EXPOSE 3000
 
-COPY --from=builder /usr/src/app/build ./build
-
-EXPOSE 5000
-CMD [ "node", "build/server.js"]
-
-
-# multiplatform
-# export DOCKER_CLI_EXPERIMENTAL=enabled
-# docker run --rm --privileged docker/binfmt:66f9012c56a8316f9244ffd7622d7c21c1f6f28d
-# docker buildx create --use --name multi-arch-builder
-# docker buildx build --platform linux/amd64,linux/arm64,linux/arm/v7 -t doublecore/auth-app:latest --push .
+CMD ["yarn", "start"]
