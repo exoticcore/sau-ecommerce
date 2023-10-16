@@ -34,7 +34,11 @@ export const userInfo = async (req: Request, res: Response) => {
   const { access_token } = req.query;
   if (!access_token) throw new UnauthorizeError('Invalid creadentials');
 
-  const user: any = await openIdClient.userinfo(<string>access_token);
+  const user: any = await openIdClient
+    .userinfo(<string>access_token)
+    .catch((err) => {
+      throw new UnauthorizeError('Invalid token credentials');
+    });
 
   const roles: string[] = user.realm_access.roles.filter((role: string) => {
     if (

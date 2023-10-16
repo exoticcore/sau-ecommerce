@@ -7,9 +7,9 @@ services:
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: secret
-      POSTGRES_DB: test
+      POSTGRES_DB: product_db
 
-  reddis-test:
-    image: reddis:7.2.1
+  reddis-dev:
+    image: redis:7.2.1
     ports:
-      - 6379:6379
+      - 6380:6379

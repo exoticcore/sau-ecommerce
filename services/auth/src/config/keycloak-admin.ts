@@ -11,14 +11,14 @@ const client = new keycloakIssuer.Client({
   token_endpoint_auth_method: 'none',
 });
 
-let revokeToken = await client.grant({
-  grant_type: 'password',
-  username: <string>process.env.KC_ADMIN_USER,
-  password: <string>process.env.KC_ADMIN_PWD,
-  scope: 'offline_access',
-});
+// let revokeToken = await client.grant({
+//   grant_type: 'password',
+//   username: <string>process.env.KC_ADMIN_USER,
+//   password: <string>process.env.KC_ADMIN_PWD,
+//   scope: 'offline_access',
+// });
 
-await client.revoke(<string>revokeToken.refresh_token);
+// await client.revoke(<string>revokeToken.refresh_token);
 
 let tokenSet = await client.grant({
   grant_type: 'password',
@@ -37,6 +37,12 @@ await kcAdmin.auth({
   clientId: 'admin-cli',
   refreshToken: tokenSet.refresh_token,
 });
+
+setInterval(async () => {
+  const refreshToken = tokenSet.refresh_token;
+  tokenSet = await client.refresh(<string>refreshToken);
+  kcAdmin.setAccessToken(<string>tokenSet.access_token);
+}, 60 * 1000);
 
 kcAdmin.setConfig({
   realmName: <string>process.env.KC_REALMS,

@@ -10,15 +10,25 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Category {
-  id                  Int         @id  @default(autoincrement())
 
-  title               String
-  description         String?      @db.Text()
+model Category {
+  id                  Int               @id  @default(autoincrement())
+
+  title               String            @unique 
+  description         String?           @db.Text()
   image               String?
+
+  created_at          DateTime          @default(now())
+  updated_at          DateTime          @updatedAt
+
+  created_by          String?
+  edited_by           String?
 
   products            Product[]
 }
+
+
+
 
 model Product {
   id                  Int               @id  @default(autoincrement())
@@ -27,8 +37,8 @@ model Product {
   description         String?           @db.Text()
   price               Decimal           @db.Decimal(10, 2)
 
-  createdAt           DateTime          @default(now())
-  updatedAt           DateTime          @updatedAt
+  created_at          DateTime          @default(now())
+  updated_at          DateTime          @updatedAt
 
   category_id         Int       
   category            Category          @relation(fields: [category_id], references: [id])
@@ -40,14 +50,16 @@ model Product {
   images              ImagesProduct[]
 }
 
+
+
 model ImagesProduct {
   id                  Int               @id  @default(autoincrement())
 
   title               String?
   url                 String
 
-  createdAt           DateTime          @default(now())
-  updatedAt           DateTime          @updatedAt
+  created_at           DateTime          @default(now())
+  updated_at           DateTime          @updatedAt
 
   product_id          Int
   product             Product           @relation(fields: [product_id], references: [id])
@@ -55,12 +67,16 @@ model ImagesProduct {
   colors              Color[]
 }
 
+
 model Color {
   id                  Int               @id  @default(autoincrement())
 
   title               String
   description         String?           @db.Text()
   add_price           Decimal?          @db.Decimal(10, 2)
+
+  created_at          DateTime          @default(now())
+  edited_at           DateTime          @updatedAt
 
   created_by          String?
   edited_by           String?
