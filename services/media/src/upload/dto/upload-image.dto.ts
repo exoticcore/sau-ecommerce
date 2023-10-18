@@ -9,3 +9,10 @@ export class UploadImageDTO {
   @IsBoolean()
   is_private?: boolean;
 }
+
+export type UploadMessageType = {
+  file: Express.Multer.File;
+  title: string;
+  bucket: string;
+  is_pravate: boolean;
+};

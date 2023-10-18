@@ -24,3 +24,13 @@ export const categoryIDValidate = z.object({
     }),
   }),
 });
+
+export type UploadInfo = {
+  catId: number;
+  title: string;
+  path?: string;
+};
+
+export type UploadFail = {
+  title: string;
+};

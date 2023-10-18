@@ -1,6 +1,6 @@
 import { CustomAPIError } from '../../error/custom-error.js';
 import Service from '../../utils/service.js';
-import { CategoryType } from './category-model.js';
+import { CategoryType, UploadInfo } from './category-model.js';
 
 export default class CategoryService extends Service {
   constructor() {
@@ -19,7 +19,7 @@ export default class CategoryService extends Service {
     return category;
   }
 
-  async getCategoryByName(title: string) {
+  async getCategoryByTitle(title: string) {
     const cacheCategory = await this.redisGet(`cat_name_${title}`);
     if (cacheCategory) return cacheCategory;
     const category = await this.prisma.category.findUnique({
@@ -86,6 +86,17 @@ export default class CategoryService extends Service {
     } catch (err) {
       throw new CustomAPIError();
     }
+  }
+
+  async categoryUpdateFromMessage(catInfo: UploadInfo) {
+    return await this.prisma.category.update({
+      where: {
+        id: catInfo.catId,
+      },
+      data: {
+        image: catInfo.path,
+      },
+    });
   }
 
   async deleteCategory(categoryId: number) {

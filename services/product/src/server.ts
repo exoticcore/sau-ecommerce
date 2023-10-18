@@ -9,6 +9,7 @@ import notFound from './middleware/not-found.js';
 import errorHandler from './middleware/error-handler.js';
 import prisma from './config/prisma.js';
 import redis from './config/redis.js';
+// import { run } from './api/kafka/consumer.js';
 
 const app: express.Application = express();
 
@@ -32,6 +33,7 @@ const start = async () => {
     await prisma.$connect();
     console.log('connected to database.');
     await prisma.$disconnect();
+    // await run();
     app.listen(port, () => {
       console.log(`server listening at http://localhost:${port}`);
     });
@@ -39,4 +41,5 @@ const start = async () => {
     console.log(err);
   }
 };
+
 await start();

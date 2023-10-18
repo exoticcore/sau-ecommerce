@@ -27,13 +27,19 @@ model Category {
   products            Product[]
 }
 
-
+model Brand {
+  id                 Int                @id   @default(autoincrement())
+  
+  name               String             @unique
+  image              String?
+  
+}
 
 
 model Product {
   id                  Int               @id  @default(autoincrement())
 
-  name                String
+  name                String            @unique
   description         String?           @db.Text()
   price               Decimal           @db.Decimal(10, 2)
 

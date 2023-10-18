@@ -38,11 +38,11 @@ await kcAdmin.auth({
   refreshToken: tokenSet.refresh_token,
 });
 
-setInterval(async () => {
-  const refreshToken = tokenSet.refresh_token;
-  tokenSet = await client.refresh(<string>refreshToken);
-  kcAdmin.setAccessToken(<string>tokenSet.access_token);
-}, 60 * 1000);
+// setInterval(async () => {
+//   const refreshToken = tokenSet.refresh_token;
+//   tokenSet = await client.refresh(<string>refreshToken);
+//   kcAdmin.setAccessToken(<string>tokenSet.access_token);
+// }, 60 * 1000);
 
 kcAdmin.setConfig({
   realmName: <string>process.env.KC_REALMS,

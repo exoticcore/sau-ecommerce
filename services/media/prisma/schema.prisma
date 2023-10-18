@@ -12,12 +12,13 @@ datasource db {
 }
 
 model Category {
-    id            String        @id @default(auto()) @map("_id") @db.ObjectId
-    title         String        @unique
-    file_name     String        @unique
-    content_type  String
-    local         String
-    is_private    Boolean?
+    id                  String        @id @default(auto()) @map("_id") @db.ObjectId
+    title               String        
+    file_name           String        @unique
+    content_type        String
+    path                String        @unique
+    created_at          DateTime      @default(now())
+    updated_at          DateTime      @updatedAt
 }
 
 model Image {
