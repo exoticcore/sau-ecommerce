@@ -6,14 +6,14 @@ import { ClientsModule, Transport } from '@nestjs/microservices';
   imports: [
     ClientsModule.register([
       {
-        name: 'UPLOAD_SERVICE',
+        name: 'MEDIA_SERVICE',
         transport: Transport.KAFKA,
         options: {
           client: {
             brokers: [process.env.KAFKA_HOST],
           },
           consumer: {
-            groupId: 'upload-consumer',
+            groupId: 'media-consumer',
           },
         },
       },

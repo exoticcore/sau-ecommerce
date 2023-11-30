@@ -19,7 +19,7 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-app.use('/api/v1/products', routes());
+app.use('/api/v1/', routes());
 
 app.use(notFound);
 app.use(errorHandler);

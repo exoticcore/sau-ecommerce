@@ -1,9 +1,11 @@
 import { Request, Response } from 'express';
 import { StatusCodes } from 'http-status-codes';
-import CategoryService from './category-service';
-import { CategoryType, UploadInfo } from './category-model';
-import { BadRequestError } from '../../error/bad-request';
-import { consumer, producer } from '../../config/kafka';
+import CategoryService from './category-service.js';
+import { CategoryType, UploadInfo } from './category-model.js';
+import { BadRequestError } from '../../error/bad-request.js';
+import { consumer, producer } from '../../config/kafka.js';
+import { PutObjectRequest } from 'aws-sdk/clients/s3.js';
+import { extension } from 'mime-types';
 
 const categoryService = new CategoryService();
 
@@ -17,9 +19,11 @@ export const getAllCategories = async (req: Request, res: Response) => {
   return res.status(StatusCodes.OK).json(categories);
 };
 
+// Read Category by ID
 export const getCategoryByID = async (req: Request, res: Response) => {
   const { categoryId } = req.params;
   const catID = parseInt(categoryId);
+  if (catID) throw new BadRequestError('category id should be number');
 
   const category = await categoryService.getCategoryByID(catID);
   if (!category) throw new BadRequestError('category not found');
@@ -36,52 +40,119 @@ export const createCategory = async (req: Request, res: Response) => {
   const category = await categoryService.getCategoryByTitle(catInfo.title);
   if (category) throw new BadRequestError('title not available');
 
-  const created = await categoryService.createCategory(catInfo, <string>sub);
+  let params: PutObjectRequest | undefined | null;
+  let newFile: string | undefined | null;
 
   if (file) {
+    const type = extension(file.mimetype);
+    newFile = `${catInfo.title.replace(' ', '_')}.${type}`;
+    const path = `category/${newFile}`;
+    params = {
+      Bucket: <string>process.env.S3_BUCKET,
+      Key: path,
+      Body: file.buffer,
+      ContentType: file.mimetype,
+    };
+  }
+
+  const created = await categoryService.createCategory(
+    catInfo,
+    <string>sub,
+    newFile,
+    params
+  );
+
+  return res.status(StatusCodes.CREATED).json(created);
+};
+
+// Update new information into category that selected by ID
+export const updateCategory = async (req: Request, res: Response) => {
+  let catInfo: CategoryType | null = req.body;
+  const file = req.file;
+  const { categoryId } = req.params;
+  const { sub } = res.locals.user;
+
+  const catID = parseInt(categoryId);
+  if (!catID) throw new BadRequestError('category id should be number');
+
+  const isCategory = await categoryService.getCategoryByID(catID);
+  if (!isCategory)
+    throw new BadRequestError('not found specific id of category');
+
+  if (catInfo?.title) {
+    const nameCheck = await categoryService.getCategoryByTitle(catInfo.title);
+    if (nameCheck && nameCheck.id !== catID)
+      throw new BadRequestError('category name not available');
+  }
+
+  let params: PutObjectRequest | undefined;
+  let newFile: string | undefined;
+
+  if (file) {
+    const type = extension(file.mimetype);
+    newFile = `${
+      catInfo?.title.replace(' ', '_') || isCategory.title.replace(' ', '_')
+    }.${type}`;
+    const path = `category/${newFile}`;
+    params = {
+      Bucket: <string>process.env.S3_BUCKET,
+      Key: path,
+      Body: file.buffer,
+      ContentType: file.mimetype,
+    };
+  }
+
+  const updatedCategory = await categoryService.updateCategory(
+    catID,
+    catInfo,
+    <string>sub,
+    newFile,
+    params
+  );
+
+  res.status(StatusCodes.OK).json(updatedCategory);
+};
+
+// Delete Category By ID params from database
+export const deleteCategory = async (req: Request, res: Response) => {
+  const { categoryId } = req.params;
+
+  const catID = parseInt(categoryId);
+  if (!catID) throw new BadRequestError('category id should be nubmer');
+
+  const isCategory = await categoryService.getCategoryByID(catID);
+
+  if (!isCategory)
+    throw new BadRequestError('not fould specific id of category');
+
+  const deletedCategory = await categoryService.deleteCategory(
+    parseInt(categoryId)
+  );
+
+  if (deletedCategory.image) {
     await producer.connect();
 
     producer.send({
-      topic: 'media.upload.image.category',
+      topic: 'media.delete.image.category',
       messages: [
         {
           value: JSON.stringify({
-            file,
-            title: catInfo.title,
-            catId: created.id,
+            catId: deletedCategory.id,
           }),
-          key: 'image',
-          partition: 0,
+          key: 'delete_category_image',
         },
       ],
     });
-
-    await producer.disconnect();
-    // const formData = new FormData();
-    // let buffer = Buffer.from(file.buffer);
-    // let arraybuffer = Uint8Array.from(buffer).buffer;
-    // let blob = new Blob([arraybuffer, 'original'], { type: file.mimetype });
-    // // console.log(arraybuffer);
-    // formData.append('picture', blob);
-    // formData.append('title', req.body.title);
-
-    // media = await axios
-    //   .post(
-    //     'http://localhost:3002/api/v1/media/upload/image/category',
-    //     formData,
-    //     {
-    //       headers: {
-    //         Authorization: 'Bearer ',
-    //         'Content-Type': 'multipart/form-data',
-    //       },
-    //     }
-    //   )
-    //   .catch((err) => {
-    //     throw new CustomAPIError();
-    //   });
   }
 
-  return res.status(StatusCodes.CREATED).json(created);
+  return res
+    .status(StatusCodes.OK)
+    .json({ message: `deleted category: '${deletedCategory.title}'` });
+};
+
+export const deleteAllCategory = async (req: Request, res: Response) => {
+  const deleted = await categoryService.deleteAllCategories();
+  return res.status(StatusCodes.OK).json(deleted);
 };
 
 // Consumer message from media.upload.image.category at Partition 1: Success, Partition 2: Failed
@@ -119,66 +190,6 @@ const createCategoryConsumer = async () => {
       }
     },
   });
-};
-
-export const updateCategory = async (req: Request, res: Response) => {
-  const catInfo: CategoryType = req.body;
-  const { categoryId } = req.params;
-  const { sub } = res.locals.user;
-
-  const catID = parseInt(categoryId);
-
-  const isCategory = await categoryService.getCategoryByID(catID);
-  if (!isCategory)
-    throw new BadRequestError('not found specific id of category');
-
-  const nameCheck = await categoryService.getCategoryByTitle(catInfo.title);
-  if (nameCheck && nameCheck.id !== catID)
-    throw new BadRequestError('category name not available');
-
-  const updatedCategory = await categoryService.updateCategory(
-    catID,
-    catInfo,
-    <string>sub
-  );
-
-  res.status(StatusCodes.OK).json(updatedCategory);
-};
-
-// Delete Category By ID params from database
-export const deleteCategory = async (req: Request, res: Response) => {
-  const { categoryId } = req.params;
-
-  const isCategory = await categoryService.getCategoryByID(
-    parseInt(categoryId)
-  );
-
-  if (!isCategory)
-    throw new BadRequestError('not fould specific id of category');
-
-  const deletedCategory = await categoryService.deleteCategory(
-    parseInt(categoryId)
-  );
-
-  if (deletedCategory.image) {
-    await producer.connect();
-
-    producer.send({
-      topic: 'media.delete.image.category',
-      messages: [
-        {
-          value: JSON.stringify({
-            catId: deletedCategory.id,
-          }),
-          key: 'delete_category_image',
-        },
-      ],
-    });
-  }
-
-  return res
-    .status(StatusCodes.OK)
-    .json({ message: `deleted category: '${deletedCategory.title}'` });
 };
 
 await createCategoryConsumer();

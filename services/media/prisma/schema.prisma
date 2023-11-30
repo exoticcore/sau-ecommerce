@@ -21,13 +21,25 @@ model Category {
     updated_at          DateTime      @updatedAt
 }
 
+model Brand {
+  id                    String        @id @default(auto()) @map("_id") @db.ObjectId
+  title                 String
+  file_name             String        @unique
+  content_type          String
+  path                  String        @unique
+  created_at            DateTime      @default(now())
+  updated_at            DateTime      @updatedAt
+}
+
 model Image {
     id                  String        @id @default(auto()) @map("_id") @db.ObjectId
     title               String        
     file_name           String        
     content_type        String
     path                String        @unique
+
+    is_private          Boolean?      @default(false)
+
     created_at          DateTime      @default(now())
     updated_at          DateTime      @updatedAt
-    is_private          Boolean?
 }

@@ -11,7 +11,9 @@ const errorHandler: ErrorRequestHandler = (
     statusCode: err.status || 500,
     msg: err.message || 'Internal server error.',
   };
-  return res.status(customError.statusCode).json({ message: customError.msg });
+  return res
+    .status(customError.statusCode)
+    .json({ statusCode: customError.statusCode, message: customError.msg });
 };
 
 export default errorHandler;

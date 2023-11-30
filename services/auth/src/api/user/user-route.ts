@@ -7,7 +7,7 @@ import { registerValidate } from './user-model.js';
 const router = express.Router();
 
 router.post('/register', validator(registerValidate), UserController.register);
-router.get('/info', authorization(null), UserController.userInfo);
+router.get('/profile', authorization(null), UserController.userInfo);
 router.patch('/edit');
 
 export default router;

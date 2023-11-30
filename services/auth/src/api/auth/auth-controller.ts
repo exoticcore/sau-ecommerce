@@ -17,7 +17,7 @@ export const emailLogin = async (req: Request, res: Response) => {
   const userInfo = await authService.getUserByEmail(loginForm.email);
 
   if (!userInfo || !userInfo[0])
-    throw new BadRequestError('please check your email or password');
+    throw new BadRequestError('invalid email or password');
 
   const verifiedEmail = userInfo[0].emailVerified;
   if (!verifiedEmail) throw new UnauthorizeError('please verify your email');
@@ -27,17 +27,18 @@ export const emailLogin = async (req: Request, res: Response) => {
 
   const token = await authService.loginEmail(loginForm);
 
-  if (!loginForm.remember_me) req.session.refresh_token = token.refresh_token;
-
-  const encryptedToken = encryptData(<string>token.refresh_token);
-
-  if (loginForm.remember_me)
+  if (loginForm.remember_me) {
     res.cookie('token', token.refresh_token, {
       signed: true,
       httpOnly: true,
       secure: true,
       expires: new Date(Date.now() + 60 * 24 * 60 * 60 * 1000), // 2 months
     });
+  } else {
+    req.session.refresh_token = token.refresh_token;
+  }
+
+  const encryptedToken = encryptData(<string>token.refresh_token);
 
   return res.status(StatusCodes.OK).json({ token: encryptedToken });
 };

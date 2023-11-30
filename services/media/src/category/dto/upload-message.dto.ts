@@ -1,5 +1,19 @@
 export type UploadMessageType = {
-  file: Express.Multer.File;
   title: string;
-  is_pravate: boolean;
+  path: string;
+  file: string;
+  mimetype: string;
+};
+
+export type UpdateCategoryType = {
+  oldPath: string;
+  title: string;
+  file: string;
+  path: string;
+  mimetype: string;
+};
+
+export type DeleteCategoryType = {
+  title: string;
+  path: string;
 };

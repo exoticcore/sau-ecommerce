@@ -18,7 +18,12 @@ import helmet from 'helmet';
 const app: express.Application = express();
 
 app.set('trust proxy', true);
-app.use(cors());
+app.use(
+  cors({
+    credentials: true,
+    origin: true,
+  })
+);
 app.use(helmet());
 app.use(cookieParser(<string>process.env.COOKIE_SECRET));
 app.use(session(sessionCofig));

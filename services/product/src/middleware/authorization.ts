@@ -1,5 +1,5 @@
 import { NextFunction, Request, Response } from 'express';
-import { UnauthoriseError } from '../error/unauthorize-error';
+import { UnauthoriseError } from '../error/unauthorize-error.js';
 import axios from 'axios';
 
 export default (roles: string[]) => {
@@ -9,14 +9,15 @@ export default (roles: string[]) => {
 
     if (!authHeader) throw new UnauthoriseError('Invalid credentials');
 
-    const { data } = await axios.get(
-      'http://localhost:3000/api/v1/auth/user/info',
-      {
+    const { data } = await axios
+      .get('http://localhost:3000/api/v1/auth/user/info', {
         headers: {
           Authorization: authHeader,
         },
-      }
-    );
+      })
+      .catch((err) => {
+        throw new UnauthoriseError(`${err.message}`);
+      });
     data.roles.filter((userRole: string) => {
       roles.filter((role) => {
         if (userRole === role) verified = true;

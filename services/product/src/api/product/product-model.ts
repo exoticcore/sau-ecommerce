@@ -1,8 +1,16 @@
 export type CreateProductType = {
   name: string;
-  description: string;
+  description?: string;
   price: number;
-  category_id: number;
+  subcat_id: number[];
+  colors?: ColorType[];
+};
+
+type ColorType = {
+  title: string;
+  description?: string;
+  add_price?: number;
+  image_name?: string;
 };
 
 export type CreateImagesProduct = {

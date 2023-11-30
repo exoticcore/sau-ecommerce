@@ -1,5 +1,4 @@
 import { SessionOptions } from 'express-session';
-import { redis } from './redis';
 
 export const sessionCofig: SessionOptions = {
   secret: 'mysecretnaja',

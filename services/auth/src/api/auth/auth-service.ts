@@ -23,7 +23,7 @@ export default class AuthService extends Service {
         }`,
       })
       .catch((err) => {
-        throw new UnauthorizeError('Invalid user credentials');
+        throw new UnauthorizeError('invalid email or password');
       });
 
     return tokenSet;

@@ -3,6 +3,7 @@ import { AssignerProtocol, Kafka, PartitionAssigner } from 'kafkajs';
 const kafka = new Kafka({
   brokers: ['localhost:9092'],
   clientId: 'product-producer',
+  logLevel: 0,
 });
 
 export const producer = kafka.producer();
