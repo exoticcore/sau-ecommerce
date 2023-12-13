@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { Routes, Route, useLocation, useNavigate } from 'react-router-dom';
 
 const AuthLazy = React.lazy(() => import('./components/AuthApp'));
@@ -14,7 +14,7 @@ const App = (): React.ReactNode => {
   const [isLogin, setIsLogin] = useState<boolean>(false);
   const navigate = useNavigate();
 
-  useEffect(() => {
+  useMemo(() => {
     async function getAccess() {
       try {
         const resp = await axios.get(
@@ -28,13 +28,14 @@ const App = (): React.ReactNode => {
         if (!token) {
           navigate('/auth/signin');
         }
-        localStorage.setItem('access_token', token);
       } catch (err) {
         navigate('/auth/signin');
       }
     }
+
     getAccess();
-  }, []);
+  }, [isLogin]);
+
   return (
     <Routes>
       <Route path="/auth/*" element={<AuthLazy />} />

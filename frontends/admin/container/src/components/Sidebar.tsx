@@ -52,7 +52,7 @@ function Sidebar() {
     <SidebarStyle className={active ? '--active' : ''}>
       <div className="logo">
         <div className="logo__image">
-          <span>X shop</span>
+          <span>Nask</span>
         </div>
         {active ? (
           <TbLayoutSidebarLeftCollapseFilled
