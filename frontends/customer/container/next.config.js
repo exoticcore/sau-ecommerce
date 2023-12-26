@@ -21,6 +21,9 @@ const nextConfig = {
     i18n: {
         locales: ['en', 'th'],
         defaultLocale: 'en'
+    },
+    experimental: {
+        outputStandalone: true,
     }
 };
 

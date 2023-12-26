@@ -1,65 +1,86 @@
 import { Request, Response } from 'express';
-import { StatusCodes } from 'http-status-codes';
-import UserService from './user-service.js';
-import {
-  BadRequestError,
-  CustomAPIError,
-  UnauthorizeError,
-} from '../../error/index.js';
-import sendVerify from '../../utils/nodemailer.js';
-import openIdClient from '../../config/openid-client';
-import { RegisterUserType, UserInfo } from './user-model.js';
+import UserService from './user-service';
+import { SignupUserDTO } from './user-dto';
+import argon from 'argon2';
+import { AccessPayload } from '../../utils/jwt-token';
 
-// Create the user
-export const register = async (req: Request, res: Response) => {
-  const regisForm: RegisterUserType = req.body;
+const userService = new UserService();
 
-  const userService = new UserService();
+export default class UserController {
+  async signupUser(req: Request, res: Response) {
+    const userInfo: SignupUserDTO = req.body;
+    const accessToken: AccessPayload = res.locals.accessToken;
 
-  const users = await userService.getUserByEmail(regisForm.email);
+    console.log(accessToken);
 
-  if (users?.[0]) throw new BadRequestError('email not available.');
+    try {
+      const user = await userService.getUserByID(accessToken.id);
+      if (!user) {
+        return res.status(400).json({ message: 'bad request error' });
+      }
 
-  try {
-    const createdUser = await userService.createUser(regisForm);
-    await sendVerify(regisForm.email, createdUser.id);
-    res.status(StatusCodes.CREATED).json({ createdUser });
-  } catch (err) {
-    throw new CustomAPIError(`${err}`, StatusCodes.INTERNAL_SERVER_ERROR);
-  }
-};
-
-// User Info
-export const userInfo = async (req: Request, res: Response) => {
-  const { access_token } = req.query;
-  if (!access_token) throw new UnauthorizeError('Invalid creadentials');
-
-  const user: any = await openIdClient
-    .userinfo(<string>access_token)
-    .catch((err) => {
-      throw new UnauthorizeError('Invalid token credentials');
-    });
-
-  const roles: string[] = user.realm_access.roles.filter((role: string) => {
-    if (
-      role !== 'default-roles-nodejs' &&
-      role !== 'offline_access' &&
-      role !== 'uma_authorization'
-    ) {
-      return role;
+      await userService.addInfo(user.email, userInfo);
+      return res.status(200).json({ message: 'user info has been added' });
+    } catch (err) {
+      if (err instanceof Error) {
+        console.log(err.message);
+      }
+      res.status(500).json({ message: 'internal server error' });
     }
-  });
+  }
 
-  const userInfo: UserInfo = {
-    sub: user.sub,
-    email_verified: user.email_verified,
-    roles: roles,
-    name: user.name,
-    preferred_username: user.preferred_username,
-    given_name: user.given_name,
-    family_name: user.family_name,
-    email: user.email,
-  };
+  async setPassword(req: Request, res: Response) {
+    const { password } = req.body;
+    const accessToken: AccessPayload = res.locals.accessToken;
 
-  return res.status(StatusCodes.OK).json(userInfo);
-};
+    try {
+      const user = await userService.getUserByID(accessToken.id);
+      if (!user || user.password) {
+        return res.status(400).json({ message: 'bad request error' });
+      }
+      const hashed = await argon.hash(password);
+      await userService.setPassword(user.email, hashed);
+
+      return res.status(200).json({ message: 'set password successfuly' });
+    } catch (err) {
+      if (err instanceof Error) {
+        console.log(err);
+      }
+
+      return res.status(500).json({ message: 'internal server error' });
+    }
+  }
+
+  async getUserInfo(req: Request, res: Response) {
+    const accessToken: AccessPayload = res.locals.accessToken;
+
+    try {
+      const user = await userService.getUserByID(accessToken.id);
+      if (!user) {
+        return res.status(404).json({ message: 'user not found' });
+      }
+
+      if (!user.givenName) {
+        return res
+          .status(204)
+          .json({ message: 'please privide user information' });
+      }
+
+      return res.status(200).json({
+        email: user.email,
+        given_name: user.givenName,
+        first_name: user.firstName,
+        last_name: user.lastName,
+        picture: user.picture,
+      });
+    } catch (err) {
+      if (err instanceof Error) {
+        console.log(err.message);
+      }
+
+      return res.status(500).json({ message: 'internal server error' });
+    }
+  }
+
+  async updateUserInfo(req: Request, res: Response) {}
+}

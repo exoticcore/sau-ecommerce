@@ -16,5 +16,8 @@ declare module 'express-session' {
   export interface SessionData {
     refresh_token: string;
     access_token: string;
+    passport: any;
+    user: any;
+    signup_method: string;
   }
 }

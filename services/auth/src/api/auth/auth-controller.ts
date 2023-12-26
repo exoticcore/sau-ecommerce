@@ -1,90 +1,115 @@
 import { Request, Response } from 'express';
-import { StatusCodes } from 'http-status-codes';
-import { BadRequestError, UnauthorizeError } from '../../error/index.js';
-import { generators } from 'openid-client';
-import { redis } from '../../config/redis.js';
-import { LoginType } from './auth-model.js';
-import crypto from 'crypto';
-import AuthService from './auth-service.js';
-import { encryptData } from '../../utils/encrypt.js';
+import AuthService from './auth-service';
+import JwtToken from '../../utils/jwt-token';
+import argon2 from 'argon2';
+import { RefreshPayload } from '../../utils/jwt-token';
+import { encryptData } from '../../utils/encrypt';
+import { JWT_REFRESH_EXPRIES } from '../../utils/constant';
 
-// Login with email & password
-export const emailLogin = async (req: Request, res: Response) => {
-  const loginForm: LoginType = req.body;
+const authService = new AuthService();
+const jwtToken = new JwtToken();
 
-  const authService = new AuthService();
+export default class AuthController {
+  constructor() {}
 
-  const userInfo = await authService.getUserByEmail(loginForm.email);
+  async login(req: Request, res: Response) {
+    const { email, password, remember } = req.body;
 
-  if (!userInfo || !userInfo[0])
-    throw new BadRequestError('invalid email or password');
+    try {
+      const user = await authService.checkEmail(email);
+      if (!user || !user?.password) {
+        return res.status(401).json({ message: 'invalid email or password' });
+      }
 
-  const verifiedEmail = userInfo[0].emailVerified;
-  if (!verifiedEmail) throw new UnauthorizeError('please verify your email');
+      const matchPwd = await argon2.verify(user.password, password);
+      if (!matchPwd) {
+        return res.status(401).json({ message: 'invalid email or password' });
+      }
 
-  const enabled = userInfo[0].enabled;
-  if (!enabled) throw new UnauthorizeError('user not enabled');
+      if (!user.isVerified) {
+        return res.status(401).json({ message: 'please verify your email' });
+      }
 
-  const token = await authService.loginEmail(loginForm);
+      const payload: RefreshPayload = {
+        id: user.id,
+        email: user.email,
+      };
 
-  if (loginForm.remember_me) {
-    res.cookie('token', token.refresh_token, {
-      signed: true,
-      httpOnly: true,
-      secure: true,
-      expires: new Date(Date.now() + 60 * 24 * 60 * 60 * 1000), // 2 months
-    });
-  } else {
-    req.session.refresh_token = token.refresh_token;
+      const refreshToken = await jwtToken.generateRefreshToken(req, payload);
+      if (remember) {
+        return res.cookie('token', refreshToken.refreshToken, {
+          signed: true,
+          httpOnly: true,
+          secure: true,
+          expires: new Date(
+            Date.now() +
+              (<number>JWT_REFRESH_EXPRIES || 14 * 24 * 60 * 60 * 1000)
+          ), // 2 weeks
+        });
+      } else {
+        req.session.refresh_token = refreshToken.refreshToken;
+      }
+
+      res.cookie('uuid', refreshToken.deviceId, {
+        signed: true,
+        httpOnly: true,
+        secure: true,
+        expires: new Date(Date.now() + 10 * 365 * 24 * 60 * 60 * 1000), // 10 years
+      });
+
+      const encryptedToken = encryptData(refreshToken.refreshToken);
+      return res.status(200).json({ token: encryptedToken });
+    } catch (err) {
+      if (err instanceof Error) {
+        console.log(err.message);
+      }
+      return res.status(500).json({ message: 'internal server error' });
+    }
   }
 
-  const encryptedToken = encryptData(<string>token.refresh_token);
+  async googleCb(req: Request, res: Response) {
+    const user: any = req.user;
+    const info: any = req.authInfo;
+    console.log(info.test);
 
-  return res.status(StatusCodes.OK).json({ token: encryptedToken });
-};
+    if (!user) {
+      return res.status(400).json({ message: 'bad request error' });
+    }
 
-// SignIn with Google Identity Provider
-export const google = async (req: Request, res: Response) => {
-  const code_verifier = generators.codeVerifier();
-  const code_challenge = generators.codeChallenge(code_verifier);
+    try {
+      const isUser = await authService.checkEmail(user.emails[0].value);
+      if (!isUser) {
+        var newUser = await authService.createUser({
+          email: user.emails[0].value,
+          firstName: user.givenName,
+          lastName: user.familyName,
+          provider: ['google'],
+        });
+      }
 
-  const key = crypto.randomBytes(16).toString('hex');
-  await redis.set(key, code_verifier);
+      if (!newUser) {
+        return res.status(400).json({ message: 'bad request error' });
+      }
 
-  const authService = new AuthService();
-  const url = await authService.googleUrl(code_challenge, key);
+      const payload: RefreshPayload = {
+        id: isUser?.id || newUser.id,
+        email: user.emails[0].value,
+      };
 
-  return res.redirect(url);
-};
-
-// Call back from Identities Provider
-export const callback = async (req: Request, res: Response) => {
-  const { state } = req.query;
-
-  if (!state) throw new BadRequestError('State not found');
-
-  const code_verifier = await redis.get(<string>state);
-  if (!code_verifier) throw new BadRequestError('Code verifier not found');
-
-  const userInfo = await new AuthService().callbackAuth(
-    req,
-    code_verifier,
-    <string>state
-  );
-
-  req.session.refresh_token = userInfo.refresh_token;
-  return res.status(StatusCodes.OK).json({ token: userInfo.refresh_token });
-};
-
-// Logout
-export const logout = async (req: Request, res: Response) => {
-  const token = req.signedCookies.token || req.session.refresh_token;
-  await new AuthService().logout(token);
-  req.session.cookie.expires = new Date(Date.now());
-  res.cookie('token', '', {
-    signed: true,
-    httpOnly: true,
-    expires: new Date(Date.now()),
-  });
-  return res.status(StatusCodes.OK).json({ message: 'Logged out' });
-};
+      const refreshToken = await jwtToken.generateRefreshToken(req, payload);
+      req.session.refresh_token = refreshToken.refreshToken;
+      res.cookie('uuid', refreshToken.deviceId, {
+        signed: true,
+        httpOnly: true,
+        secure: true,
+        expires: new Date(Date.now() + 10 * 365 * 24 * 60 * 60 * 1000), // 10 years
+      });
+      return res.redirect('http://localhost:10000');
+    } catch (err) {
+      if (err instanceof Error) {
+        console.log(err.message);
+      }
+      return res.status(500).json({ message: 'internal server error' });
+    }
+  }
+}

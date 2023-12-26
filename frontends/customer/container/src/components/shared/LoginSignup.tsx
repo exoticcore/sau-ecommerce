@@ -46,10 +46,14 @@ export default function LoginSignup() {
             <FaFacebook />
             <p>Continue with Facebook</p>
           </div>
-          <div className="social-login google">
+          <Link
+            href="http://localhost:3000/api/v1/auth/google"
+            passHref
+            className="social-login google"
+          >
             <FcGoogle />
             <p>Continue with Google</p>
-          </div>
+          </Link>
           <span>
             <Link href="/about/policy">Term of Use</Link> and{' '}
             <Link href="/about/policy">Privacy Policy</Link>

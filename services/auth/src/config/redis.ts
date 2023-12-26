@@ -1,4 +1,4 @@
-import { createClient } from '../../node_modules/redis/dist/index.js';
+import { createClient } from 'redis';
 
 export const redis = createClient({
   socket: {

@@ -1,10 +1,13 @@
 import express from 'express';
-import * as EmailController from './email-controller.js';
+import EmailController from './email-controller';
+import validator from '../../middleware/validator';
+import { VerifyEmailDTO } from './emal.dto';
+
+const email = new EmailController();
 
 const router = express.Router();
 
-router.get('/verify/:code', EmailController.emailVerify);
-router.post('/reverify', EmailController.resendVerifyEmail);
-router.post('/forget');
+router.post('/validate', email.validateEmail);
+router.get('/verify', email.verifyEmail);
 
 export default router;

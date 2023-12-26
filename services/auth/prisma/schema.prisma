@@ -11,12 +11,74 @@ datasource db {
 }
 
 model User {
-  session_id        String      @id
-  user_id           String
-  device_id         String      
-  created_at        DateTime    @default(now())
-  last_activity     DateTime    @updatedAt
-  session_data      Json
-  is_active         Boolean
-  expires_at        DateTime
+  id                String      @id @default(uuid())
+
+  email             String      @unique
+  password          String?
+  phone             String?
+
+  givenName         String?
+  firstName         String?
+  lastName          String?
+  
+  picture           String?
+  addresses         Address[]
+
+  role              UserRole[] 
+
+  isVerified        Boolean     @default(false)
+  locale            String?
+  token             Token[]
+
+  provider          String[]
+
+  createdAt         DateTime    @default(now())
+  updatedAt         DateTime    @updatedAt
+}
+
+model UserRole {
+  id                Int         @id @default(autoincrement())
+
+  userId            String
+  user              User        @relation(fields: [userId] ,references: [id])
+
+  roleTitle         String
+  role              Role        @relation(fields: [roleTitle], references: [title])
+}
+
+model Role {
+  id                Int         @id @default(autoincrement())
+
+  title             String      @unique
+
+  users             UserRole[]
+}
+
+model Token {
+  id                String      @id @default(uuid())
+  refreshToken      String      @unique
+
+  userId            String
+  user              User        @relation(fields: [userId], references: [id])
+
+  deviceId          String      @unique
+  device            String?
+  timezone          String?
+  ip                String?
+
+  accessToken       String?     @unique
+
+  expriedAt         BigInt?
+  createdAt         DateTime    @default(now())
+  updatedAt         DateTime    @updatedAt
+}
+
+
+model Address {
+  id                String      @id @default(uuid())
+
+  contract          String
+
+  userId            String
+  user              User        @relation(fields: [userId], references: [id])
 }

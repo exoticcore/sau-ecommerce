@@ -1,26 +1,43 @@
-import { UnauthorizeError } from '../../error';
-import Service from '../../utils/service';
+import { PrismaClient } from '@prisma/client';
+import prisma from '../../config/prisma';
+import { redis } from '../../config/redis';
 
-export class TokenService extends Service {
+export default class TokenService {
+  private readonly prisma: PrismaClient;
+  private readonly redis: typeof redis;
+
   constructor() {
-    super();
+    this.prisma = prisma;
+    this.redis = redis;
   }
 
-  public async getAccessToken(refreshToken: string) {
-    try {
-      const tokenSet = await this.openId.refresh(refreshToken);
-      return tokenSet;
-    } catch (err) {
-      throw new UnauthorizeError('Invalid refresh token');
-    }
+  async getRefreshTokenByDeviceId(deviceId: string) {
+    return await this.prisma.token.findUnique({
+      where: {
+        deviceId,
+      },
+      include: {
+        user: {
+          include: {
+            role: {
+              include: {
+                role: true,
+              },
+            },
+          },
+        },
+      },
+    });
   }
 
-  public async introspectToken(accessToken: string) {
-    try {
-      const introspect = await this.openId.introspect(accessToken);
-      return introspect;
-    } catch (err) {
-      throw new UnauthorizeError('Invalid access token');
-    }
+  async createAccessToken(deviceId: string, accessToken: string) {
+    return await this.prisma.token.update({
+      data: {
+        accessToken,
+      },
+      where: {
+        deviceId,
+      },
+    });
   }
 }

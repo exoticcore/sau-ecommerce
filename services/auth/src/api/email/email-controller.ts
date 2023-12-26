@@ -1,50 +1,102 @@
 import { Request, Response } from 'express';
-import { redis } from '../../config/redis';
-import { BadRequestError, UnauthorizeError } from '../../error';
 import { EmailService } from './email-service';
-import { StatusCodes } from 'http-status-codes';
-import sendVerify from '../../utils/nodemailer.js';
+import { VERIFY_TIMEOUT } from '../../utils/constant';
+import sendVerify from '../../utils/nodemailer';
+import JwtToken from '../../utils/jwt-token';
+import { redis } from '../../config/redis';
+import { RefreshPayload } from '../../utils/jwt-token';
 
 const emailService = new EmailService();
+const jwtToken = new JwtToken();
 
-// Verify email from url link
-export const emailVerify = async (req: Request, res: Response) => {
-  const { code } = req.params;
+export default class EmailController {
+  async validateEmail(req: Request, res: Response) {
+    const { email } = req.body;
 
-  const verifyInfo = await redis.hGetAll(code);
-  if (!verifyInfo) throw new UnauthorizeError('unauthorised code');
+    try {
+      const isEmail = await emailService.checkEmail(email);
 
-  const expiresIn = parseInt(verifyInfo.expiresIn);
-  if (expiresIn < Date.now() || !verifyInfo.id)
-    throw new BadRequestError('verify code is expired');
+      // available to login
+      if (isEmail?.password && isEmail.isVerified) {
+        return res.status(200).json({ isVerified: true, email: isEmail.email });
+      }
 
-  await emailService.verifyEmail(verifyInfo.id);
+      // check count of sending email
+      const count = await redis.hGet(email, 'count');
+      if (count) {
+        if (parseInt(count) <= 0) {
+          return res
+            .status(400)
+            .json({ message: 'please contract our support' });
+        }
+        await redis.hSet(email, { count: parseInt(count) - 1 });
+      } else {
+        await redis.hSet(email, { count: 5 });
+      }
 
-  return res
-    .status(StatusCodes.ACCEPTED)
-    .json({ msg: 'your email has been verified 👏🏻' });
-};
+      await sendVerify(email);
+      const newCount = await redis.hGet(email, 'count');
+      return res.status(201).json({
+        isVerified: false,
+        timeout: VERIFY_TIMEOUT,
+        email,
+        count: parseInt(<string>newCount),
+      });
+    } catch (err) {
+      if (err instanceof Error) {
+        console.log(err);
+      }
+      return res.status(500).json({ message: 'internal server error' });
+    }
+  }
 
-// Resend email verify
-export const resendVerifyEmail = async (req: Request, res: Response) => {
-  const { email } = req.body;
+  async verifyEmail(req: Request, res: Response) {
+    const { key, email }: any = req.query;
 
-  const userInfo = await emailService.getUserByEmail(email);
-  if (!userInfo || !userInfo[0])
-    throw new BadRequestError('not found your email');
+    try {
+      const verifyKey: any = await redis.hGetAll(email);
+      console.log(verifyKey);
+      if (!verifyKey.key || key !== verifyKey.key || !verifyKey.timeout) {
+        return res.status(400).json({ message: 'bad request error' });
+      }
 
-  const verifiedEmail = userInfo[0].emailVerified;
-  if (verifiedEmail)
-    throw new BadRequestError('your email has been verifed already');
+      if (parseInt(verifyKey.timeout) < Date.now()) {
+        return res.status(400).json({ message: 'verify url has been expried' });
+      }
 
-  await sendVerify(email, <string>userInfo[0].id);
+      let isEmail = await emailService.checkEmail(email);
+      if (!isEmail?.email) {
+        isEmail = await emailService.verifyEmail(email);
+      }
 
-  return res
-    .status(StatusCodes.OK)
-    .json({ message: 'resend verify email successfully' });
-};
+      await redis.del(email);
 
-// Confirm url link from email to Reset password
-export const resetPassword = async (req: Request, res: Response) => {
-  return res.send('Reset password controller');
-};
+      let payload: RefreshPayload = {
+        id: isEmail.id,
+        email: isEmail.email,
+      };
+
+      const refreshToken = await jwtToken.generateRefreshToken(req, payload);
+
+      req.session.refresh_token = refreshToken.refreshToken;
+
+      res.cookie('uuid', refreshToken.deviceId, {
+        signed: true,
+        httpOnly: true,
+        secure: true,
+        expires: new Date(Date.now() + 10 * 365 * 24 * 60 * 60 * 1000), // 10 years
+      });
+
+      return res.status(201).json({
+        message: 'email has been verified',
+        email: email,
+        key: key,
+      });
+    } catch (err) {
+      if (err instanceof Error) {
+        console.log(err.message);
+      }
+      return res.status(500).json({ message: 'internal server error' });
+    }
+  }
+}

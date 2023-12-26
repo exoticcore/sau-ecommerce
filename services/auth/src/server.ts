@@ -1,53 +1,25 @@
-import 'dotenv/config';
-import 'express-async-errors';
+import app from './app';
+import prisma from './config/prisma';
+import { redis } from './config/redis';
+import rolesDefault from './config/roles-default';
 
-import express from 'express';
-import cors from 'cors';
-import cookieParser from 'cookie-parser';
-
-import { redis } from './config/redis.js';
-
-import session from 'express-session';
-import { sessionCofig } from './config/session.js';
-
-import routes from './routes/index.js';
-import notFound from './middleware/not-found.js';
-import errorHandler from './middleware/error-handler.js';
-import helmet from 'helmet';
-
-const app: express.Application = express();
-
-app.set('trust proxy', true);
-app.use(
-  cors({
-    credentials: true,
-    origin: true,
-  })
-);
-app.use(helmet());
-app.use(cookieParser(<string>process.env.COOKIE_SECRET));
-app.use(session(sessionCofig));
-
-app.use(express.json());
-
-app.use('/api/v1/auth', routes());
-
-app.use(notFound);
-app.use(errorHandler);
-
-const port: number = parseInt(<string>process.env.PORT) || 8888;
+const PORT = process.env.PORT || 3000;
 
 const start = async () => {
   try {
-    redis.on('Error', (err: Error) => console.log('Redis Client Error', err));
     await redis.connect();
-
-    app.listen(port, () =>
-      console.log(`Server running at http://localhost:${port}`)
-    );
+    console.log('connected to redis');
+    await prisma.$connect();
+    console.log('connected to database');
+    await rolesDefault();
+    console.log('created roles');
+    await prisma.$disconnect();
+    app.listen(PORT, () => console.log(`server is listening on port ${PORT}`));
   } catch (err) {
-    console.log(err);
+    if (err instanceof Error) {
+      console.log(err.message);
+    }
   }
 };
 
-await start();
+start();

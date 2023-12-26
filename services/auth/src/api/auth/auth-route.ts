@@ -1,14 +1,25 @@
 import express from 'express';
-import * as AuthController from './auth-controller.js';
-import authentication from '../../middleware/authentication.js';
-import validator from '../../middleware/validator.js';
-import { loginValidate } from './auth-model.js';
+import AuthController from './auth-controller';
+import passport from 'passport';
+import validator from '../../middleware/validator';
+import { LoginEmailDTO } from './auth-dto';
+
+const auth = new AuthController();
 
 const router = express.Router();
 
-router.post('/login', validator(loginValidate), AuthController.emailLogin);
-router.post('/google', AuthController.google);
-router.get('/callback', AuthController.callback);
-router.delete('/logout', authentication, AuthController.logout);
+router.post('/login', validator(LoginEmailDTO), auth.login);
+router.get(
+  '/google',
+  passport.authenticate('google', { scope: ['email', 'profile'] })
+);
+router.get(
+  '/google/callback',
+  passport.authenticate('google', {
+    failureRedirect: '/',
+    session: false,
+  }),
+  auth.googleCb
+);
 
 export default router;

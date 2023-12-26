@@ -1,8 +1,9 @@
-import { Request, Response } from 'express';
-import { StatusCodes } from '../../node_modules/http-status-codes/build/cjs/status-codes.js';
+import express, { NextFunction } from 'express';
 
-const notFound = (req: Request, res: Response) => {
-  res.status(StatusCodes.NOT_FOUND).json({ message: 'Route not found 😵' });
+const notFound = async (
+  req: express.Request,
+  res: express.Response,
+  next: NextFunction
+) => {
+  return res.status(404).json({ message: 'route not found.' });
 };
-
-export default notFound;

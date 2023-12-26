@@ -1,65 +1,67 @@
-import { Request } from 'express';
-import Service from '../../utils/service.js';
-import { LoginType } from './auth-model.js';
-import { UnauthorizeError } from '../../error/unauthorize.js';
-import { CustomAPIError } from '../../error/custom-api.js';
+import { PrismaClient } from '@prisma/client';
+import prisma from '../../config/prisma';
+import { redis } from '../../config/redis';
 
-export default class AuthService extends Service {
-  private callback: string;
+export interface CreateUser {
+  email: string;
+  hash?: string;
+  firstName?: string;
+  lastName?: string;
+  picture?: string;
+  provider?: string[];
+}
+
+export default class AuthService {
+  private readonly prisma: PrismaClient;
+  private readonly redis: typeof redis;
 
   constructor() {
-    super();
-    this.callback = 'http://localhost:3000/api/v1/auth/callback';
+    this.prisma = prisma;
+    this.redis = redis;
   }
 
-  public async loginEmail(body: LoginType) {
-    const tokenSet = await this.openId
-      .grant({
-        grant_type: 'password',
-        username: body.email,
-        password: body.password,
-        scope: `openid email profile ${
-          body.remember_me ? 'offline_access' : ''
-        }`,
-      })
-      .catch((err) => {
-        throw new UnauthorizeError('invalid email or password');
+  async getUserByEmail(email: string) {
+    try {
+      const user = await this.prisma.user.findUnique({
+        where: {
+          email,
+        },
       });
 
-    return tokenSet;
-  }
-
-  public async googleUrl(challengeCode: string, key: string): Promise<string> {
-    const url = this.openId.authorizationUrl({
-      scope: 'openid',
-      code_challenge: challengeCode,
-      code_challenge_method: 'S256',
-      kc_idp_hint: 'google',
-      state: key,
-      redirect_uri: this.callback,
-    });
-    return url;
-  }
-
-  public async callbackAuth(
-    req: Request,
-    code_verifier: string,
-    state: string
-  ) {
-    const params = this.openId.callbackParams(req);
-    const tokenSet = await this.openId.callback(this.callback, params, {
-      state,
-      code_verifier,
-    });
-    return tokenSet;
-  }
-
-  public async logout(token: string) {
-    try {
-      this.openId.endSessionUrl();
-      return await this.openId.revoke(token);
+      return user;
     } catch (err) {
-      throw new CustomAPIError('Internal server error');
+      console.error(err);
     }
+  }
+
+  async checkEmail(email: string) {
+    try {
+      const user = await this.prisma.user.findUnique({
+        where: {
+          email: email,
+        },
+      });
+
+      return user;
+    } catch (err) {
+      if (err instanceof Error) {
+        console.error('message: ', err.message);
+      }
+    }
+  }
+
+  async createUser(userInfo: CreateUser) {
+    try {
+      const newUser = await prisma.user.create({
+        data: {
+          email: userInfo.email,
+          firstName: userInfo.firstName,
+          lastName: userInfo.lastName || undefined,
+          picture: userInfo.picture || undefined,
+          provider: ['eiei'],
+        },
+      });
+      return newUser;
+    } catch (err) {}
   }
 }

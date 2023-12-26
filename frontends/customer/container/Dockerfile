@@ -1,8 +1,18 @@
-FROM node:16-alpine
-RUN mkdir -p /app
-WORKDIR /app
+FROM node:18-alpine as builder
+WORKDIR /my-space
+
+COPY package.json package-lock.json ./
+RUN npm ci
 COPY . .
-RUN npm install
 RUN npm run build
-EXPOSE 10000
-CMD ["npm", "start"]
+
+FROM node:18-alpine as runner
+WORKDIR /my-space
+COPY --from=builder /my-space/package.json .
+COPY --from=builder /my-space/package-lock.json .
+COPY --from=builder /my-space/next.config.js ./
+COPY --from=builder /my-space/public ./public
+COPY --from=builder /my-space/.next/standalone ./
+COPY --from=builder /my-space/.next/static ./.next/static
+EXPOSE 3000
+ENTRYPOINT ["npm", "start"]

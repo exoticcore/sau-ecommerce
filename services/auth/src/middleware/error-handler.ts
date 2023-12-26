@@ -1,17 +1,10 @@
-import { ErrorRequestHandler, NextFunction, Request, Response } from 'express';
-import { CustomAPIError } from '../error/index';
+import { NextFunction, Request, Response } from 'express';
 
-const errorHandler: ErrorRequestHandler = (
-  err: CustomAPIError,
+export default async (
+  err: Error,
   req: Request,
   res: Response,
   next: NextFunction
 ) => {
-  const customError = {
-    statusCode: err.status || 500,
-    msg: err.message || 'Internal server error.',
-  };
-  return res.status(customError.statusCode).json({ message: customError.msg });
+  return res.status(500).json({ message: err.message });
 };
-
-export default errorHandler;
