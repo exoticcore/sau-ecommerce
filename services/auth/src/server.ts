@@ -3,6 +3,8 @@ import prisma from './config/prisma';
 import { redis } from './config/redis';
 import rolesDefault from './config/roles-default';
 
+import './grpc';
+
 const PORT = process.env.PORT || 3000;
 
 const start = async () => {

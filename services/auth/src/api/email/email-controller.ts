@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
 import { EmailService } from './email-service';
-import { VERIFY_TIMEOUT } from '../../utils/constant';
+import { VERIFY_TIMEOUT } from '../../config/constant';
 import sendVerify from '../../utils/nodemailer';
 import JwtToken from '../../utils/jwt-token';
 import { redis } from '../../config/redis';

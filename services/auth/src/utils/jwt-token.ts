@@ -3,7 +3,7 @@ import {
   JWT_SECRET,
   JWT_REFRESH_EXPRIES,
   JWT_ACCESS_EXPRIES,
-} from '../utils/constant';
+} from '../config/constant';
 import prisma from '../config/prisma';
 import { Request } from 'express';
 import { PrismaClient, Token } from '@prisma/client';

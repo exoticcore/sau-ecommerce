@@ -4,7 +4,7 @@ import JwtToken from '../../utils/jwt-token';
 import argon2 from 'argon2';
 import { RefreshPayload } from '../../utils/jwt-token';
 import { encryptData } from '../../utils/encrypt';
-import { JWT_REFRESH_EXPRIES } from '../../utils/constant';
+import { JWT_REFRESH_EXPRIES } from '../../config/constant';
 
 const authService = new AuthService();
 const jwtToken = new JwtToken();
@@ -56,7 +56,6 @@ export default class AuthController {
         secure: true,
         expires: new Date(Date.now() + 10 * 365 * 24 * 60 * 60 * 1000), // 10 years
       });
-
       const encryptedToken = encryptData(refreshToken.refreshToken);
       return res.status(200).json({ token: encryptedToken });
     } catch (err) {

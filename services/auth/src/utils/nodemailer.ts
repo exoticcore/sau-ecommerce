@@ -1,7 +1,7 @@
 import nodemailer from 'nodemailer';
 import crypto from 'crypto';
 import { redis } from '../config/redis';
-import { VERIFY_TIMEOUT } from '../constant/index';
+import { VERIFY_TIMEOUT } from '../config/constant';
 
 const { SMTP_HOST, SMTP_SERVICE, SMTP_USER, SMTP_PWD } = process.env;
 
