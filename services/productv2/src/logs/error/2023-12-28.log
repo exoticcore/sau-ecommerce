@@ -1,0 +1,1527 @@
+2023-12-28 00:30:00 error: uncaughtException: listen EADDRINUSE: address already in use :::3000
+Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1751:16)
+    at listenInCluster (node:net:1799:12)
+    at Server.listen (node:net:1887:7)
+    at Function.listen (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/express/lib/application.js:635:24)
+    at App.listen (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/app.ts:32:14)
+    at Object.<anonymous> (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/server.ts:8:5)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module.m._compile (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1621:12)
+2023-12-28 00:30:22 error: uncaughtException: listen EADDRINUSE: address already in use :::3000
+Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1751:16)
+    at listenInCluster (node:net:1799:12)
+    at Server.listen (node:net:1887:7)
+    at Function.listen (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/express/lib/application.js:635:24)
+    at App.listen (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/app.ts:32:14)
+    at Object.<anonymous> (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/server.ts:8:5)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module.m._compile (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1621:12)
+2023-12-28 00:51:32 error: uncaughtException: _a.getMetadata is not a function
+TypeError: _a.getMetadata is not a function
+    at ContainerInstance.getServiceValue (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container-instance.class.ts:276:44)
+    at ContainerInstance.get (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container-instance.class.ts:54:36)
+    at Function.get (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container.class.ts:61:32)
+    at new BrandController (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.controller.ts:6:27)
+    at new BrandRoute (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.route.ts:8:18)
+    at Object.<anonymous> (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/server.ts:7:22)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module.m._compile (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1621:12)
+2023-12-28 00:51:42 error: uncaughtException: _a.getMetadata is not a function
+TypeError: _a.getMetadata is not a function
+    at ContainerInstance.getServiceValue (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container-instance.class.ts:276:44)
+    at ContainerInstance.get (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container-instance.class.ts:54:36)
+    at Function.get (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container.class.ts:61:32)
+    at new BrandController (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.controller.ts:6:27)
+    at new BrandRoute (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.route.ts:8:18)
+    at Object.<anonymous> (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/server.ts:7:22)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module.m._compile (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1621:12)
+2023-12-28 00:51:57 error: uncaughtException: _a.getMetadata is not a function
+TypeError: _a.getMetadata is not a function
+    at ContainerInstance.getServiceValue (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container-instance.class.ts:276:44)
+    at ContainerInstance.get (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container-instance.class.ts:54:36)
+    at Function.get (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container.class.ts:61:32)
+    at new BrandController (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.controller.ts:6:27)
+    at new BrandRoute (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.route.ts:8:18)
+    at Object.<anonymous> (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/server.ts:7:22)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module.m._compile (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1621:12)
+2023-12-28 00:52:04 error: uncaughtException: _a.getMetadata is not a function
+TypeError: _a.getMetadata is not a function
+    at ContainerInstance.getServiceValue (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container-instance.class.ts:276:44)
+    at ContainerInstance.get (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container-instance.class.ts:54:36)
+    at Function.get (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container.class.ts:61:32)
+    at new BrandController (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.controller.ts:6:27)
+    at new BrandRoute (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.route.ts:8:18)
+    at Object.<anonymous> (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/server.ts:7:22)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module.m._compile (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1621:12)
+2023-12-28 00:52:11 error: uncaughtException: _a.getMetadata is not a function
+TypeError: _a.getMetadata is not a function
+    at ContainerInstance.getServiceValue (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container-instance.class.ts:276:44)
+    at ContainerInstance.get (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container-instance.class.ts:54:36)
+    at Function.get (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container.class.ts:61:32)
+    at new BrandController (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.controller.ts:6:27)
+    at new BrandRoute (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.route.ts:8:18)
+    at Object.<anonymous> (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/server.ts:7:22)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module.m._compile (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1621:12)
+2023-12-28 00:52:32 error: uncaughtException: _a.getMetadata is not a function
+TypeError: _a.getMetadata is not a function
+    at ContainerInstance.getServiceValue (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container-instance.class.ts:276:44)
+    at ContainerInstance.get (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container-instance.class.ts:54:36)
+    at Function.get (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container.class.ts:61:32)
+    at new BrandController (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.controller.ts:6:27)
+    at new BrandRoute (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.route.ts:8:18)
+    at Object.<anonymous> (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/server.ts:7:22)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module.m._compile (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1621:12)
+2023-12-28 00:52:50 error: uncaughtException: _a.getMetadata is not a function
+TypeError: _a.getMetadata is not a function
+    at ContainerInstance.getServiceValue (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container-instance.class.ts:276:44)
+    at ContainerInstance.get (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container-instance.class.ts:54:36)
+    at Function.get (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container.class.ts:61:32)
+    at new BrandController (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.controller.ts:6:27)
+    at new BrandRoute (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.route.ts:8:18)
+    at Object.<anonymous> (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/server.ts:7:22)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module.m._compile (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1621:12)
+2023-12-28 00:52:52 error: uncaughtException: _a.getMetadata is not a function
+TypeError: _a.getMetadata is not a function
+    at ContainerInstance.getServiceValue (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container-instance.class.ts:276:44)
+    at ContainerInstance.get (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container-instance.class.ts:54:36)
+    at Function.get (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container.class.ts:61:32)
+    at new BrandController (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.controller.ts:6:27)
+    at new BrandRoute (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.route.ts:8:18)
+    at Object.<anonymous> (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/server.ts:7:22)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module.m._compile (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1621:12)
+2023-12-28 00:54:38 error: uncaughtException: _a.getMetadata is not a function
+TypeError: _a.getMetadata is not a function
+    at ContainerInstance.getServiceValue (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container-instance.class.ts:276:44)
+    at ContainerInstance.get (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container-instance.class.ts:54:36)
+    at Function.get (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container.class.ts:61:32)
+    at new BrandController (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.controller.ts:6:27)
+    at new BrandRoute (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.route.ts:8:18)
+    at Object.<anonymous> (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/server.ts:7:22)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module.m._compile (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1621:12)
+2023-12-28 00:55:30 error: uncaughtException: _a.getMetadata is not a function
+TypeError: _a.getMetadata is not a function
+    at ContainerInstance.getServiceValue (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container-instance.class.ts:276:44)
+    at ContainerInstance.get (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container-instance.class.ts:54:36)
+    at Function.get (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container.class.ts:61:32)
+    at new BrandController (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.controller.ts:6:27)
+    at new BrandRoute (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.route.ts:8:18)
+    at Object.<anonymous> (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/server.ts:7:22)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module.m._compile (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1621:12)
+2023-12-28 00:56:07 error: uncaughtException: _a.getMetadata is not a function
+TypeError: _a.getMetadata is not a function
+    at ContainerInstance.getServiceValue (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container-instance.class.ts:276:44)
+    at ContainerInstance.get (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container-instance.class.ts:54:36)
+    at Function.get (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container.class.ts:61:32)
+    at new BrandController (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.controller.ts:6:27)
+    at new BrandRoute (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.route.ts:8:18)
+    at Object.<anonymous> (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/server.ts:7:22)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module.m._compile (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1621:12)
+2023-12-28 00:56:46 error: uncaughtException: _a.getMetadata is not a function
+TypeError: _a.getMetadata is not a function
+    at ContainerInstance.getServiceValue (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container-instance.class.ts:276:44)
+    at ContainerInstance.get (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container-instance.class.ts:54:36)
+    at Function.get (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container.class.ts:61:32)
+    at new BrandController (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.controller.ts:6:27)
+    at new BrandRoute (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.route.ts:8:18)
+    at Object.<anonymous> (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/server.ts:7:22)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module.m._compile (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1621:12)
+2023-12-28 00:57:28 error: uncaughtException: _a.getMetadata is not a function
+TypeError: _a.getMetadata is not a function
+    at ContainerInstance.getServiceValue (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container-instance.class.ts:276:44)
+    at ContainerInstance.get (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container-instance.class.ts:54:36)
+    at Function.get (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container.class.ts:61:32)
+    at new BrandController (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.controller.ts:6:27)
+    at new BrandRoute (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.route.ts:8:18)
+    at Object.<anonymous> (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/server.ts:7:22)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module.m._compile (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1621:12)
+2023-12-28 00:58:43 error: uncaughtException: _a.getMetadata is not a function
+TypeError: _a.getMetadata is not a function
+    at ContainerInstance.getServiceValue (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container-instance.class.ts:276:44)
+    at ContainerInstance.get (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container-instance.class.ts:54:36)
+    at Function.get (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container.class.ts:61:32)
+    at new BrandController (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.controller.ts:6:27)
+    at new BrandRoute (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.route.ts:8:18)
+    at Object.<anonymous> (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/server.ts:7:22)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module.m._compile (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1621:12)
+2023-12-28 01:05:33 error: uncaughtException: _a.getMetadata is not a function
+TypeError: _a.getMetadata is not a function
+    at ContainerInstance.getServiceValue (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container-instance.class.ts:276:44)
+    at ContainerInstance.get (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container-instance.class.ts:54:36)
+    at Function.get (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container.class.ts:61:32)
+    at new BrandController (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.controller.ts:6:27)
+    at new BrandRoute (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.route.ts:8:18)
+    at Object.<anonymous> (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/server.ts:7:22)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module.m._compile (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1621:12)
+2023-12-28 01:07:31 error: uncaughtException: _a.getMetadata is not a function
+TypeError: _a.getMetadata is not a function
+    at ContainerInstance.getServiceValue (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container-instance.class.ts:276:44)
+    at ContainerInstance.get (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container-instance.class.ts:54:36)
+    at Function.get (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container.class.ts:61:32)
+    at new BrandController (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.controller.ts:6:27)
+    at new BrandRoute (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.route.ts:8:18)
+    at Object.<anonymous> (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/server.ts:7:22)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module.m._compile (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1621:12)
+2023-12-28 01:08:40 error: uncaughtException: _a.getMetadata is not a function
+TypeError: _a.getMetadata is not a function
+    at ContainerInstance.getServiceValue (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container-instance.class.ts:276:44)
+    at ContainerInstance.get (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container-instance.class.ts:54:36)
+    at Function.get (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container.class.ts:61:32)
+    at new BrandController (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.controller.ts:6:27)
+    at new BrandRoute (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.route.ts:8:18)
+    at Object.<anonymous> (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/server.ts:7:22)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module.m._compile (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1621:12)
+2023-12-28 01:09:36 error: uncaughtException: _a.getMetadata is not a function
+TypeError: _a.getMetadata is not a function
+    at ContainerInstance.getServiceValue (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container-instance.class.ts:276:44)
+    at ContainerInstance.get (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container-instance.class.ts:54:36)
+    at Function.get (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container.class.ts:61:32)
+    at new BrandController (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.controller.ts:6:27)
+    at new BrandRoute (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.route.ts:8:18)
+    at Object.<anonymous> (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/server.ts:7:22)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module.m._compile (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1621:12)
+2023-12-28 01:10:30 error: uncaughtException: brand_route_1.default is not a constructor
+TypeError: brand_route_1.default is not a constructor
+    at Object.<anonymous> (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/server.ts:7:22)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module.m._compile (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:960:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)
+    at phase4 (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/bin.ts:649:14)
+    at bootstrap (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/bin.ts:95:10)
+2023-12-28 01:10:33 error: uncaughtException: _a.getMetadata is not a function
+TypeError: _a.getMetadata is not a function
+    at ContainerInstance.getServiceValue (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container-instance.class.ts:276:44)
+    at ContainerInstance.get (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container-instance.class.ts:54:36)
+    at Function.get (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container.class.ts:61:32)
+    at new BrandController (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.controller.ts:6:27)
+    at new BrandRoute (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.route.ts:8:18)
+    at Object.<anonymous> (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/server.ts:7:22)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module.m._compile (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1621:12)
+2023-12-28 01:10:40 error: uncaughtException: brand_route_1.default is not a constructor
+TypeError: brand_route_1.default is not a constructor
+    at Object.<anonymous> (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/server.ts:7:22)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module.m._compile (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:960:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)
+    at phase4 (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/bin.ts:649:14)
+    at bootstrap (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/bin.ts:95:10)
+2023-12-28 01:11:12 error: uncaughtException: _a.getMetadata is not a function
+TypeError: _a.getMetadata is not a function
+    at ContainerInstance.getServiceValue (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container-instance.class.ts:276:44)
+    at ContainerInstance.get (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container-instance.class.ts:54:36)
+    at Function.get (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container.class.ts:61:32)
+    at new BrandController (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.controller.ts:6:27)
+    at new BrandRoute (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.route.ts:8:18)
+    at Object.<anonymous> (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/server.ts:7:22)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module.m._compile (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1621:12)
+2023-12-28 01:11:33 error: uncaughtException: _a.getMetadata is not a function
+TypeError: _a.getMetadata is not a function
+    at ContainerInstance.getServiceValue (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container-instance.class.ts:276:44)
+    at ContainerInstance.get (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container-instance.class.ts:54:36)
+    at Function.get (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container.class.ts:61:32)
+    at new BrandController (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.controller.ts:6:27)
+    at new BrandRoute (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.route.ts:8:18)
+    at Object.<anonymous> (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/server.ts:7:22)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module.m._compile (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1621:12)
+2023-12-28 01:12:24 error: uncaughtException: _a.getMetadata is not a function
+TypeError: _a.getMetadata is not a function
+    at ContainerInstance.getServiceValue (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container-instance.class.ts:276:44)
+    at ContainerInstance.get (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container-instance.class.ts:54:36)
+    at Function.get (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container.class.ts:61:32)
+    at new BrandController (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.controller.ts:6:27)
+    at new BrandRoute (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.route.ts:8:18)
+    at Object.<anonymous> (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/server.ts:7:22)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module.m._compile (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1621:12)
+2023-12-28 01:12:36 error: uncaughtException: _a.getMetadata is not a function
+TypeError: _a.getMetadata is not a function
+    at ContainerInstance.getServiceValue (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container-instance.class.ts:276:44)
+    at ContainerInstance.get (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container-instance.class.ts:54:36)
+    at Function.get (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container.class.ts:61:32)
+    at new BrandController (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.controller.ts:6:27)
+    at new BrandRoute (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.route.ts:8:18)
+    at Object.<anonymous> (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/server.ts:7:22)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module.m._compile (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1621:12)
+2023-12-28 01:12:43 error: uncaughtException: _a.getMetadata is not a function
+TypeError: _a.getMetadata is not a function
+    at ContainerInstance.getServiceValue (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container-instance.class.ts:276:44)
+    at ContainerInstance.get (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container-instance.class.ts:54:36)
+    at Function.get (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container.class.ts:61:32)
+    at new BrandController (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.controller.ts:6:27)
+    at new BrandRoute (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.route.ts:8:18)
+    at Object.<anonymous> (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/server.ts:7:22)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module.m._compile (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1621:12)
+2023-12-28 01:36:21 error: uncaughtException: _a.getMetadata is not a function
+TypeError: _a.getMetadata is not a function
+    at ContainerInstance.getServiceValue (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container-instance.class.ts:276:44)
+    at ContainerInstance.get (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container-instance.class.ts:54:36)
+    at Function.get (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container.class.ts:61:32)
+    at new BrandController (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.controller.ts:6:27)
+    at new BrandRoute (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.route.ts:8:18)
+    at Object.<anonymous> (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/server.ts:7:22)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module.m._compile (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1621:12)
+2023-12-28 01:36:29 error: uncaughtException: _a.getMetadata is not a function
+TypeError: _a.getMetadata is not a function
+    at ContainerInstance.getServiceValue (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container-instance.class.ts:276:44)
+    at ContainerInstance.get (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container-instance.class.ts:54:36)
+    at Function.get (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container.class.ts:61:32)
+    at new BrandController (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.controller.ts:6:27)
+    at new BrandRoute (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.route.ts:8:18)
+    at Object.<anonymous> (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/server.ts:7:22)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module.m._compile (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1621:12)
+2023-12-28 01:39:26 error: uncaughtException: _a.getMetadata is not a function
+TypeError: _a.getMetadata is not a function
+    at ContainerInstance.getServiceValue (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container-instance.class.ts:276:44)
+    at ContainerInstance.get (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container-instance.class.ts:54:36)
+    at Function.get (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container.class.ts:61:32)
+    at new BrandController (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.controller.ts:6:27)
+    at new BrandRoute (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.route.ts:8:18)
+    at Object.<anonymous> (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/server.ts:7:22)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module.m._compile (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1621:12)
+2023-12-28 01:39:34 error: uncaughtException: _a.getMetadata is not a function
+TypeError: _a.getMetadata is not a function
+    at ContainerInstance.getServiceValue (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container-instance.class.ts:276:44)
+    at ContainerInstance.get (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container-instance.class.ts:54:36)
+    at Function.get (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container.class.ts:61:32)
+    at new BrandController (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.controller.ts:6:27)
+    at new BrandRoute (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.route.ts:8:18)
+    at Object.<anonymous> (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/server.ts:7:22)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module.m._compile (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1621:12)
+2023-12-28 01:44:55 error: uncaughtException: _a.getMetadata is not a function
+TypeError: _a.getMetadata is not a function
+    at ContainerInstance.getServiceValue (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container-instance.class.ts:276:44)
+    at ContainerInstance.get (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container-instance.class.ts:54:36)
+    at Function.get (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container.class.ts:61:32)
+    at new BrandController (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.controller.ts:6:27)
+    at new BrandRoute (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.route.ts:8:18)
+    at Object.<anonymous> (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/server.ts:7:22)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module.m._compile (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1621:12)
+2023-12-28 01:47:59 error: uncaughtException: _a.getMetadata is not a function
+TypeError: _a.getMetadata is not a function
+    at ContainerInstance.getServiceValue (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container-instance.class.ts:276:44)
+    at ContainerInstance.get (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container-instance.class.ts:54:36)
+    at Function.get (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container.class.ts:61:32)
+    at new BrandController (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.controller.ts:6:27)
+    at new BrandRoute (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.route.ts:8:18)
+    at Object.<anonymous> (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/server.ts:7:22)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module.m._compile (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1621:12)
+2023-12-28 01:49:05 error: uncaughtException: _a.getMetadata is not a function
+TypeError: _a.getMetadata is not a function
+    at ContainerInstance.getServiceValue (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container-instance.class.ts:276:44)
+    at ContainerInstance.get (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container-instance.class.ts:54:36)
+    at Function.get (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container.class.ts:61:32)
+    at new BrandController (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.controller.ts:6:27)
+    at new BrandRoute (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.route.ts:8:18)
+    at Object.<anonymous> (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/server.ts:7:22)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module.m._compile (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1621:12)
+2023-12-28 01:50:01 error: uncaughtException: _a.getMetadata is not a function
+TypeError: _a.getMetadata is not a function
+    at ContainerInstance.getServiceValue (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container-instance.class.ts:276:44)
+    at ContainerInstance.get (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container-instance.class.ts:54:36)
+    at Function.get (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container.class.ts:61:32)
+    at new BrandController (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.controller.ts:6:27)
+    at new BrandRoute (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.route.ts:8:18)
+    at Object.<anonymous> (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/server.ts:7:22)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module.m._compile (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1621:12)
+2023-12-28 01:50:30 error: uncaughtException: _a.getMetadata is not a function
+TypeError: _a.getMetadata is not a function
+    at ContainerInstance.getServiceValue (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container-instance.class.ts:276:44)
+    at ContainerInstance.get (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container-instance.class.ts:54:36)
+    at Function.get (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container.class.ts:61:32)
+    at new BrandController (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.controller.ts:6:27)
+    at new BrandRoute (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.route.ts:8:18)
+    at Object.<anonymous> (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/server.ts:7:22)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module.m._compile (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1621:12)
+2023-12-28 01:52:56 error: uncaughtException: _a.getMetadata is not a function
+TypeError: _a.getMetadata is not a function
+    at ContainerInstance.getServiceValue (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container-instance.class.ts:276:44)
+    at ContainerInstance.get (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container-instance.class.ts:54:36)
+    at Function.get (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container.class.ts:61:32)
+    at new BrandController (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.controller.ts:6:27)
+    at new BrandRoute (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.route.ts:8:18)
+    at Object.<anonymous> (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/server.ts:7:22)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module.m._compile (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1621:12)
+2023-12-28 01:56:05 error: uncaughtException: _a.getMetadata is not a function
+TypeError: _a.getMetadata is not a function
+    at ContainerInstance.getServiceValue (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container-instance.class.ts:276:44)
+    at ContainerInstance.get (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container-instance.class.ts:54:36)
+    at Function.get (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container.class.ts:61:32)
+    at new BrandController (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.controller.ts:6:27)
+    at new BrandRoute (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.route.ts:8:18)
+    at Object.<anonymous> (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/server.ts:7:22)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module.m._compile (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1621:12)
+2023-12-28 01:56:53 error: uncaughtException: _a.getMetadata is not a function
+TypeError: _a.getMetadata is not a function
+    at ContainerInstance.getServiceValue (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container-instance.class.ts:276:44)
+    at ContainerInstance.get (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container-instance.class.ts:54:36)
+    at Function.get (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container.class.ts:61:32)
+    at new BrandController (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.controller.ts:6:27)
+    at new BrandRoute (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.route.ts:8:18)
+    at Object.<anonymous> (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/server.ts:7:22)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module.m._compile (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1621:12)
+2023-12-28 01:57:29 error: uncaughtException: _a.getMetadata is not a function
+TypeError: _a.getMetadata is not a function
+    at ContainerInstance.getServiceValue (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container-instance.class.ts:276:44)
+    at ContainerInstance.get (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container-instance.class.ts:54:36)
+    at Function.get (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container.class.ts:61:32)
+    at new BrandController (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.controller.ts:6:27)
+    at new BrandRoute (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.route.ts:8:18)
+    at Object.<anonymous> (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/server.ts:7:22)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module.m._compile (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1621:12)
+2023-12-28 01:58:15 error: uncaughtException: Class constructor BrandRoute cannot be invoked without 'new'
+TypeError: Class constructor BrandRoute cannot be invoked without 'new'
+    at Object.<anonymous> (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/server.ts:7:32)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module.m._compile (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:960:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)
+    at phase4 (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/bin.ts:649:14)
+    at bootstrap (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/bin.ts:95:10)
+2023-12-28 01:58:23 error: uncaughtException: _a.getMetadata is not a function
+TypeError: _a.getMetadata is not a function
+    at ContainerInstance.getServiceValue (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container-instance.class.ts:276:44)
+    at ContainerInstance.get (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container-instance.class.ts:54:36)
+    at Function.get (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container.class.ts:61:32)
+    at new BrandController (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.controller.ts:6:27)
+    at new BrandRoute (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.route.ts:8:18)
+    at Object.<anonymous> (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/server.ts:7:22)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module.m._compile (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1621:12)
+2023-12-28 02:02:18 error: uncaughtException: _a.getMetadata is not a function
+TypeError: _a.getMetadata is not a function
+    at ContainerInstance.getServiceValue (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container-instance.class.ts:276:44)
+    at ContainerInstance.get (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container-instance.class.ts:54:36)
+    at Function.get (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container.class.ts:61:32)
+    at new BrandController (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.controller.ts:6:27)
+    at new BrandRoute (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.route.ts:8:18)
+    at Object.<anonymous> (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/server.ts:7:22)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module.m._compile (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1621:12)
+2023-12-28 02:03:04 error: uncaughtException: _a.getMetadata is not a function
+TypeError: _a.getMetadata is not a function
+    at ContainerInstance.getServiceValue (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container-instance.class.ts:276:44)
+    at ContainerInstance.get (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container-instance.class.ts:54:36)
+    at Function.get (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container.class.ts:61:32)
+    at new BrandController (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.controller.ts:6:27)
+    at new BrandRoute (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.route.ts:8:18)
+    at Object.<anonymous> (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/server.ts:7:22)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module.m._compile (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1621:12)
+2023-12-28 02:03:17 error: uncaughtException: _a.getMetadata is not a function
+TypeError: _a.getMetadata is not a function
+    at ContainerInstance.getServiceValue (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container-instance.class.ts:276:44)
+    at ContainerInstance.get (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container-instance.class.ts:54:36)
+    at Function.get (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container.class.ts:61:32)
+    at new BrandController (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.controller.ts:6:27)
+    at new BrandRoute (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.route.ts:8:18)
+    at Object.<anonymous> (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/server.ts:7:22)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module.m._compile (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1621:12)
+2023-12-28 02:04:35 error: uncaughtException: _a.getMetadata is not a function
+TypeError: _a.getMetadata is not a function
+    at ContainerInstance.getServiceValue (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container-instance.class.ts:276:44)
+    at ContainerInstance.get (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container-instance.class.ts:54:36)
+    at Function.get (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container.class.ts:61:32)
+    at new BrandController (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.controller.ts:6:27)
+    at new BrandRoute (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.route.ts:8:18)
+    at Object.<anonymous> (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/server.ts:7:22)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module.m._compile (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1621:12)
+2023-12-28 02:07:44 error: uncaughtException: _a.getMetadata is not a function
+TypeError: _a.getMetadata is not a function
+    at ContainerInstance.getServiceValue (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container-instance.class.ts:276:44)
+    at ContainerInstance.get (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container-instance.class.ts:54:36)
+    at Function.get (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container.class.ts:61:32)
+    at new BrandController (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.controller.ts:6:27)
+    at new BrandRoute (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.route.ts:8:18)
+    at Object.<anonymous> (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/server.ts:7:22)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module.m._compile (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1621:12)
+2023-12-28 02:08:18 error: uncaughtException: _a.getMetadata is not a function
+TypeError: _a.getMetadata is not a function
+    at ContainerInstance.getServiceValue (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container-instance.class.ts:276:44)
+    at ContainerInstance.get (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container-instance.class.ts:54:36)
+    at Function.get (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container.class.ts:61:32)
+    at new BrandController (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.controller.ts:6:27)
+    at new BrandRoute (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.route.ts:8:19)
+    at Object.<anonymous> (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/server.ts:7:22)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module.m._compile (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1621:12)
+2023-12-28 02:11:38 error: uncaughtException: _a.getMetadata is not a function
+TypeError: _a.getMetadata is not a function
+    at ContainerInstance.getServiceValue (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container-instance.class.ts:276:44)
+    at ContainerInstance.get (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container-instance.class.ts:54:36)
+    at Function.get (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container.class.ts:61:32)
+    at new BrandController (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.controller.ts:6:27)
+    at new BrandRoute (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.route.ts:8:19)
+    at Object.<anonymous> (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/server.ts:7:22)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module.m._compile (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1621:12)
+2023-12-28 02:11:48 error: uncaughtException: Cannot read properties of undefined (reading 'getUsers')
+TypeError: Cannot read properties of undefined (reading 'getUsers')
+    at BrandRoute.initializeRoutes (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.route.ts:15:48)
+    at new BrandRoute (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.route.ts:11:10)
+    at Object.<anonymous> (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/server.ts:7:22)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module.m._compile (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:960:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)
+2023-12-28 02:12:55 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/api/brand/brand.route.ts[0m:[93m15[0m:[93m36[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m15[0m     this.router.get(`${this.path}` this.brand.getUsers);
+[7m  [0m [91m                                   ~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/api/brand/brand.route.ts[0m:[93m15[0m:[93m36[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m15[0m     this.router.get(`${this.path}` this.brand.getUsers);
+[7m  [0m [91m                                   ~~~~[0m
+
+    at createTSError (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:863:19)
+    at /Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1379:34
+    at Object.compile (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1458:13)
+    at Module.m._compile (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+2023-12-28 02:15:37 error: uncaughtException: _a.getMetadata is not a function
+TypeError: _a.getMetadata is not a function
+    at ContainerInstance.getServiceValue (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container-instance.class.ts:276:44)
+    at ContainerInstance.get (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container-instance.class.ts:54:36)
+    at Function.get (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container.class.ts:61:32)
+    at new BrandController (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.controller.ts:6:38)
+    at new BrandRoute (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.route.ts:8:19)
+    at Object.<anonymous> (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/server.ts:7:22)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module.m._compile (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1621:12)
+2023-12-28 02:15:52 error: uncaughtException: _a.getMetadata is not a function
+TypeError: _a.getMetadata is not a function
+    at ContainerInstance.getServiceValue (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container-instance.class.ts:276:44)
+    at ContainerInstance.get (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container-instance.class.ts:54:36)
+    at Function.get (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container.class.ts:61:32)
+    at new BrandController (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.controller.ts:6:38)
+    at new BrandRoute (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.route.ts:8:19)
+    at Object.<anonymous> (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/server.ts:7:22)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module.m._compile (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1621:12)
+2023-12-28 02:15:59 error: uncaughtException: _a.getMetadata is not a function
+TypeError: _a.getMetadata is not a function
+    at ContainerInstance.getServiceValue (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container-instance.class.ts:276:44)
+    at ContainerInstance.get (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container-instance.class.ts:54:36)
+    at Function.get (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container.class.ts:61:32)
+    at new BrandController (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.controller.ts:6:38)
+    at new BrandRoute (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.route.ts:8:19)
+    at Object.<anonymous> (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/server.ts:7:22)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module.m._compile (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1621:12)
+2023-12-28 02:16:47 error: uncaughtException: _a.getMetadata is not a function
+TypeError: _a.getMetadata is not a function
+    at ContainerInstance.getServiceValue (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container-instance.class.ts:276:44)
+    at ContainerInstance.get (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container-instance.class.ts:54:36)
+    at Function.get (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container.class.ts:61:32)
+    at new BrandController (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.controller.ts:6:38)
+    at new BrandRoute (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.route.ts:8:19)
+    at Object.<anonymous> (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/server.ts:7:22)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module.m._compile (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1621:12)
+2023-12-28 02:17:37 error: uncaughtException: _a.getMetadata is not a function
+TypeError: _a.getMetadata is not a function
+    at ContainerInstance.getServiceValue (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container-instance.class.ts:276:44)
+    at ContainerInstance.get (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container-instance.class.ts:54:36)
+    at Function.get (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container.class.ts:61:32)
+    at new BrandController (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.controller.ts:6:38)
+    at new BrandRoute (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.route.ts:8:19)
+    at Object.<anonymous> (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/server.ts:7:22)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module.m._compile (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1621:12)
+2023-12-28 02:18:53 error: [GET] /brand >> StatusCode:: 500, Message:: Cannot read properties of undefined (reading 'brand')
+2023-12-28 02:20:03 error: [GET] /brand >> StatusCode:: 500, Message:: Cannot read properties of undefined (reading 'brand')
+2023-12-28 02:22:39 error: [GET] /brand >> StatusCode:: 500, Message:: Cannot read properties of undefined (reading 'brand')
+2023-12-28 02:24:14 error: uncaughtException: brand_service_1.BrandService is not a constructor
+TypeError: brand_service_1.BrandService is not a constructor
+    at new BrandController (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.controller.ts:9:18)
+    at new BrandRoute (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.route.ts:8:19)
+    at Object.<anonymous> (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/server.ts:7:22)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module.m._compile (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:960:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)
+2023-12-28 02:25:08 error: uncaughtException: _a.getMetadata is not a function
+TypeError: _a.getMetadata is not a function
+    at ContainerInstance.getServiceValue (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container-instance.class.ts:276:44)
+    at ContainerInstance.get (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container-instance.class.ts:54:36)
+    at Function.get (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container.class.ts:61:32)
+    at new BrandController (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.controller.ts:6:38)
+    at new BrandRoute (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.route.ts:8:19)
+    at Object.<anonymous> (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/server.ts:7:22)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module.m._compile (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1621:12)
+2023-12-28 02:39:50 error: uncaughtException: Route.get() requires a callback function but got a [object Promise]
+Error: Route.get() requires a callback function but got a [object Promise]
+    at Route.<computed> [as get] (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/express/lib/router/route.js:211:15)
+    at Function.proto.<computed> [as get] (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/express/lib/router/index.js:521:19)
+    at BrandRoute.initializeRoutes (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.route.ts:19:17)
+    at new BrandRoute (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.route.ts:15:10)
+    at Object.<anonymous> (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/server.ts:7:22)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module.m._compile (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+2023-12-28 02:39:50 error: uncaughtException: next is not a function
+TypeError: next is not a function
+    at BrandController.getUsers (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.controller.ts:17:7)
+    at BrandRoute.initializeRoutes (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.route.ts:19:48)
+    at new BrandRoute (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.route.ts:15:10)
+    at Object.<anonymous> (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/server.ts:7:22)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module.m._compile (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:960:12)
+2023-12-28 02:41:56 error: [GET] /brand >> StatusCode:: 500, Message:: this.brand.printMessage is not a function
+2023-12-28 02:42:21 error: [GET] /brand >> StatusCode:: 500, Message:: Cannot read properties of undefined (reading 'brand')
+2023-12-28 02:44:10 error: [GET] /brand >> StatusCode:: 500, Message:: this.brand.printMessage is not a function
+2023-12-28 02:45:38 error: [GET] /brand >> StatusCode:: 500, Message:: Cannot read properties of undefined (reading 'brand')
+2023-12-28 02:46:52 error: [GET] /brand >> StatusCode:: 500, Message:: Cannot read properties of undefined (reading 'brand')
+2023-12-28 02:57:23 error: uncaughtException: _a.getMetadata is not a function
+TypeError: _a.getMetadata is not a function
+    at ContainerInstance.getServiceValue (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container-instance.class.ts:276:44)
+    at ContainerInstance.get (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container-instance.class.ts:54:36)
+    at Function.get (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/src/container.class.ts:61:32)
+    at new BrandController (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.controller.ts:7:28)
+    at new BrandRoute (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.route.ts:9:19)
+    at Object.<anonymous> (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/server.ts:7:22)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module.m._compile (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1621:12)
+2023-12-28 02:57:48 error: [GET] /brand >> StatusCode:: 500, Message:: this.brand.printMessage is not a function
+2023-12-28 02:58:03 error: [GET] /brand >> StatusCode:: 500, Message:: this.brand.printMessage is not a function
+2023-12-28 02:59:00 error: [GET] /brand >> StatusCode:: 500, Message:: this.brand.printMessage is not a function
+2023-12-28 02:59:45 error: [GET] /brand >> StatusCode:: 500, Message:: this.brand.printMessage is not a function
+2023-12-28 02:59:59 error: [GET] /brand >> StatusCode:: 500, Message:: this.brand.printMessage is not a function
+2023-12-28 03:00:17 error: [GET] /brand >> StatusCode:: 500, Message:: Cannot read properties of undefined (reading 'brand')
+2023-12-28 03:00:27 error: [GET] /brand >> StatusCode:: 500, Message:: Cannot read properties of undefined (reading 'brand')
+2023-12-28 03:01:54 error: [GET] /brand >> StatusCode:: 500, Message:: Cannot read properties of undefined (reading 'brand')
+2023-12-28 03:03:43 error: [GET] /brand >> StatusCode:: 500, Message:: Cannot read properties of undefined (reading 'printMessage')
+2023-12-28 03:04:38 error: [GET] /brand >> StatusCode:: 500, Message:: Cannot read properties of undefined (reading 'printMessage')
+2023-12-28 03:04:52 error: [GET] /brand >> StatusCode:: 500, Message:: Cannot read properties of undefined (reading 'brand')
+2023-12-28 03:07:30 error: uncaughtException: Cannot find module 'reflect-metadata'
+Require stack:
+- /Users/kreckkead/Works/sau-ecommerce/services/productv2/src/server.ts
+Error: Cannot find module 'reflect-metadata'
+Require stack:
+- /Users/kreckkead/Works/sau-ecommerce/services/productv2/src/server.ts
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:1077:15)
+    at Function.Module._resolveFilename.sharedData.moduleResolveFilenameHook.installedValue (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/@cspotcode/source-map-support/source-map-support.js:811:30)
+    at Function.Module._resolveFilename (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/tsconfig-paths/src/register.ts:115:36)
+    at Function.Module._load (node:internal/modules/cjs/loader:922:27)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:121:18)
+    at Object.<anonymous> (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/server.ts:2:1)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module.m._compile (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+2023-12-28 03:07:59 error: [GET] /brand >> StatusCode:: 500, Message:: Cannot read properties of undefined (reading 'brand')
+2023-12-28 03:08:10 error: [GET] /brand >> StatusCode:: 500, Message:: Cannot read properties of undefined (reading 'brand')
+2023-12-28 03:09:04 error: [GET] /brand >> StatusCode:: 500, Message:: Cannot read properties of undefined (reading 'brand')
+2023-12-28 04:43:29 error: uncaughtException: (conn=31, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+SequelizeAccessDeniedError: (conn=31, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+    at ConnectionManager.connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/mariadb/connection-manager.js:107:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ConnectionManager._connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:332:24)
+    at async /Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:250:32
+    at async ConnectionManager.getConnection (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:280:7)
+    at async /Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/sequelize.js:638:26
+    at async Sequelize.authenticate (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/sequelize.js:972:5)
+2023-12-28 04:43:54 error: uncaughtException: (conn=32, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+SequelizeAccessDeniedError: (conn=32, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+    at ConnectionManager.connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/mariadb/connection-manager.js:107:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ConnectionManager._connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:332:24)
+    at async /Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:250:32
+2023-12-28 04:43:54 error: uncaughtException: (conn=32, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+SequelizeAccessDeniedError: (conn=32, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+    at ConnectionManager.connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/mariadb/connection-manager.js:107:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ConnectionManager._connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:332:24)
+    at async /Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:250:32
+2023-12-28 04:44:53 error: uncaughtException: (conn=33, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+SequelizeAccessDeniedError: (conn=33, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+    at ConnectionManager.connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/mariadb/connection-manager.js:107:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ConnectionManager._connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:332:24)
+    at async /Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:250:32
+2023-12-28 04:44:53 error: uncaughtException: (conn=33, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+SequelizeAccessDeniedError: (conn=33, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+    at ConnectionManager.connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/mariadb/connection-manager.js:107:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ConnectionManager._connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:332:24)
+    at async /Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:250:32
+2023-12-28 04:45:26 error: uncaughtException: (conn=34, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+SequelizeAccessDeniedError: (conn=34, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+    at ConnectionManager.connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/mariadb/connection-manager.js:107:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ConnectionManager._connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:332:24)
+    at async /Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:250:32
+2023-12-28 04:45:26 error: uncaughtException: (conn=34, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+SequelizeAccessDeniedError: (conn=34, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+    at ConnectionManager.connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/mariadb/connection-manager.js:107:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ConnectionManager._connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:332:24)
+    at async /Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:250:32
+2023-12-28 04:45:41 error: uncaughtException: (conn=35, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+SequelizeAccessDeniedError: (conn=35, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+    at ConnectionManager.connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/mariadb/connection-manager.js:107:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ConnectionManager._connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:332:24)
+    at async /Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:250:32
+2023-12-28 04:45:41 error: uncaughtException: (conn=35, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+SequelizeAccessDeniedError: (conn=35, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+    at ConnectionManager.connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/mariadb/connection-manager.js:107:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ConnectionManager._connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:332:24)
+    at async /Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:250:32
+2023-12-28 04:46:19 error: uncaughtException: (conn=36, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+SequelizeAccessDeniedError: (conn=36, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+    at ConnectionManager.connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/mariadb/connection-manager.js:107:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ConnectionManager._connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:332:24)
+    at async /Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:250:32
+2023-12-28 04:46:19 error: uncaughtException: (conn=36, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+SequelizeAccessDeniedError: (conn=36, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+    at ConnectionManager.connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/mariadb/connection-manager.js:107:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ConnectionManager._connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:332:24)
+    at async /Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:250:32
+2023-12-28 04:46:38 error: uncaughtException: (conn=37, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+SequelizeAccessDeniedError: (conn=37, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+    at ConnectionManager.connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/mariadb/connection-manager.js:107:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ConnectionManager._connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:332:24)
+    at async /Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:250:32
+2023-12-28 04:46:52 error: uncaughtException: (conn=38, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+SequelizeAccessDeniedError: (conn=38, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+    at ConnectionManager.connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/mariadb/connection-manager.js:107:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ConnectionManager._connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:332:24)
+    at async /Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:250:32
+2023-12-28 04:47:01 error: (conn=39, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+2023-12-28 04:47:01 error: uncaughtException: (conn=39, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+SequelizeAccessDeniedError: (conn=39, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+    at ConnectionManager.connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/mariadb/connection-manager.js:107:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ConnectionManager._connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:332:24)
+    at async /Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:250:32
+2023-12-28 04:47:44 error: uncaughtException: (conn=40, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+SequelizeAccessDeniedError: (conn=40, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+    at ConnectionManager.connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/mariadb/connection-manager.js:107:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ConnectionManager._connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:332:24)
+    at async /Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:250:32
+    at async ConnectionManager.getConnection (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:280:7)
+    at async /Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/sequelize.js:638:26
+    at async Sequelize.authenticate (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/sequelize.js:972:5)
+2023-12-28 04:50:11 error: (conn=41, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+2023-12-28 04:50:11 error: uncaughtException: (conn=41, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+SequelizeAccessDeniedError: (conn=41, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+    at ConnectionManager.connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/mariadb/connection-manager.js:107:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ConnectionManager._connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:332:24)
+    at async /Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:250:32
+2023-12-28 04:50:19 error: (conn=42, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+2023-12-28 04:50:19 error: uncaughtException: (conn=42, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+SequelizeAccessDeniedError: (conn=42, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+    at ConnectionManager.connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/mariadb/connection-manager.js:107:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ConnectionManager._connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:332:24)
+    at async /Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:250:32
+2023-12-28 06:29:20 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/api/brand/brand.service.ts[0m:[93m8[0m:[93m3[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m8[0m   }
+[7m [0m [91m  ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/api/brand/brand.service.ts[0m:[93m8[0m:[93m3[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m8[0m   }
+[7m [0m [91m  ~[0m
+
+    at createTSError (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:863:19)
+    at /Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1379:34
+    at Object.compile (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1458:13)
+    at Module.m._compile (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+2023-12-28 06:29:20 error: uncaughtException: (conn=43, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+SequelizeAccessDeniedError: (conn=43, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+    at ConnectionManager.connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/mariadb/connection-manager.js:107:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ConnectionManager._connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:332:24)
+    at async /Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:250:32
+    at async ConnectionManager.getConnection (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:280:7)
+    at async /Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/sequelize.js:638:26
+    at async Sequelize.authenticate (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/sequelize.js:972:5)
+2023-12-28 06:30:18 error: (conn=44, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+2023-12-28 06:30:18 error: uncaughtException: (conn=44, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+SequelizeAccessDeniedError: (conn=44, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+    at ConnectionManager.connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/mariadb/connection-manager.js:107:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ConnectionManager._connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:332:24)
+    at async /Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:250:32
+2023-12-28 06:30:44 error: (conn=45, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+2023-12-28 06:30:44 error: uncaughtException: (conn=45, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+SequelizeAccessDeniedError: (conn=45, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+    at ConnectionManager.connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/mariadb/connection-manager.js:107:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ConnectionManager._connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:332:24)
+    at async /Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:250:32
+2023-12-28 06:31:15 error: (conn=46, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+2023-12-28 06:31:15 error: uncaughtException: (conn=46, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+SequelizeAccessDeniedError: (conn=46, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+    at ConnectionManager.connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/mariadb/connection-manager.js:107:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ConnectionManager._connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:332:24)
+    at async /Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:250:32
+2023-12-28 06:31:21 error: (conn=47, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+2023-12-28 06:31:21 error: uncaughtException: (conn=47, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+SequelizeAccessDeniedError: (conn=47, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+    at ConnectionManager.connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/mariadb/connection-manager.js:107:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ConnectionManager._connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:332:24)
+    at async /Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:250:32
+2023-12-28 06:33:12 error: (conn=48, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+2023-12-28 06:33:12 error: uncaughtException: (conn=48, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+SequelizeAccessDeniedError: (conn=48, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+    at ConnectionManager.connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/mariadb/connection-manager.js:107:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ConnectionManager._connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:332:24)
+    at async /Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:250:32
+2023-12-28 06:33:21 error: (conn=49, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+2023-12-28 06:33:21 error: uncaughtException: (conn=49, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+SequelizeAccessDeniedError: (conn=49, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+    at ConnectionManager.connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/mariadb/connection-manager.js:107:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ConnectionManager._connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:332:24)
+    at async /Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:250:32
+2023-12-28 06:34:04 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/api/brand/brand.controller.ts[0m:[93m10[0m:[93m38[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m10[0m       if (brands.length <= 0) return throw new HttpException(404, 'Brands not found')
+[7m  [0m [91m                                     ~~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/api/brand/brand.controller.ts[0m:[93m10[0m:[93m38[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m10[0m       if (brands.length <= 0) return throw new HttpException(404, 'Brands not found')
+[7m  [0m [91m                                     ~~~~~[0m
+
+    at createTSError (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:863:19)
+    at /Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1379:34
+    at Object.compile (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1458:13)
+    at Module.m._compile (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+2023-12-28 06:34:04 error: uncaughtException: (conn=50, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+SequelizeAccessDeniedError: (conn=50, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+    at ConnectionManager.connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/mariadb/connection-manager.js:107:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ConnectionManager._connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:332:24)
+    at async /Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:250:32
+    at async ConnectionManager.getConnection (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:280:7)
+    at async /Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/sequelize.js:638:26
+    at async Sequelize.authenticate (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/sequelize.js:972:5)
+2023-12-28 06:34:09 error: (conn=51, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+2023-12-28 06:34:09 error: uncaughtException: (conn=51, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+SequelizeAccessDeniedError: (conn=51, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+    at ConnectionManager.connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/mariadb/connection-manager.js:107:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ConnectionManager._connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:332:24)
+    at async /Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:250:32
+2023-12-28 06:34:15 error: (conn=52, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+2023-12-28 06:34:15 error: uncaughtException: (conn=52, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+SequelizeAccessDeniedError: (conn=52, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+    at ConnectionManager.connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/mariadb/connection-manager.js:107:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ConnectionManager._connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:332:24)
+    at async /Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:250:32
+2023-12-28 06:36:01 error: (conn=53, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+2023-12-28 06:36:01 error: uncaughtException: (conn=53, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+SequelizeAccessDeniedError: (conn=53, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+    at ConnectionManager.connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/mariadb/connection-manager.js:107:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ConnectionManager._connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:332:24)
+    at async /Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:250:32
+2023-12-28 06:36:14 error: (conn=54, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+2023-12-28 06:36:14 error: uncaughtException: (conn=54, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+SequelizeAccessDeniedError: (conn=54, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+    at ConnectionManager.connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/mariadb/connection-manager.js:107:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ConnectionManager._connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:332:24)
+    at async /Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:250:32
+2023-12-28 06:36:30 error: (conn=55, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+2023-12-28 06:36:30 error: uncaughtException: (conn=55, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+SequelizeAccessDeniedError: (conn=55, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+    at ConnectionManager.connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/mariadb/connection-manager.js:107:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ConnectionManager._connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:332:24)
+    at async /Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:250:32
+2023-12-28 06:36:44 error: (conn=56, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+2023-12-28 06:36:44 error: uncaughtException: (conn=56, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+SequelizeAccessDeniedError: (conn=56, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+    at ConnectionManager.connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/mariadb/connection-manager.js:107:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ConnectionManager._connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:332:24)
+    at async /Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:250:32
+2023-12-28 06:38:37 error: (conn=57, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+2023-12-28 06:38:37 error: uncaughtException: (conn=57, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+SequelizeAccessDeniedError: (conn=57, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+    at ConnectionManager.connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/mariadb/connection-manager.js:107:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ConnectionManager._connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:332:24)
+    at async /Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:250:32
+2023-12-28 06:38:44 error: (conn=58, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+2023-12-28 06:38:44 error: uncaughtException: (conn=58, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+SequelizeAccessDeniedError: (conn=58, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+    at ConnectionManager.connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/mariadb/connection-manager.js:107:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ConnectionManager._connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:332:24)
+    at async /Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:250:32
+2023-12-28 06:39:15 error: (conn=59, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+2023-12-28 06:39:15 error: uncaughtException: (conn=59, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+SequelizeAccessDeniedError: (conn=59, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+    at ConnectionManager.connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/mariadb/connection-manager.js:107:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ConnectionManager._connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:332:24)
+    at async /Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:250:32
+2023-12-28 06:40:19 error: (conn=60, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+2023-12-28 06:40:19 error: uncaughtException: (conn=60, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+SequelizeAccessDeniedError: (conn=60, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+    at ConnectionManager.connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/mariadb/connection-manager.js:107:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ConnectionManager._connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:332:24)
+    at async /Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:250:32
+2023-12-28 06:42:20 error: (conn=61, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+2023-12-28 06:42:20 error: uncaughtException: (conn=61, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+SequelizeAccessDeniedError: (conn=61, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+    at ConnectionManager.connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/mariadb/connection-manager.js:107:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ConnectionManager._connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:332:24)
+    at async /Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:250:32
+2023-12-28 06:45:25 error: (conn=62, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+2023-12-28 06:45:25 error: uncaughtException: (conn=62, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+SequelizeAccessDeniedError: (conn=62, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+    at ConnectionManager.connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/mariadb/connection-manager.js:107:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ConnectionManager._connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:332:24)
+    at async /Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:250:32
+2023-12-28 06:45:30 error: (conn=63, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+2023-12-28 06:45:30 error: uncaughtException: (conn=63, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+SequelizeAccessDeniedError: (conn=63, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+    at ConnectionManager.connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/mariadb/connection-manager.js:107:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ConnectionManager._connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:332:24)
+    at async /Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:250:32
+2023-12-28 06:45:45 error: (conn=64, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+2023-12-28 06:45:45 error: uncaughtException: (conn=64, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+SequelizeAccessDeniedError: (conn=64, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+    at ConnectionManager.connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/mariadb/connection-manager.js:107:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ConnectionManager._connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:332:24)
+    at async /Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:250:32
+2023-12-28 06:46:49 error: (conn=65, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+2023-12-28 06:46:49 error: uncaughtException: (conn=65, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+SequelizeAccessDeniedError: (conn=65, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+    at ConnectionManager.connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/mariadb/connection-manager.js:107:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ConnectionManager._connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:332:24)
+    at async /Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:250:32
+2023-12-28 06:48:24 error: (conn=66, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+2023-12-28 06:48:24 error: uncaughtException: (conn=66, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+SequelizeAccessDeniedError: (conn=66, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+    at ConnectionManager.connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/mariadb/connection-manager.js:107:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ConnectionManager._connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:332:24)
+    at async /Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:250:32
+2023-12-28 06:48:33 error: (conn=67, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+2023-12-28 06:48:33 error: uncaughtException: (conn=67, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+SequelizeAccessDeniedError: (conn=67, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+    at ConnectionManager.connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/mariadb/connection-manager.js:107:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ConnectionManager._connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:332:24)
+    at async /Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:250:32
+2023-12-28 06:49:18 error: (conn=68, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+2023-12-28 06:49:18 error: uncaughtException: (conn=68, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+SequelizeAccessDeniedError: (conn=68, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+    at ConnectionManager.connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/mariadb/connection-manager.js:107:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ConnectionManager._connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:332:24)
+    at async /Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:250:32
+2023-12-28 06:51:32 error: (conn=69, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+2023-12-28 06:51:32 error: uncaughtException: (conn=69, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+SequelizeAccessDeniedError: (conn=69, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+    at ConnectionManager.connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/mariadb/connection-manager.js:107:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ConnectionManager._connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:332:24)
+    at async /Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:250:32
+2023-12-28 06:52:27 error: (conn=70, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+2023-12-28 06:52:27 error: uncaughtException: (conn=70, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+SequelizeAccessDeniedError: (conn=70, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+    at ConnectionManager.connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/mariadb/connection-manager.js:107:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ConnectionManager._connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:332:24)
+    at async /Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:250:32
+2023-12-28 06:52:32 error: (conn=71, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+2023-12-28 06:52:32 error: uncaughtException: (conn=71, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+SequelizeAccessDeniedError: (conn=71, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+    at ConnectionManager.connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/mariadb/connection-manager.js:107:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ConnectionManager._connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:332:24)
+    at async /Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:250:32
+2023-12-28 06:52:39 error: (conn=72, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+2023-12-28 06:52:39 error: uncaughtException: (conn=72, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+SequelizeAccessDeniedError: (conn=72, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+    at ConnectionManager.connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/mariadb/connection-manager.js:107:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ConnectionManager._connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:332:24)
+    at async /Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:250:32
+2023-12-28 06:53:27 error: (conn=73, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+2023-12-28 06:53:27 error: uncaughtException: (conn=73, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+SequelizeAccessDeniedError: (conn=73, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+    at ConnectionManager.connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/mariadb/connection-manager.js:107:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ConnectionManager._connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:332:24)
+    at async /Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:250:32
+2023-12-28 06:53:30 error: (conn=74, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+2023-12-28 06:53:30 error: uncaughtException: (conn=74, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+SequelizeAccessDeniedError: (conn=74, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+    at ConnectionManager.connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/mariadb/connection-manager.js:107:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ConnectionManager._connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:332:24)
+    at async /Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:250:32
+2023-12-28 06:54:34 error: (conn=75, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+2023-12-28 06:54:34 error: uncaughtException: (conn=75, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+SequelizeAccessDeniedError: (conn=75, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+    at ConnectionManager.connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/mariadb/connection-manager.js:107:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ConnectionManager._connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:332:24)
+    at async /Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:250:32
+2023-12-28 06:55:31 error: (conn=76, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+2023-12-28 06:55:31 error: uncaughtException: (conn=76, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+SequelizeAccessDeniedError: (conn=76, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+    at ConnectionManager.connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/mariadb/connection-manager.js:107:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ConnectionManager._connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:332:24)
+    at async /Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:250:32
+2023-12-28 06:57:53 error: (conn=77, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+2023-12-28 06:57:53 error: uncaughtException: (conn=77, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+SequelizeAccessDeniedError: (conn=77, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+    at ConnectionManager.connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/mariadb/connection-manager.js:107:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ConnectionManager._connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:332:24)
+    at async /Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:250:32
+2023-12-28 06:59:41 error: (conn=78, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+2023-12-28 06:59:41 error: uncaughtException: (conn=78, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+SequelizeAccessDeniedError: (conn=78, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+    at ConnectionManager.connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/mariadb/connection-manager.js:107:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ConnectionManager._connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:332:24)
+    at async /Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:250:32
+2023-12-28 07:00:02 error: (conn=79, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+2023-12-28 07:00:02 error: uncaughtException: (conn=79, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+SequelizeAccessDeniedError: (conn=79, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+    at ConnectionManager.connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/mariadb/connection-manager.js:107:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ConnectionManager._connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:332:24)
+    at async /Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:250:32
+2023-12-28 07:00:54 error: (conn=80, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+2023-12-28 07:00:54 error: uncaughtException: (conn=80, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+SequelizeAccessDeniedError: (conn=80, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+    at ConnectionManager.connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/mariadb/connection-manager.js:107:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ConnectionManager._connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:332:24)
+    at async /Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:250:32
+2023-12-28 07:01:17 error: (conn=81, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+2023-12-28 07:01:17 error: uncaughtException: (conn=81, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+SequelizeAccessDeniedError: (conn=81, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+    at ConnectionManager.connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/mariadb/connection-manager.js:107:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ConnectionManager._connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:332:24)
+    at async /Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:250:32
+2023-12-28 07:01:59 error: (conn=82, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+2023-12-28 07:01:59 error: uncaughtException: (conn=82, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+SequelizeAccessDeniedError: (conn=82, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+    at ConnectionManager.connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/mariadb/connection-manager.js:107:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ConnectionManager._connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:332:24)
+    at async /Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:250:32
+2023-12-28 07:02:07 error: (conn=83, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+2023-12-28 07:02:07 error: uncaughtException: (conn=83, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+SequelizeAccessDeniedError: (conn=83, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+    at ConnectionManager.connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/mariadb/connection-manager.js:107:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ConnectionManager._connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:332:24)
+    at async /Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:250:32
+2023-12-28 07:02:14 error: (conn=84, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+2023-12-28 07:02:14 error: uncaughtException: (conn=84, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+SequelizeAccessDeniedError: (conn=84, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+    at ConnectionManager.connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/mariadb/connection-manager.js:107:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ConnectionManager._connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:332:24)
+    at async /Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:250:32
+2023-12-28 07:02:21 error: (conn=85, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+2023-12-28 07:02:21 error: uncaughtException: (conn=85, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+SequelizeAccessDeniedError: (conn=85, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+    at ConnectionManager.connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/mariadb/connection-manager.js:107:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ConnectionManager._connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:332:24)
+    at async /Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:250:32
+2023-12-28 07:02:31 error: (conn=86, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+2023-12-28 07:02:31 error: uncaughtException: (conn=86, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+SequelizeAccessDeniedError: (conn=86, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+    at ConnectionManager.connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/mariadb/connection-manager.js:107:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ConnectionManager._connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:332:24)
+    at async /Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:250:32
+2023-12-28 07:02:45 error: (conn=87, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+2023-12-28 07:02:45 error: uncaughtException: (conn=87, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+SequelizeAccessDeniedError: (conn=87, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+    at ConnectionManager.connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/mariadb/connection-manager.js:107:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ConnectionManager._connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:332:24)
+    at async /Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:250:32
+2023-12-28 07:02:52 error: (conn=88, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+2023-12-28 07:02:52 error: uncaughtException: (conn=88, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+SequelizeAccessDeniedError: (conn=88, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+    at ConnectionManager.connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/mariadb/connection-manager.js:107:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ConnectionManager._connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:332:24)
+    at async /Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:250:32
+2023-12-28 07:02:59 error: (conn=89, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+2023-12-28 07:02:59 error: uncaughtException: (conn=89, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+SequelizeAccessDeniedError: (conn=89, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+    at ConnectionManager.connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/mariadb/connection-manager.js:107:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ConnectionManager._connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:332:24)
+    at async /Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:250:32
+2023-12-28 07:05:31 error: (conn=90, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+2023-12-28 07:05:31 error: uncaughtException: (conn=90, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+SequelizeAccessDeniedError: (conn=90, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+    at ConnectionManager.connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/mariadb/connection-manager.js:107:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ConnectionManager._connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:332:24)
+    at async /Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:250:32
+2023-12-28 07:08:59 error: (conn=91, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+2023-12-28 07:08:59 error: uncaughtException: (conn=91, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+SequelizeAccessDeniedError: (conn=91, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+    at ConnectionManager.connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/mariadb/connection-manager.js:107:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ConnectionManager._connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:332:24)
+    at async /Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:250:32
+2023-12-28 07:09:26 error: (conn=92, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+2023-12-28 07:09:26 error: uncaughtException: (conn=92, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+SequelizeAccessDeniedError: (conn=92, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+    at ConnectionManager.connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/mariadb/connection-manager.js:107:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ConnectionManager._connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:332:24)
+    at async /Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:250:32
+2023-12-28 07:09:35 error: (conn=93, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+2023-12-28 07:09:35 error: uncaughtException: (conn=93, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+SequelizeAccessDeniedError: (conn=93, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+    at ConnectionManager.connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/mariadb/connection-manager.js:107:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ConnectionManager._connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:332:24)
+    at async /Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:250:32
+2023-12-28 07:10:05 error: (conn=94, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+2023-12-28 07:10:05 error: uncaughtException: (conn=94, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+SequelizeAccessDeniedError: (conn=94, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+    at ConnectionManager.connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/mariadb/connection-manager.js:107:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ConnectionManager._connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:332:24)
+    at async /Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:250:32
+2023-12-28 07:11:34 error: (conn=95, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+2023-12-28 07:11:34 error: uncaughtException: (conn=95, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+SequelizeAccessDeniedError: (conn=95, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+    at ConnectionManager.connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/mariadb/connection-manager.js:107:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ConnectionManager._connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:332:24)
+    at async /Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:250:32
+2023-12-28 07:13:25 error: (conn=96, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+2023-12-28 07:13:25 error: uncaughtException: (conn=96, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+SequelizeAccessDeniedError: (conn=96, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+    at ConnectionManager.connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/mariadb/connection-manager.js:107:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ConnectionManager._connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:332:24)
+    at async /Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:250:32
+2023-12-28 07:13:43 error: (conn=97, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+2023-12-28 07:13:43 error: uncaughtException: (conn=97, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+SequelizeAccessDeniedError: (conn=97, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+    at ConnectionManager.connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/mariadb/connection-manager.js:107:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ConnectionManager._connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:332:24)
+    at async /Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:250:32
+2023-12-28 07:15:32 error: (conn=98, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+2023-12-28 07:15:32 error: uncaughtException: (conn=98, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+SequelizeAccessDeniedError: (conn=98, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+    at ConnectionManager.connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/mariadb/connection-manager.js:107:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ConnectionManager._connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:332:24)
+    at async /Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:250:32
+2023-12-28 07:16:16 error: (conn=99, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+2023-12-28 07:16:16 error: uncaughtException: (conn=99, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+SequelizeAccessDeniedError: (conn=99, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+    at ConnectionManager.connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/mariadb/connection-manager.js:107:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ConnectionManager._connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:332:24)
+    at async /Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:250:32
+2023-12-28 07:18:16 error: (conn=100, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+2023-12-28 07:18:16 error: uncaughtException: (conn=100, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+SequelizeAccessDeniedError: (conn=100, no: 1045, SQLState: 28000) Access denied for user ''@'172.27.0.1' (using password: NO)
+    at ConnectionManager.connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/mariadb/connection-manager.js:107:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ConnectionManager._connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:332:24)
+    at async /Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:250:32
+2023-12-28 08:32:47 error: (conn=103, no: 1273, SQLState: HY000) Unknown collation: 'utf8mb4_generate_ci'
+sql: CREATE TABLE IF NOT EXISTS `model` (`id` INTEGER auto_increment , `title` VARCHAR(70) NOT NULL, `description` TEXT, `picture` VARCHAR(200), `created_at` DATETIME NOT NULL, `updated_at` DATETIME NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB DEFAULT CHARSET=ut... - parameters:[]
+2023-12-28 08:36:30 error: uncaughtException: Route.get() requires a callback function but got a [object Undefined]
+Error: Route.get() requires a callback function but got a [object Undefined]
+    at Route.<computed> [as get] (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/express/lib/router/route.js:211:15)
+    at Function.proto.<computed> [as get] (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/express/lib/router/index.js:521:19)
+    at BrandRoute.initializeRoutes (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.route.ts:16:17)
+    at new BrandRoute (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.route.ts:12:10)
+    at Object.<anonymous> (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/server.ts:7:22)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module.m._compile (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+2023-12-28 08:36:38 error: (conn=109, no: 1273, SQLState: HY000) Unknown collation: 'utf8mb4_generate_ci'
+sql: CREATE TABLE IF NOT EXISTS `model` (`id` INTEGER auto_increment , `title` VARCHAR(70) NOT NULL, `description` TEXT, `picture` VARCHAR(200), `created_at` DATETIME NOT NULL, `updated_at` DATETIME NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB DEFAULT CHARSET=ut... - parameters:[]
+2023-12-28 08:38:52 error: (conn=112, no: 1273, SQLState: HY000) Unknown collation: 'utf8mb4_generate_ci'
+sql: CREATE TABLE IF NOT EXISTS `model` (`id` INTEGER auto_increment , `title` VARCHAR(70) NOT NULL, `description` TEXT, `picture` VARCHAR(200), `created_at` DATETIME NOT NULL, `updated_at` DATETIME NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB DEFAULT CHARSET=ut... - parameters:[]
+2023-12-28 08:39:03 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/api/brand/brand.route.ts[0m:[93m17[0m:[93m60[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m17[0m     this.router.get(`${this.path}/:brandTitle`, this.brand.)
+[7m  [0m [91m                                                           ~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/api/brand/brand.route.ts[0m:[93m17[0m:[93m60[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m17[0m     this.router.get(`${this.path}/:brandTitle`, this.brand.)
+[7m  [0m [91m                                                           ~[0m
+
+    at createTSError (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:863:19)
+    at /Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1379:34
+    at Object.compile (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1458:13)
+    at Module.m._compile (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+2023-12-28 08:39:13 error: (conn=117, no: 1273, SQLState: HY000) Unknown collation: 'utf8mb4_generate_ci'
+sql: CREATE TABLE IF NOT EXISTS `model` (`id` INTEGER auto_increment , `title` VARCHAR(70) NOT NULL, `description` TEXT, `picture` VARCHAR(200), `created_at` DATETIME NOT NULL, `updated_at` DATETIME NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB DEFAULT CHARSET=ut... - parameters:[]
+2023-12-28 08:39:48 error: (conn=120, no: 1273, SQLState: HY000) Unknown collation: 'utf8mb4_generate_ci'
+sql: CREATE TABLE IF NOT EXISTS `model` (`id` INTEGER auto_increment , `title` VARCHAR(70) NOT NULL, `description` TEXT, `picture` VARCHAR(200), `created_at` DATETIME NOT NULL, `updated_at` DATETIME NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB DEFAULT CHARSET=ut... - parameters:[]
+2023-12-28 08:40:00 error: (conn=122, no: 1273, SQLState: HY000) Unknown collation: 'utf8mb4_generate_ci'
+sql: CREATE TABLE IF NOT EXISTS `model` (`id` INTEGER auto_increment , `title` VARCHAR(70) NOT NULL, `description` TEXT, `picture` VARCHAR(200), `created_at` DATETIME NOT NULL, `updated_at` DATETIME NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB DEFAULT CHARSET=ut... - parameters:[]
+2023-12-28 08:41:18 error: uncaughtException: Unexpected token ';'
+/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.controller.ts:33
+            const ;
+                  ^
+
+SyntaxError: Unexpected token ';'
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1178:20)
+    at Module._compile (node:internal/modules/cjs/loader:1220:27)
+    at Module.m._compile (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:121:18)
+2023-12-28 08:41:31 error: (conn=127, no: 1273, SQLState: HY000) Unknown collation: 'utf8mb4_generate_ci'
+sql: CREATE TABLE IF NOT EXISTS `model` (`id` INTEGER auto_increment , `title` VARCHAR(70) NOT NULL, `description` TEXT, `picture` VARCHAR(200), `created_at` DATETIME NOT NULL, `updated_at` DATETIME NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB DEFAULT CHARSET=ut... - parameters:[]
+2023-12-28 08:42:45 error: (conn=131, no: 1273, SQLState: HY000) Unknown collation: 'utf8mb4_generate_ci'
+sql: CREATE TABLE IF NOT EXISTS `model` (`id` INTEGER auto_increment , `title` VARCHAR(70) NOT NULL, `description` TEXT, `picture` VARCHAR(200), `created_at` DATETIME NOT NULL, `updated_at` DATETIME NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB DEFAULT CHARSET=ut... - parameters:[]
+2023-12-28 08:43:41 error: (conn=134, no: 1273, SQLState: HY000) Unknown collation: 'utf8mb4_generate_ci'
+sql: CREATE TABLE IF NOT EXISTS `model` (`id` INTEGER auto_increment , `title` VARCHAR(70) NOT NULL, `description` TEXT, `picture` VARCHAR(200), `created_at` DATETIME NOT NULL, `updated_at` DATETIME NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB DEFAULT CHARSET=ut... - parameters:[]
+2023-12-28 08:44:01 error: uncaughtException: (0 , validation_middleware_1.default) is not a function
+TypeError: (0 , validation_middleware_1.default) is not a function
+    at BrandRoute.initializeRoutes (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.route.ts:18:69)
+    at new BrandRoute (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/api/brand/brand.route.ts:13:10)
+    at Object.<anonymous> (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/server.ts:7:22)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module.m._compile (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:960:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)
+2023-12-28 08:44:11 error: (conn=139, no: 1273, SQLState: HY000) Unknown collation: 'utf8mb4_generate_ci'
+sql: CREATE TABLE IF NOT EXISTS `model` (`id` INTEGER auto_increment , `title` VARCHAR(70) NOT NULL, `description` TEXT, `picture` VARCHAR(200), `created_at` DATETIME NOT NULL, `updated_at` DATETIME NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB DEFAULT CHARSET=ut... - parameters:[]
+2023-12-28 08:44:37 error: (conn=142, no: 1273, SQLState: HY000) Unknown collation: 'utf8mb4_generate_ci'
+sql: CREATE TABLE IF NOT EXISTS `model` (`id` INTEGER auto_increment , `title` VARCHAR(70) NOT NULL, `description` TEXT, `picture` VARCHAR(200), `created_at` DATETIME NOT NULL, `updated_at` DATETIME NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB DEFAULT CHARSET=ut... - parameters:[]
+2023-12-28 08:45:31 error: (conn=144, no: 1273, SQLState: HY000) Unknown collation: 'utf8mb4_generate_ci'
+sql: CREATE TABLE IF NOT EXISTS `model` (`id` INTEGER auto_increment , `title` VARCHAR(70) NOT NULL, `description` TEXT, `picture` VARCHAR(200), `created_at` DATETIME NOT NULL, `updated_at` DATETIME NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB DEFAULT CHARSET=ut... - parameters:[]
+2023-12-28 08:46:05 error: (conn=147, no: 1273, SQLState: HY000) Unknown collation: 'utf8mb4_generate_ci'
+sql: CREATE TABLE IF NOT EXISTS `model` (`id` INTEGER auto_increment , `title` VARCHAR(70) NOT NULL, `description` TEXT, `picture` VARCHAR(200), `created_at` DATETIME NOT NULL, `updated_at` DATETIME NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB DEFAULT CHARSET=ut... - parameters:[]
+2023-12-28 08:46:15 error: [POST] /brand >> StatusCode:: 400, Message:: title should not be empty,title must be a string
+2023-12-28 08:47:52 error: [POST] /brand >> StatusCode:: 400, Message:: title should not be empty,title must be a string
+2023-12-28 08:49:44 error: [POST] /brand >> StatusCode:: 400, Message:: title should not be empty,title must be a string
+2023-12-28 08:50:08 error: [POST] /brand >> StatusCode:: 500, Message:: (conn=149, no: 1146, SQLState: 42S02) Table 'productdb.model' doesn't exist
+sql: SELECT `id`, `title`, `description`, `picture`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `model` AS `BrandModel` WHERE `BrandModel`.`title` = 'guccixs' LIMIT 1; - parameters:[]
+2023-12-28 08:50:49 error: [POST] /brand >> StatusCode:: 500, Message:: (conn=150, no: 1146, SQLState: 42S02) Table 'productdb.model' doesn't exist
+sql: SELECT `id`, `title`, `description`, `picture`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `model` AS `BrandModel` WHERE `BrandModel`.`title` = 'gucci' LIMIT 1; - parameters:[]
+2023-12-28 08:53:52 error: (conn=152, no: 1273, SQLState: HY000) Unknown collation: 'utf8mb4_generate_ci'
+sql: CREATE TABLE IF NOT EXISTS `model` (`id` INTEGER auto_increment , `title` VARCHAR(70) NOT NULL, `description` TEXT, `picture` VARCHAR(200), `created_at` DATETIME NOT NULL, `updated_at` DATETIME NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB DEFAULT CHARSET=ut... - parameters:[]
+2023-12-28 08:54:10 error: [POST] /brand >> StatusCode:: 500, Message:: (conn=154, no: 1146, SQLState: 42S02) Table 'productdb.model' doesn't exist
+sql: SELECT `id`, `title`, `description`, `picture`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `model` AS `BrandModel` WHERE `BrandModel`.`title` = 'gucci' LIMIT 1; - parameters:[]
+2023-12-28 08:54:13 error: [GET] /brand/1 >> StatusCode:: 500, Message:: (conn=154, no: 1146, SQLState: 42S02) Table 'productdb.model' doesn't exist
+sql: SELECT `id`, `title`, `description`, `picture`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `model` AS `BrandModel`; - parameters:[]
+2023-12-28 08:54:41 error: (conn=157, no: 1273, SQLState: HY000) Unknown collation: 'utf8mb4_generate_ci'
+sql: CREATE TABLE IF NOT EXISTS `brand` (`id` INTEGER auto_increment , `title` VARCHAR(70) NOT NULL, `description` TEXT, `picture` VARCHAR(200), `created_at` DATETIME NOT NULL, `updated_at` DATETIME NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB DEFAULT CHARSET=ut... - parameters:[]
+2023-12-28 08:55:14 error: (conn=160, no: 1273, SQLState: HY000) Unknown collation: 'utf8mb4_generate_ci'
+sql: CREATE TABLE IF NOT EXISTS `Brand` (`id` INTEGER auto_increment , `title` VARCHAR(70) NOT NULL, `description` TEXT, `picture` VARCHAR(200), `created_at` DATETIME NOT NULL, `updated_at` DATETIME NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB DEFAULT CHARSET=ut... - parameters:[]
+2023-12-28 08:55:24 error: [POST] /brand >> StatusCode:: 500, Message:: (conn=160, no: 1146, SQLState: 42S02) Table 'productdb.Brand' doesn't exist
+sql: SELECT `id`, `title`, `description`, `picture`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `Brand` AS `BrandModel` WHERE `BrandModel`.`title` = 'gucci' LIMIT 1; - parameters:[]
+2023-12-28 08:56:08 error: [POST] /brand >> StatusCode:: 500, Message:: (conn=162, no: 1146, SQLState: 42S02) Table 'productdb.Brand' doesn't exist
+sql: SELECT `id`, `title`, `description`, `picture`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `Brand` AS `BrandModel` WHERE `BrandModel`.`title` = 'gucci' LIMIT 1; - parameters:[]
+2023-12-28 08:57:04 error: (conn=165, no: 1273, SQLState: HY000) Unknown collation: 'utf8mb4_generate_ci'
+sql: CREATE TABLE IF NOT EXISTS `Brands` (`id` INTEGER auto_increment , `title` VARCHAR(70) NOT NULL, `description` TEXT, `picture` VARCHAR(200), `created_at` DATETIME NOT NULL, `updated_at` DATETIME NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB DEFAULT CHARSET=u... - parameters:[]
+2023-12-28 08:57:18 error: [POST] /brand >> StatusCode:: 500, Message:: (conn=166, no: 1146, SQLState: 42S02) Table 'productdb.Brands' doesn't exist
+sql: SELECT `id`, `title`, `description`, `picture`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `Brands` AS `BrandModel` WHERE `BrandModel`.`title` = 'gucci' LIMIT 1; - parameters:[]
+2023-12-28 08:58:27 error: (conn=169, no: 1273, SQLState: HY000) Unknown collation: 'utf8mb4_generate_ci'
+sql: CREATE TABLE IF NOT EXISTS `Brands` (`id` INTEGER auto_increment , `title` VARCHAR(70) NOT NULL, `description` TEXT, `picture` VARCHAR(200), `created_at` DATETIME NOT NULL, `updated_at` DATETIME NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB DEFAULT CHARSET=u... - parameters:[]
+2023-12-28 08:59:21 error: (conn=174, no: 1273, SQLState: HY000) Unknown collation: 'utf8mb4_generate_ci'
+sql: CREATE TABLE IF NOT EXISTS `Brands` (`id` INTEGER auto_increment , `title` VARCHAR(70) NOT NULL, `description` TEXT, `picture` VARCHAR(200), `created_at` DATETIME NOT NULL, `updated_at` DATETIME NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB DEFAULT CHARSET=u... - parameters:[]
+2023-12-28 09:03:27 error: (conn=7, no: 1273, SQLState: HY000) Unknown collation: 'utf8mb4_generate_ci'
+sql: CREATE TABLE IF NOT EXISTS `Brands` (`id` INTEGER auto_increment , `title` VARCHAR(70) NOT NULL, `description` TEXT, `picture` VARCHAR(200), `created_at` DATETIME NOT NULL, `updated_at` DATETIME NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB DEFAULT CHARSET=u... - parameters:[]
+2023-12-28 09:03:38 error: [GET] /brand >> StatusCode:: 500, Message:: (conn=7, no: 1146, SQLState: 42S02) Table 'productdb.Brands' doesn't exist
+sql: SELECT `id`, `title`, `description`, `picture`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `Brands` AS `BrandModel`; - parameters:[]
+2023-12-28 09:05:08 error: (conn=11, no: 1273, SQLState: HY000) Unknown collation: 'utf8mb4_generate_ci'
+sql: CREATE TABLE IF NOT EXISTS `Brands` (`id` INTEGER auto_increment , `title` VARCHAR(70) NOT NULL, `description` TEXT, `picture` VARCHAR(200), `created_at` DATETIME NOT NULL, `updated_at` DATETIME NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB DEFAULT CHARSET=u... - parameters:[]
+2023-12-28 09:06:14 error: (conn=15, no: 1273, SQLState: HY000) Unknown collation: 'utf8mb4_generate_ci'
+sql: CREATE TABLE IF NOT EXISTS `brand` (`id` INTEGER auto_increment , `title` VARCHAR(70) NOT NULL, `description` TEXT, `picture` VARCHAR(200), `created_at` DATETIME NOT NULL, `updated_at` DATETIME NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB DEFAULT CHARSET=ut... - parameters:[]
+2023-12-28 09:07:44 error: (conn=19, no: 1273, SQLState: HY000) Unknown collation: 'utf8mb4_generate_ci'
+sql: CREATE TABLE IF NOT EXISTS `brand` (`id` INTEGER auto_increment , `title` VARCHAR(70) NOT NULL, `description` TEXT, `picture` VARCHAR(200), `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB DEFAULT CHARSET=utf8... - parameters:[]
+2023-12-28 18:10:19 error: (conn=23, no: 1273, SQLState: HY000) Unknown collation: 'utf8mb4_generate_ci'
+sql: CREATE TABLE IF NOT EXISTS `brand` (`id` INTEGER auto_increment , `title` VARCHAR(70) NOT NULL, `description` TEXT, `picture` VARCHAR(200), `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB DEFAULT CHARSET=utf8... - parameters:[]
+2023-12-28 18:12:06 error: [GET] /brand/gucci >> StatusCode:: 500, Message:: (conn=25, no: 1146, SQLState: 42S02) Table 'productdb.brand' doesn't exist
+sql: SELECT `id`, `title`, `description`, `picture`, `createdAt`, `updatedAt` FROM `brand` AS `BrandModel`; - parameters:[]
+2023-12-28 18:13:13 error: (conn=27, no: 1273, SQLState: HY000) Unknown collation: 'utf8mb4_generate_ci'
+sql: CREATE TABLE IF NOT EXISTS `brand` (`id` INTEGER auto_increment , `title` VARCHAR(70) NOT NULL, `description` TEXT, `picture` VARCHAR(200), `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB DEFAULT CHARSET=utf8... - parameters:[]
+2023-12-28 18:20:55 error: connect ECONNREFUSED ::1:3306
+2023-12-28 18:20:55 error: uncaughtException: connect ECONNREFUSED ::1:3306
+SequelizeConnectionRefusedError: connect ECONNREFUSED ::1:3306
+    at ConnectionManager.connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/mariadb/connection-manager.js:104:17)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async ConnectionManager._connect (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:332:24)
+    at async /Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/sequelize/src/dialects/abstract/connection-manager.js:250:32
+2023-12-28 18:22:46 error: (conn=5, no: 1273, SQLState: HY000) Unknown collation: 'utf8mb4_generate_ci'
+sql: CREATE TABLE IF NOT EXISTS `brand` (`id` INTEGER auto_increment , `title` VARCHAR(70) NOT NULL, `description` TEXT, `picture` VARCHAR(200), `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB DEFAULT CHARSET=utf8... - parameters:[]
+2023-12-28 18:23:01 error: [GET] /brand >> StatusCode:: 500, Message:: (conn=6, no: 1146, SQLState: 42S02) Table 'productdb.brand' doesn't exist
+sql: SELECT `id`, `title`, `description`, `picture`, `createdAt`, `updatedAt` FROM `brand` AS `BrandModel`; - parameters:[]
+2023-12-28 18:26:39 error: (conn=12, no: 1273, SQLState: HY000) Unknown collation: 'utf8mb4_generate_ci'
+sql: CREATE TABLE IF NOT EXISTS `brand` (`id` INTEGER auto_increment , `title` VARCHAR(70) NOT NULL, `description` TEXT, `picture` VARCHAR(200), `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB DEFAULT CHARSET=utf8... - parameters:[]
+2023-12-28 18:27:57 error: (conn=18, no: 1273, SQLState: HY000) Unknown collation: 'utf8mb4_generate_ci'
+sql: CREATE TABLE IF NOT EXISTS `brand` (`id` INTEGER auto_increment , `title` VARCHAR(70) NOT NULL, `description` TEXT, `picture` VARCHAR(200), `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB DEFAULT CHARSET=utf8... - parameters:[]
+2023-12-28 18:28:09 error: (conn=21, no: 1273, SQLState: HY000) Unknown collation: 'utf8mb4_generate_ci'
+sql: CREATE TABLE IF NOT EXISTS `brand` (`id` INTEGER auto_increment , `title` VARCHAR(70) NOT NULL, `description` TEXT, `picture` VARCHAR(200), `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB DEFAULT CHARSET=utf8... - parameters:[]
+2023-12-28 18:52:57 error: (conn=24, no: 1273, SQLState: HY000) Unknown collation: 'utf8mb4_generate_ci'
+sql: CREATE TABLE IF NOT EXISTS `brand` (`id` INTEGER auto_increment , `title` VARCHAR(70) NOT NULL, `description` TEXT, `picture` VARCHAR(200), `created_at` DATETIME NOT NULL, `updated_at` DATETIME NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB DEFAULT CHARSET=ut... - parameters:[]
+2023-12-28 18:58:44 error: (conn=27, no: 1273, SQLState: HY000) Unknown collation: 'utf8mb4_generate_ci'
+sql: CREATE TABLE IF NOT EXISTS `brand` (`id` INTEGER auto_increment , `title` VARCHAR(70) NOT NULL, `description` TEXT, `picture` VARCHAR(200), `created_at` DATETIME NOT NULL, `updated_at` DATETIME NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB DEFAULT CHARSET=ut... - parameters:[]
+2023-12-28 18:59:03 error: (conn=29, no: 1273, SQLState: HY000) Unknown collation: 'utf8mb4_generate_ci'
+sql: CREATE TABLE IF NOT EXISTS `brand` (`id` INTEGER auto_increment , `title` VARCHAR(70) NOT NULL, `description` TEXT, `picture` VARCHAR(200), `created_at` DATETIME NOT NULL, `updated_at` DATETIME NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB DEFAULT CHARSET=ut... - parameters:[]
+2023-12-28 19:02:02 error: (conn=34, no: 1273, SQLState: HY000) Unknown collation: 'utf8mb4_generate_ci'
+sql: CREATE TABLE IF NOT EXISTS `brand` (`id` INTEGER auto_increment , `title` VARCHAR(255) NOT NULL, `description` TEXT, `picture` VARCHAR(255), `created_at` DATETIME NOT NULL, `updated_at` DATETIME NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB DEFAULT CHARSET=u... - parameters:[]
+2023-12-28 19:04:49 error: (conn=36, no: 1273, SQLState: HY000) Unknown collation: 'utf8mb4_generate_ci'
+sql: CREATE TABLE IF NOT EXISTS `brand` (`id` INTEGER auto_increment , `title` VARCHAR(255) NOT NULL, `description` TEXT, `picture` VARCHAR(255), `created_at` DATETIME NOT NULL, `updated_at` DATETIME NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB DEFAULT CHARSET=u... - parameters:[]
+2023-12-28 19:05:10 error: (conn=39, no: 1273, SQLState: HY000) Unknown collation: 'utf8mb4_generate_ci'
+sql: CREATE TABLE IF NOT EXISTS `brand` (`id` INTEGER auto_increment , `title` VARCHAR(255) NOT NULL, `description` TEXT, `picture` VARCHAR(255), `created_at` DATETIME NOT NULL, `updated_at` DATETIME NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB DEFAULT CHARSET=u... - parameters:[]
+2023-12-28 19:06:29 error: (conn=42, no: 1273, SQLState: HY000) Unknown collation: 'utf8generate_ci'
+sql: CREATE TABLE IF NOT EXISTS `brand` (`id` INTEGER auto_increment , `title` VARCHAR(255) NOT NULL, `description` TEXT, `picture` VARCHAR(255), `created_at` DATETIME NOT NULL, `updated_at` DATETIME NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB DEFAULT CHARSET=u... - parameters:[]
+2023-12-28 19:06:31 error: (conn=45, no: 1273, SQLState: HY000) Unknown collation: 'utf8_generate_ci'
+sql: CREATE TABLE IF NOT EXISTS `brand` (`id` INTEGER auto_increment , `title` VARCHAR(255) NOT NULL, `description` TEXT, `picture` VARCHAR(255), `created_at` DATETIME NOT NULL, `updated_at` DATETIME NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB DEFAULT CHARSET=u... - parameters:[]
+2023-12-28 19:09:41 error: [GET] /brand >> StatusCode:: 404, Message:: Brands not found
+2023-12-28 19:09:55 error: [GET] /brand/gucci >> StatusCode:: 404, Message:: Brands not found
+2023-12-28 19:14:10 error: [POST] /brand >> StatusCode:: 409, Message:: This brand title 'หลุยส์' already exists
+2023-12-28 19:14:51 error: [POST] /brand >> StatusCode:: 409, Message:: This brand title 'หลุยส์' already exists

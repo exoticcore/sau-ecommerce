@@ -1,0 +1,25 @@
+{
+    "keep": {
+        "days": false,
+        "amount": 30
+    },
+    "auditLog": "/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/logs/debug/.9055f26c18c99d6f2d11bbb59d8cf527bd313a33-audit.json",
+    "files": [
+        {
+            "date": 1703698199999,
+            "name": "/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/logs/debug/2023-12-28.log",
+            "hash": "09130ef86a182479541cd5a138c248fa3eed6aa9277f726c45aadc398a2115c0"
+        },
+        {
+            "date": 1703866856792,
+            "name": "/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/logs/debug/2023-12-29.log",
+            "hash": "ed2d937d5196e6bc4bd6d639d3ffbea767d3f601b8eb24062ca4fab130bcc057"
+        },
+        {
+            "date": 1703869245100,
+            "name": "/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/logs/debug/2023-12-30.log",
+            "hash": "1311817dd646779b30095225cbeae242b6e290e0356f6c89af86dde2b4c41de3"
+        }
+    ],
+    "hashType": "sha256"
+}

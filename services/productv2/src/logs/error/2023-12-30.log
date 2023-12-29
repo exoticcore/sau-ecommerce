@@ -1,0 +1,63 @@
+2023-12-30 00:01:21 error: [POST] /brand >> StatusCode:: 401, Message:: jwt expired
+2023-12-30 00:03:19 error: [POST] /brand >> StatusCode:: 409, Message:: This brand title 'gucci' already exists
+2023-12-30 00:10:33 error: [POST] /brand >> StatusCode:: 401, Message:: jwt expired
+2023-12-30 00:10:41 error: [POST] /brand >> StatusCode:: 401, Message:: Invalid credention
+2023-12-30 00:10:44 error: [POST] /brand >> StatusCode:: 401, Message:: internal server error
+2023-12-30 00:10:49 error: [POST] /brand >> StatusCode:: 401, Message:: internal server error
+2023-12-30 00:11:00 error: [POST] /brand >> StatusCode:: 401, Message:: internal server error
+2023-12-30 00:11:35 error: [POST] /brand >> StatusCode:: 401, Message:: internal server error
+2023-12-30 00:11:38 error: [POST] /brand >> StatusCode:: 401, Message:: jwt expired
+2023-12-30 00:11:46 error: [POST] /brand >> StatusCode:: 401, Message:: jwt expired
+2023-12-30 00:13:36 error: [POST] /brand >> StatusCode:: 401, Message:: jwt expired
+2023-12-30 00:13:44 error: [POST] /brand >> StatusCode:: 401, Message:: Invalid credential
+2023-12-30 00:15:20 error: [POST] /brand >> StatusCode:: 401, Message:: jwt expired
+2023-12-30 00:31:18 error: uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/middlewares/authorization.middleware.ts[0m:[93m15[0m:[93m3[0m - [91merror[0m[90m TS1357: [0mAn enum member name must be followed by a ',', '=', or '}'.
+
+[7m15[0m   USER = 'user',
+[7m  [0m [91m  ~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/middlewares/authorization.middleware.ts[0m:[93m15[0m:[93m3[0m - [91merror[0m[90m TS1357: [0mAn enum member name must be followed by a ',', '=', or '}'.
+
+[7m15[0m   USER = 'user',
+[7m  [0m [91m  ~~~~[0m
+
+    at createTSError (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:859:12)
+    at reportTSError (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:863:19)
+    at /Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1379:34
+    at Object.compile (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1458:13)
+    at Module.m._compile (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)
+    at Object.require.extensions.<computed> [as .ts] (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1119:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:960:12)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+2023-12-30 00:52:07 error: [POST] /brand >> StatusCode:: 403, Message:: Unthorization error
+2023-12-30 00:52:39 error: [POST] /brand >> StatusCode:: 409, Message:: This brand title 'gucci' already exists
+2023-12-30 00:53:52 error: [PATCH] /brand/1 >> StatusCode:: 401, Message:: Invalid credential
+2023-12-30 00:59:17 error: [PATCH] /brand/1 >> StatusCode:: 401, Message:: jwt expired
+2023-12-30 00:59:56 error: [PATCH] /brand/2 >> StatusCode:: 409, Message:: This brand title nike already exists
+2023-12-30 01:00:09 error: [PATCH] /brand/2 >> StatusCode:: 409, Message:: This brand title 'nike' already exists
+2023-12-30 01:00:11 error: [PATCH] /brand/2 >> StatusCode:: 409, Message:: This brand title 'nike' already exists
+2023-12-30 01:00:11 error: [PATCH] /brand/2 >> StatusCode:: 409, Message:: This brand title 'nike' already exists
+2023-12-30 01:00:12 error: [PATCH] /brand/2 >> StatusCode:: 409, Message:: This brand title 'nike' already exists
+2023-12-30 01:00:13 error: [PATCH] /brand/2 >> StatusCode:: 409, Message:: This brand title 'nike' already exists
+2023-12-30 01:00:13 error: [PATCH] /brand/2 >> StatusCode:: 409, Message:: This brand title 'nike' already exists
+2023-12-30 01:00:14 error: [PATCH] /brand/2 >> StatusCode:: 409, Message:: This brand title 'nike' already exists
+2023-12-30 01:00:14 error: [PATCH] /brand/2 >> StatusCode:: 409, Message:: This brand title 'nike' already exists
+2023-12-30 01:00:15 error: [PATCH] /brand/2 >> StatusCode:: 409, Message:: This brand title 'nike' already exists
+2023-12-30 01:00:16 error: [PATCH] /brand/2 >> StatusCode:: 409, Message:: This brand title 'nike' already exists
+2023-12-30 01:00:17 error: [PATCH] /brand/2 >> StatusCode:: 409, Message:: This brand title 'nike' already exists
+2023-12-30 01:00:18 error: [PATCH] /brand/2 >> StatusCode:: 409, Message:: This brand title 'nike' already exists
+2023-12-30 01:00:20 error: [PATCH] /brand/2 >> StatusCode:: 401, Message:: jwt expired
+2023-12-30 01:00:21 error: [PATCH] /brand/2 >> StatusCode:: 401, Message:: jwt expired
+2023-12-30 01:01:05 error: [PATCH] /brand/2 >> StatusCode:: 409, Message:: This brand title 'nike' already exists
+2023-12-30 01:01:11 error: [PATCH] /brand/2 >> StatusCode:: 409, Message:: This brand title 'nike' already exists
+2023-12-30 01:01:12 error: [PATCH] /brand/2 >> StatusCode:: 409, Message:: This brand title 'nike' already exists
+2023-12-30 01:02:03 error: [POST] /brand >> StatusCode:: 401, Message:: jwt expired
+2023-12-30 01:02:16 error: [POST] /brand >> StatusCode:: 403, Message:: Unthorization error
+2023-12-30 01:14:42 error: [PATCH] /brand/2 >> StatusCode:: 401, Message:: jwt expired
+2023-12-30 01:15:22 error: [DELETE] /brand/3 >> StatusCode:: 401, Message:: Invalid credential
+2023-12-30 01:21:14 error: [DELETE] /brand/3 >> StatusCode:: 401, Message:: jwt expired
+2023-12-30 01:21:29 error: [DELETE] /brand/3 >> StatusCode:: 403, Message:: Unthorization error
