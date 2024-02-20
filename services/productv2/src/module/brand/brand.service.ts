@@ -1,6 +1,6 @@
 import { DB } from '@database';
-import { Brand } from '@brand/brand.interface';
-import { CreateBrandDto, UpdateBrandDto } from '@brand/brand.dto';
+import { Brand } from '@/module/brand/brand.interface';
+import { CreateBrandDto, UpdateBrandDto } from '@/module/brand/brand.dto';
 import { HttpException } from '@exceptions/httpException';
 
 export default class BrandService {

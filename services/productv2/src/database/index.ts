@@ -1,6 +1,6 @@
 import Sequelize from 'sequelize';
 import { DB_DATABASE, DB_HOST, DB_PASSWORD, DB_PORT, DB_USER, NODE_ENV } from '@config/constants';
-import BrandModel from '@/api/brand/brand.model';
+import BrandModel from '@/module/brand/brand.model';
 import { logger } from '@utils/logger';
 
 const sequelize = new Sequelize.Sequelize(DB_DATABASE, DB_USER, DB_PASSWORD, {

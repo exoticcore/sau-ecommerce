@@ -21,9 +21,20 @@
             "hash": "1311817dd646779b30095225cbeae242b6e290e0356f6c89af86dde2b4c41de3"
         },
         {
+<<<<<<< HEAD
             "date": 1708470753304,
             "name": "/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/logs/debug/2024-02-21.log",
             "hash": "e9e4f7c09d05046d5978ed2df1a19120bd5a29dec8d051a6d987c11a40a216c7"
+=======
+            "date": 1704213801095,
+            "name": "/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/logs/debug/2024-01-02.log",
+            "hash": "05b905949e4b55679db994345c0e5b972dd868c99ed1e8bd643be67cd2aad255"
+        },
+        {
+            "date": 1708470224425,
+            "name": "/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/logs/debug/2024-02-21.log",
+            "hash": "608aa4d5e0138ba8ac69aa4dba4607a02f0c2a64f7450026c7dc5af67cb9fc5d"
+>>>>>>> dev-media
         }
     ],
     "hashType": "sha256"

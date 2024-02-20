@@ -1,8 +1,8 @@
 import { Router } from 'express';
 import { Routes } from '@interfaces/routes.interface';
 import { ValidationMiddleware } from '@middlewares/validation.middleware';
-import { CreateBrandDto, UpdateBrandDto } from '@brand/brand.dto';
-import BrandController from '@brand/brand.controller';
+import { CreateBrandDto, UpdateBrandDto } from '@/module/brand/brand.dto';
+import BrandController from '@/module/brand/brand.controller';
 import authorizationMiddleware, { Roles } from '../../middlewares/authorization.middleware';
 
 export default class BrandRoute implements Routes {

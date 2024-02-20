@@ -1,5 +1,5 @@
 import App from '@/app';
-import BrandRoute from '@brand/brand.route';
+import BrandRoute from '@/module/brand/brand.route';
 import { ValidateEnv } from '@utils/validateEnv';
 
 ValidateEnv();

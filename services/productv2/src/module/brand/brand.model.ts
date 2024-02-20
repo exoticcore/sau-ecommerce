@@ -1,5 +1,5 @@
 import { Sequelize, DataTypes, Model, Optional } from 'sequelize';
-import { Brand } from '@brand/brand.interface';
+import { Brand } from '@/module/brand/brand.interface';
 
 export type BrandCreationAttributes = Optional<Brand, 'id' | 'title' | 'description'>;
 
