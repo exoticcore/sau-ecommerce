@@ -1,0 +1,12 @@
+2024-02-21 06:03:44 info: ====================================
+2024-02-21 06:03:44 info: ========= ENV: development =========
+2024-02-21 06:03:44 info: 🚀 App listening on the port 3002
+2024-02-21 06:03:44 info: ====================================
+2024-02-21 06:03:44 info: 3ms Executed (default): SELECT 1+1 AS result
+2024-02-21 06:03:44 info: 3ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'brand' AND TABLE_SCHEMA = 'productdb'
+2024-02-21 06:03:44 info: 5ms Executed (default): SHOW INDEX FROM `brand`
+2024-02-21 06:03:54 info: 1ms Executed (default): SELECT `id`, `title`, `description`, `picture`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `brand` AS `BrandModel`;
+2024-02-21 06:03:54 info: [0mGET /brand [32m200[0m 18.219 ms - 347[0m
+2024-02-21 06:04:31 info: 2ms Executed (default): SELECT `id`, `title`, `description`, `picture`, `created_at` AS `createdAt`, `updated_at` AS `updatedAt` FROM `brand` AS `BrandModel` WHERE `BrandModel`.`title` = 'gucci' LIMIT 1;
+2024-02-21 06:04:31 error: [GET] /brand/gucci >> StatusCode:: 409, Message:: Brands not exists
+2024-02-21 06:04:31 info: [0mGET /brand/gucci [33m409[0m 16.182 ms - 31[0m

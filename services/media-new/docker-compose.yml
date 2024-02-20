@@ -2,6 +2,7 @@ version: '3.1'
 
 services:
   mongo:
+    container_name: mongodb
     build: ./mongodb_rs
     restart: always
     environment:
@@ -14,8 +15,11 @@ services:
       - 27017:27017
 
   mongo-express:
+    container_name: mongo-express
     image: mongo-express
     restart: always
+    depends_on:
+      - mongo
     ports:
       - 8081:8081
     environment:

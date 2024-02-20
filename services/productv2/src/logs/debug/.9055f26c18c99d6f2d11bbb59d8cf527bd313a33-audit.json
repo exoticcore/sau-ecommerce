@@ -19,6 +19,16 @@
             "date": 1703869245100,
             "name": "/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/logs/debug/2023-12-30.log",
             "hash": "1311817dd646779b30095225cbeae242b6e290e0356f6c89af86dde2b4c41de3"
+        },
+        {
+            "date": 1704213801095,
+            "name": "/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/logs/debug/2024-01-02.log",
+            "hash": "05b905949e4b55679db994345c0e5b972dd868c99ed1e8bd643be67cd2aad255"
+        },
+        {
+            "date": 1708470224425,
+            "name": "/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/logs/debug/2024-02-21.log",
+            "hash": "608aa4d5e0138ba8ac69aa4dba4607a02f0c2a64f7450026c7dc5af67cb9fc5d"
         }
     ],
     "hashType": "sha256"

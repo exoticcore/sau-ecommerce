@@ -1,0 +1,20 @@
+2024-01-02 23:43:21 error: uncaughtException: Cannot find module '@/api/brand/brand.model'
+Require stack:
+- /Users/kreckkead/Works/sau-ecommerce/services/productv2/src/database/index.ts
+- /Users/kreckkead/Works/sau-ecommerce/services/productv2/src/app.ts
+- /Users/kreckkead/Works/sau-ecommerce/services/productv2/src/server.ts
+Error: Cannot find module '@/api/brand/brand.model'
+Require stack:
+- /Users/kreckkead/Works/sau-ecommerce/services/productv2/src/database/index.ts
+- /Users/kreckkead/Works/sau-ecommerce/services/productv2/src/app.ts
+- /Users/kreckkead/Works/sau-ecommerce/services/productv2/src/server.ts
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:1077:15)
+    at Function.Module._resolveFilename.sharedData.moduleResolveFilenameHook.installedValue (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/@cspotcode/source-map-support/source-map-support.js:811:30)
+    at Function.Module._resolveFilename (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/tsconfig-paths/src/register.ts:115:36)
+    at Function.Module._load (node:internal/modules/cjs/loader:922:27)
+    at Module.require (node:internal/modules/cjs/loader:1143:19)
+    at require (node:internal/modules/cjs/helpers:121:18)
+    at Object.<anonymous> (/Users/kreckkead/Works/sau-ecommerce/services/productv2/src/database/index.ts:3:1)
+    at Module._compile (node:internal/modules/cjs/loader:1256:14)
+    at Module.m._compile (/Users/kreckkead/Works/sau-ecommerce/services/productv2/node_modules/ts-node/src/index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1310:10)

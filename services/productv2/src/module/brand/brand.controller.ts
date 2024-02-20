@@ -1,7 +1,7 @@
 import { NextFunction, Request, Response } from 'express';
 import BrandService from './brand.service';
 import { HttpException } from '@exceptions/httpException';
-import { CreateBrandDto, UpdateBrandDto } from '@brand/brand.dto';
+import { CreateBrandDto, UpdateBrandDto } from '@/module/brand/brand.dto';
 const brandService = new BrandService();
 
 export default class BrandController {

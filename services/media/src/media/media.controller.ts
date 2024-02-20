@@ -27,6 +27,7 @@ export class MediaController {
       'Content-Type': image.content_type,
       'Content-Deisposition': `${image.title}_${Date.now()}`,
     });
+
     return fileStream.pipe(res);
   }
 }
