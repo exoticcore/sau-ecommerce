@@ -1,0 +1,7 @@
+2024-02-21 06:12:33 info: ====================================
+2024-02-21 06:12:33 info: ========= ENV: development =========
+2024-02-21 06:12:33 info: 🚀 App listening on the port 3002
+2024-02-21 06:12:33 info: ====================================
+2024-02-21 06:12:33 info: 2ms Executed (default): SELECT 1+1 AS result
+2024-02-21 06:12:33 info: 3ms Executed (default): SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME = 'brand' AND TABLE_SCHEMA = 'productdb'
+2024-02-21 06:12:33 info: 2ms Executed (default): SHOW INDEX FROM `brand`
